@@ -5,7 +5,7 @@
 [![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set)
 [![Node](https://img.shields.io/badge/node-%3E%3D8.0.0-green.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set/pulls)
-[![Build Status](https://travis-ci.org/YanceyOfficial/javascript-apis.svg?branch=master)](https://travis-ci.org/YanceyOfficial/javascript-apis)
+[![Build Status](https://travis-ci.com/YanceyOfficial/javascript-apis.svg?branch=master)](https://travis-ci.com/YanceyOfficial/javascript-apis)
 
 I explain all APIs of JavaScript.
 
