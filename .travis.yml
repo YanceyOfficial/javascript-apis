@@ -1,24 +1,28 @@
 language: node_js
 sudo: true
 node_js:
-- 8
+  - 8
+  
 branchs:
   only:
-  - master
+    - master
 addons:
   ssh_known_hosts:
-  - 74.120.172.16
+    - 74.120.172.16
 cache:
   directories:
-  - node_modules
-install:
-- yarn install
-scripts:
-- yarn test
-- yarn build
+    - node_modules
 before_install:
-- openssl aes-256-cbc -K $encrypted_e9bd37c35d76_key -iv $encrypted_e9bd37c35d76_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa -d
+  - openssl aes-256-cbc -K $encrypted_e9bd37c35d76_key -iv $encrypted_e9bd37c35d76_iv
+    -in .travis/id_rsa.enc -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
+  - eval $(ssh-agent)
+  - ssh-add ~/.ssh/id_rsa
+  - echo -e "Host $74.120.172.16\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+install:
+  - yarn install
+scripts:
+  - yarn test
+  - yarn build
 after_success:
-- ssh caddy@74.120.172.16 -o StrictHostKeyChecking=no 'cd /var/www/jsapi/javascript-apis
-  && git pull && yarn install && yarn build'
+  - ssh caddy@74.120.172.16 -o StrictHostKeyChecking=no 'cd /var/www/jsapi/javascript-apis && git pull && yarn install && yarn build'
