@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vuepress dev docs",
     "test": "jest",
-    "build": "node ./build/addComponents.js && vuepress build docs && node ./build/delComponents.js",
+    "build": "node ./builds/addComponents.js && vuepress build docs && node ./builds/delComponents.js",
     "precommit": "yarn eslint && yarn test"
   },
   "repository": {
