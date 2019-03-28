@@ -22,9 +22,9 @@ assign<T, U, V>(target: T, source1: U, source2: V): T & U & V;
 
 不传入任何参数直接报错：**Uncaught TypeError: Cannot convert undefined or null to object**.
 
-不能将 `undefined` 和 `null` 作为源对象，因为两者不能被转换成对象类型，错误内容和上一条一致。
+不能将 `undefined` 和 `null` 作为源对象，否则报错，因为两者不能被转换成对象类型。
 
-当参数只有一个且为引用类型时，直接返回该参数；若该参数是除 `undefined、null` 之外的基本数据类型，将会被执行装箱操作。
+当参数只有一个且为引用类型时，直接返回该参数；若该参数是除 `undefined、null` 之外的基本数据类型，将会执行装箱操作。
 
 ```js
 // 以下三个全部报错
@@ -74,7 +74,7 @@ Object.assign(target, source_1, source_2); // { name: 'Lucy', say: [Function: sa
 
 如果源对象中某个属性的属性值是 `对象`，那么目标对象拷贝得到的只是这个对象的引用。
 
-看下面这个例子，拷贝一个对象 source 之后，我们分别修改 **name** 和 **food.japaneseFood** 的值，打印出来发现 **copy.name** 还是 `Yancey`，而 **copy.food.japaneseFood** 却变成了 `['sushi', 'udon', 'natto']`，也就是说拷贝之后 **copy.food** 和 **source.food** 仍然指向的是同一个堆，这也就是例子最后一个输出返回 **true** 的原因。
+看下面这个例子，拷贝一个对象 source 之后，我们分别修改 **name** 和 **food.japaneseFood** 的值，打印出来发现 **copy.name** 还是 `Yancey`，而 **copy.food.japaneseFood** 却变成了 `['sushi', 'udon', 'natto']`，也就是说拷贝之后 **copy.food** 和 **source.food** 仍然指向的是同一个堆。
 
 ```js
 const source = {
@@ -94,6 +94,7 @@ copy.name; // 'Yancey'
 
 copy.food.japaneseFood; // ['sushi', 'udon', 'natto']
 
+// 两者指向了同一个堆
 copy.food === source.food; // true
 ```
 
@@ -116,6 +117,7 @@ Object.assign(
   },
   {
     foo2: 3,
+    // 错误出在了这一行
     foo: 3,
     foo3: 3,
   },
@@ -145,4 +147,4 @@ target.baz; // undefined
 
 - 无法拷贝源对象的原型
 
-后面讲到 Object.getOwnPropertyDescriptors 时会有解决 “四宗罪” 方案，具体可以戳 [解决 Object.assign() 浅拷贝问题](/ECMAScript/Object/Object.getOwnPropertyDescriptors.html#解决-object-assign-浅拷贝问题)
+后面讲到 Object.getOwnPropertyDescriptors 时会彻底解决 Object.assign() 的“四宗罪”，具体可以戳 [解决 Object.assign() 浅拷贝问题](/ECMAScript/Object/Object.getOwnPropertyDescriptors.html#解决-object-assign-浅拷贝问题)。
