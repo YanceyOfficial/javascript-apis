@@ -8,20 +8,16 @@ abs(x: number): number;
 
 ## 描述
 
-用于返回一个数字的绝对值。
+返回一个数字的绝对值。
 
-- 传入一个不可转变成数字的其他数据类型返回 NaN
-
-- 传入 undefined 返回 NaN (Number(undefined) 为 NaN)
-
-- 传入 null 返回 0 (Number(null) 为 0)
+- 传入一个不可转变成数字的值返回 NaN
 
 - 不传入数字返回 NaN
 
 ## 示例
 
 ```js
-Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON; // true
+Math.abs(0.1 + 0.2 - 0.3) <= Number.EPSILON; // true
 
 Math.abs(-2); // 2
 

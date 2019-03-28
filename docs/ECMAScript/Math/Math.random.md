@@ -8,7 +8,7 @@ random(): number;
 
 ## 描述
 
-返回一个浮点型伪随机数字, 范围在 [0, 1) 之间
+返回一个浮点型伪随机数字, 范围在 [0, 1) 之间。
 
 ## 示例
 
@@ -36,7 +36,7 @@ const colors = ['red', 'white', 'blue', 'green', 'orange'];
 shuffle(colors); // ['white', 'orange', 'green', 'red', 'blue']
 ```
 
-### 获取两数之间的随机值，可能包括最小值但不包括最大值
+### 获取两数之间的随机值，可能包括最小值但不包括最大值（两个数均为整数）
 
 ```js
 const getRandomInt = (min, max) => {
@@ -46,7 +46,7 @@ const getRandomInt = (min, max) => {
 };
 ```
 
-### 获取两数之间的随机值，包括这两个数（两个数是整数）
+### 获取两数之间的随机值，包括这两个数（两个数均为整数）
 
 ```js
 const getRandomInt = (min, max) => {
