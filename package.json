@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vuepress dev docs",
     "test": "jest",
-    "build": "vuepress build docs",
+    "build": "node ./build/addComponents.js && vuepress build docs && node ./build/delComponents.js",
     "precommit": "yarn eslint && yarn test"
   },
   "repository": {
@@ -41,5 +41,8 @@
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vuepress": "^1.0.0-alpha.44"
+  },
+  "dependencies": {
+    "gitalk": "^1.5.0"
   }
 }
