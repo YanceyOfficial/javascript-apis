@@ -613,7 +613,7 @@ export default {
       const commentConfig = {
         clientID: 'cafb285f82b3c637550b',
         clientSecret: 'a437e56cdc9b6ec41ee6361940e2afe8eb1676f6',
-        repo: 'jacascript-apis',
+        repo: 'javascript-apis',
         owner: 'YanceyOfficial',
         admin: ['YanceyOfficial'],
         id: location.pathname,
