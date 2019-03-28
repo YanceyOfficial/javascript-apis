@@ -6,7 +6,7 @@
 [![Node](https://img.shields.io/badge/node-%3E%3D8.0.0-green.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set/pulls)
 [![Build Status](https://travis-ci.org/YanceyOfficial/javascript-apis.svg?branch=master)](https://travis-ci.org/YanceyOfficial/javascript-apis)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis?ref=badge_shield)
 
 I explain the APIs which is recommended by MDN of JavaScript.
 
@@ -32,4 +32,5 @@ Builds the app for production to the `docs/.vuepress/dist` folder. It correctly 
 
 JavaScript API Set is open source software licensed as [MIT](https://opensource.org/licenses/MIT).
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis?ref=badge_large)
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis?ref=badge_large)
