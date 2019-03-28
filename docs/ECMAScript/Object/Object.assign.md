@@ -1,6 +1,4 @@
-# Object.assign()  <Badge text="ES6"/>
-
-用于将所有`可枚举`、`非继承`的属性从一个或多个源对象复制到目标对象，它将返回目标对象，其中第一个参数为目标对象，后面的参数为源对象。
+# Object.assign() <Badge text="ES6"/>
 
 ## 语法
 
@@ -10,104 +8,141 @@ assign<T, U, V>(target: T, source1: U, source2: V): T & U & V;
 
 ## 描述
 
-- `继承属性`和`不可枚举属性`将不会被拷贝
+用于将所有 `可枚举` 、`非继承` 的属性（可以是 Symbol）从一个或多个源对象复制到目标对象，它将返回目标对象。其中第一个参数为目标对象，剩余参数为源对象。
 
-- 未传入源对象时，将返回原目标对象
+- 如果目标对象和源对象具有相同的属性，则该属性将被源对象中的属性覆盖；类似地，后面的源对象的属性将覆盖前面的源对象的属性
 
-- 由于`undefined`和`null`无法转成对象，所以不能将这两者作为源对象，否则报错
+- 当源参数是基本数据类型时，null 和 undefined 会被忽略，其他类型会被转换成对象。由于只有字符串的包装对象才可能有自身可枚举属性，所以其他基本类型作为源参数会被忽略
 
-```js
-Uncaught TypeError: Cannot convert undefined or null to object
-```
-
-- 如果目标对象和源对象具有相同的键，则该属性将被源对象中的属性覆盖；类似地，后面的源对象的属性将覆盖前面的源对象的属性
-
-- 当源参数是基本数据类型时，它将会被包装(尝试转换成对象)，因为只有字符串的包装对象才可能有自身可枚举属性，所以其他基本类型会被忽略
-
-- `Object.assign()`是`浅拷贝`，也就说如果源对象某个属性的属性值是`对象`，那么目标对象拷贝得到的只是这个对象的引用
+- 如果源对象某个属性的属性值是 `对象`，那么目标对象拷贝得到的只是这个对象的引用
 
 ## 示例
 
 ### 参数问题
 
-若不传入参数，将会报错。
+不传入任何参数直接报错：**Uncaught TypeError: Cannot convert undefined or null to object**.
 
-当参数只有一个且为引用类型时，直接返回该参数；若该参数是除 `undefined、null` 之外的基本数据类型，将会被包装为`对象`返回。如下面的例子返回 `true`
+不能将 `undefined` 和 `null` 作为源对象，因为两者不能被转换成对象类型，错误内容和上一条一致。
+
+当参数只有一个且为引用类型时，直接返回该参数；若该参数是除 `undefined、null` 之外的基本数据类型，将会被执行装箱操作。
 
 ```js
-Object.assign(100).__proto__ === new Number(100).__proto__
+// 以下三个全部报错
+Object.assign();
+Object.assign(undefined);
+Object.assign(null);
+
+// 当只有一个参数且参数为引用类型时直接返回该参数
+Object.assign([1, 2, 3]); // [1, 2, 3]
+
+// 除 undefined 和 null 以外的基本数据类型会被包装成对象形式
+Object.assign(100).__proto__ === new Number(100).__proto__; // true
 ```
 
-### 基本对象复制
+### 基本数据类型会被包装成对象
+
+当源参数是基本数据类型时，null 和 undefined 会被忽略，其他类型会被转换成对象。由于只有字符串的包装对象才可能有自身可枚举属性，所以其他基本类型作为源参数会被忽略。
 
 ```js
+// null undefined number boolean sysmbol 将会被忽略
+Object.assign({}, 0, 'abc', Symbol('name'), null, undefined, true); // { '0': 'a', '1': 'b', '2': 'c' }
+```
+
+### 简单的对象复制
+
+```js
+const target = {
+  name: 'Sayaka',
+};
+
+// 源对象1会覆盖掉与目标对象相同的属性，所以 name: 'Yancey' 会覆盖掉 name: 'Sayaka'
 const source_1 = {
   name: 'Yancey',
   say() {},
+};
 
-// 源对象2因为后于源对象1，所以 name: 'Lucy' 会覆盖掉 name: 'yancey'
+// 源对象2因为后于源对象1，所以 name: 'Lucy' 会覆盖掉 name: 'Yancey'
 const source_2 = {
   name: 'Lucy',
   nullType: null,
-}
+};
 
-// 字符串会先被转换成对象格式，即 {'0': 'l', '1': 'e', 2: 'o'}
-const str = 'leo';
-
-// 数字类型的变量会被忽略
-const num = 123;
-
-const copy = Object.assign({}, source_1, source_2, str, num)
+Object.assign(target, source_1, source_2); // { name: 'Lucy', say: [Function: say], nullType: null }
 ```
 
-示例输出：
-
-    { '0': 'l',
-    '1': 'e',
-    '2': 'o',
-    name: 'Lucy',
-    age: 16,
-    say: [Function: say],
-    other: [],
-    emptyProperty: null,
-    eat: [Function: eat] }
-
 ### 浅拷贝
+
+如果源对象中某个属性的属性值是 `对象`，那么目标对象拷贝得到的只是这个对象的引用。
+
+看下面这个例子，拷贝一个对象 source 之后，我们分别修改 **name** 和 **food.japaneseFood** 的值，打印出来发现 **copy.name** 还是 `Yancey`，而 **copy.food.japaneseFood** 却变成了 `['sushi', 'udon', 'natto']`，也就是说拷贝之后 **copy.food** 和 **source.food** 仍然指向的是同一个堆，这也就是例子最后一个输出返回 **true** 的原因。
 
 ```js
 const source = {
   food: {
-    japaneseFood: ['sushi', 'udon']
+    japaneseFood: ['sushi', 'udon'],
   },
-  name: 'Yancey'
-}
+  name: 'Yancey',
+};
 
-const copy = Object.assign({}, source)
+const copy = Object.assign({}, source);
 
-source.name = 'Leo'
+// 分别修改 name 属性和 food 属性
+source.name = 'Sayaka';
+source.food.japaneseFood = [...source.food.japaneseFood, 'natto'];
 
-source.food.japaneseFood = [...source.food.japaneseFood, 'natto']
+copy.name; // 'Yancey'
+
+copy.food.japaneseFood; // ['sushi', 'udon', 'natto']
+
+copy.food === source.food; // true
 ```
 
-打印出`copy`，可以发现`copy`的`name`属性的属性值还是`Yancey`，而`food.japaneseFood`却变成了`[ 'sushi', 'udon', 'natto' ]`
+### 异常会打断后续拷贝
 
-### 原型链上的属性（即继承属性）和不可枚举属性不可被拷贝
+拷贝的源对象是按顺序读取，一旦中途出错，将停止拷贝。
 
 ```js
-const source = Object.create({
-  type: 'husky'
-}, {
-  name: {
-    value: 'lolita',
-    enumerable: true,
-  },
-  gender: {
-    value: 'girl',
-    enumerable: false,
-  },
-})
+const target = Object.defineProperty({}, 'foo', {
+  value: 1,
+  writable: false,
+});
 
-const copy = Object.assign({}, source)
+// 直接报错
+// TypeError: Cannot assign to read only property 'foo' of object '#<Object>'
+Object.assign(
+  target,
+  {
+    bar: 2,
+  },
+  {
+    foo2: 3,
+    foo: 3,
+    foo3: 3,
+  },
+  {
+    baz: 4,
+  },
+);
+
+target.bar; // 2
+target.foo2; // 3
+
+// 拷贝终止
+target.foo; // 1
+target.foo3; // undefined
+target.baz; // undefined
 ```
 
-源中的`type`属性是`原型链上的属性`，而`gender`属性不可枚举，故最后输出`{ name: 'lolita' }`
+## 扩展
+
+### Object.assign() "四宗罪"
+
+- 只能拷贝源对象的可枚举的自身属性
+
+- 无法拷贝属性的特性们
+
+- 访问器属性会被转换成数据属性
+
+- 无法拷贝源对象的原型
+
+后面讲到 Object.getOwnPropertyDescriptors 时会有解决 “四宗罪” 方案，具体可以戳 [解决 Object.assign() 浅拷贝问题](/ECMAScript/Object/Object.getOwnPropertyDescriptors.html#解决-object-assign-浅拷贝问题)
