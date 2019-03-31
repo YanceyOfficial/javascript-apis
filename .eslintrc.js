@@ -15,5 +15,5 @@ module.exports = {
     rules: {
         'quotes': ['error', 'single'],
         'no-console': 'off',
-    },
+    }
 };

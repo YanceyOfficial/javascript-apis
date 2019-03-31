@@ -6,7 +6,7 @@ build
 dist
 
 # testing
-/coverage
+/coverage-report
 
 # misc
 .DS_Store
@@ -21,6 +21,3 @@ yarn-error.log*
 
 # IDE
 .idea
-
-# Jest Report
-.coverage-report
