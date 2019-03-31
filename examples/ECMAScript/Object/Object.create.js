@@ -49,12 +49,12 @@ Cat.prototype = new Animal();
 
 // use Object.create()
 
-function Cat() {
-  // 继承属性
-  Animal.call(this);
-}
-Cat.prototype = Object.create(Animal.prototype);
-Cat.prototype.constructor = Cat;
+// function Cat() {
+//   // 继承属性
+//   Animal.call(this);
+// }
+// Cat.prototype = Object.create(Animal.prototype);
+// Cat.prototype.constructor = Cat;
 
 
 const persian = new Cat('咪咪');
