@@ -56,10 +56,16 @@ module.exports = {
     },
   },
   themeConfig: {
+    //  algolia: {
+    //     apiKey: '5304c2403a41a7c2d17a71016438d6fc',
+    //     indexName: 'docsearch'
+    //   }, 
     activeHeaderLinks: true,
     repo: 'YanceyOfficial/javascript-apis',
     repoLabel: 'GitHub',
     docsDir: 'docs',
+    editLinks: true,
+    editLinkText: '在 GitHub 上编辑此页',
     nav: [{
         text: 'ECMAScript',
         link: '/ECMAScript/',
@@ -163,6 +169,7 @@ module.exports = {
                   '/ECMAScript/Object/Object.getOwnPropertyNames',
                   '/ECMAScript/Object/Object.getOwnPropertySymbols',
                   '/ECMAScript/Object/Object.getPrototypeOf',
+                  '/ECMAScript/Object/Object.setPrototypeOf',
                 ],
               },
               {
@@ -229,7 +236,6 @@ module.exports = {
       },
     ],
     displayAllHeaders: true,
-    editLinkText: '在 GitHub 上编辑此页',
     lastUpdated: '上次更新',
     sidebarDepth: 0,
   },
