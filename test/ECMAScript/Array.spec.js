@@ -32,3 +32,19 @@ describe('Array.from()', () => {
     ])
   })
 })
+
+console.log(Array.isArray([])); // true
+console.log(Array.isArray(new Array())); // true
+console.log(Array.isArray(123)); // false
+console.log(Array.isArray({})); // false
+console.log(Array.isArray()); // false
+
+describe('Array.isArray()', () => {
+  test('', () => {
+    expect(Array.isArray([])).toBeTruthy()
+    expect(Array.isArray(new Array())).toBeTruthy()
+    expect(Array.isArray(123)).toBeFalsy()
+    expect(Array.isArray({})).toBeFalsy()
+    expect(Array.isArray()).toBeFalsy()
+  })
+})
