@@ -33,12 +33,6 @@ describe('Array.from()', () => {
   })
 })
 
-console.log(Array.isArray([])); // true
-console.log(Array.isArray(new Array())); // true
-console.log(Array.isArray(123)); // false
-console.log(Array.isArray({})); // false
-console.log(Array.isArray()); // false
-
 describe('Array.isArray()', () => {
   test('', () => {
     expect(Array.isArray([])).toBeTruthy()
@@ -46,5 +40,22 @@ describe('Array.isArray()', () => {
     expect(Array.isArray(123)).toBeFalsy()
     expect(Array.isArray({})).toBeFalsy()
     expect(Array.isArray()).toBeFalsy()
+  })
+})
+
+describe('concat()', () => {
+  test('', () => {
+    expect([1, 2, 3].concat([4, 5, 6], [7, 8, 9])).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9])
+    const obj = {
+      name: 'yancey',
+      hobbies: ['music', 'football'],
+    };
+    const arr4 = [1, 2, 3].concat(obj);
+    arr4[3].name = 'sayaka';
+    arr4[3].hobbies.push('coding');
+    expect(obj).toEqual({
+      name: 'sayaka',
+      hobbies: ['music', 'football', 'coding']
+    })
   })
 })

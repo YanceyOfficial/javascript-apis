@@ -194,6 +194,7 @@ module.exports = {
                 children: [
                   '/ECMAScript/Array/Array.of',
                   '/ECMAScript/Array/Array.from',
+                  '/ECMAScript/Array/Array.isArray',
                 ],
               },
               {
