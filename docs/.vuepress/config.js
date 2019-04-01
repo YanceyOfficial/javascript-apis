@@ -188,8 +188,23 @@ module.exports = {
             collapsable: true,
             children: [
               '/ECMAScript/Array/',
-              '/ECMAScript/Array/concat',
-              '/ECMAScript/Array/slice',
+              {
+                title: '构造方法',
+                collapsable: false,
+                children: [
+                  '/ECMAScript/Array/Array.of',
+                  '/ECMAScript/Array/Array.from',
+                ],
+              },
+              {
+                title: '原型方法',
+                collapsable: false,
+                children: [
+                  '/ECMAScript/Array/concat',
+                  '/ECMAScript/Array/slice',
+                ],
+              },
+
             ],
           },
           {
