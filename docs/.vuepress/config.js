@@ -202,6 +202,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                   '/ECMAScript/Array/concat',
+                  '/ECMAScript/Array/copyWithin',
                   '/ECMAScript/Array/slice',
                 ],
               },
