@@ -8,7 +8,7 @@ isArray(arg: any): arg is Array<any>;
 
 ## 描述
 
-该方法用于判断参数是否是数组。
+该方法用于判断参数是否为数组。
 
 ## 示例
 

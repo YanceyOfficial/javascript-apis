@@ -194,6 +194,7 @@ module.exports = {
                 children: [
                   '/ECMAScript/Array/Array.of',
                   '/ECMAScript/Array/Array.from',
+                  '/ECMAScript/Array/Array.isArray',
                 ],
               },
               {
@@ -201,6 +202,7 @@ module.exports = {
                 collapsable: false,
                 children: [
                   '/ECMAScript/Array/concat',
+                  '/ECMAScript/Array/copyWithin',
                   '/ECMAScript/Array/slice',
                 ],
               },
