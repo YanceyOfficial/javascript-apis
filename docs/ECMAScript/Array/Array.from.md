@@ -107,6 +107,17 @@ function add(x) {
 Array.from([1, 2, 3, 4, 5], add, obj); // [2, 3, 4, 5, 6]
 ```
 
+## 扩展
+
+获取 dom 集合的方式有两种，分别是：
+
+```js
+const dom = document.querySelectorAll('.some-class');
+const dom1 = document.getElementsByClassName('.some-class');
+```
+
+第一个返回 NodeList，第二个返回 HTMLCollection，两者都是类数组，都可以使用 Array.from() 和 Array.prototype.slice.call() 将它变成数组。
+
 ## 参考
 
 [Array.prototype.slice.call()方法详解](https://blog.csdn.net/i10630226/article/details/49702375)

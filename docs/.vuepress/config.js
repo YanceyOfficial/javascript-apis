@@ -204,6 +204,8 @@ module.exports = {
                   '/ECMAScript/Array/concat',
                   '/ECMAScript/Array/copyWithin',
                   '/ECMAScript/Array/slice',
+                  '/ECMAScript/Array/flat',
+                  '/ECMAScript/Array/entries',
                 ],
               },
 
