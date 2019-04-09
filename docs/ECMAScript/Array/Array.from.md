@@ -18,7 +18,7 @@ from<T, U>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any
 
 ## 类数组对象
 
-类数组对象是可以通过索引访问元素，并且拥有 length 属性，但它没有数组的其他方法，例如 push, forEach, indexOf 等。最经典的类数组对象是函数中的 `arguments`。此外，我们可以通过 **Array.prototype.slice.call()** 来将类数组对象转换为真正的数组，当然你也可以简单使用 **[].slice.call()**
+类数组对象是可以通过索引访问元素，并且拥有 length 属性，但它没有数组的其他方法，例如 push, forEach, indexOf 等。最经典的类数组对象是函数中的 `arguments`。
 
 ```js
 /*
@@ -31,9 +31,6 @@ const foo = {
   length: 3,
 };
 
-Array.prototype.slice.call(foo); // ['Java', 'Python', 'Scala']
-[].slice.call(foo); // ['Java', 'Python', 'Scala']
-
 /*
  * arguments 也是一个类数组对象
  */
@@ -42,6 +39,29 @@ function arrayLikeToArray() {
 }
 
 arrayLikeToArray('令', '和', '元', '年'); // [ '令', '和', '元', '年' ]
+```
+
+有三种方式可以将类数组转换成真正的数组：
+
+```js
+const foo = {
+  0: 'Java',
+  1: 'Python',
+  2: 'Scala',
+  length: 3,
+};
+
+Array.prototype.slice.call(foo); // ['Java', 'Python', 'Scala']
+
+// 当然你可以简单写成这种
+[].slice.call(foo); // ['Java', 'Python', 'Scala']
+
+Array.from(foo); // ['Java', 'Python', 'Scala']
+
+// 任何定义了迭代器（Iterator）接口的对象，都可以用扩展运算符转为真正的数组。
+// 注意上面那个 foo 对象没用迭代器接口，因此用扩展运算符直接报错
+// 而函数中的 arguments 对象可以
+[...arguments];
 ```
 
 ## 示例
