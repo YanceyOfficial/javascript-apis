@@ -8,9 +8,9 @@ hasOwnProperty(v: PropertyKey): boolean;
 
 ## 描述
 
-用来判断一个对象是否含有该属性，返回一个 Boolean 值，
+用来判断一个对象**本身**是否含有该属性，返回一个 Boolean 值。
 
-- **继承属性** 一律返回 false
+- **原型链上的属性** 一律返回 false
 
 - `Symbol` 类型的属性也可以被检测
 
