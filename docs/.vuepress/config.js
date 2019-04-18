@@ -59,14 +59,15 @@ module.exports = {
     //  algolia: {
     //     apiKey: '5304c2403a41a7c2d17a71016438d6fc',
     //     indexName: 'docsearch'
-    //   }, 
+    //   },
     activeHeaderLinks: true,
     repo: 'YanceyOfficial/javascript-apis',
     repoLabel: 'GitHub',
     docsDir: 'docs',
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
-    nav: [{
+    nav: [
+      {
         text: 'ECMAScript',
         link: '/ECMAScript/',
       },
@@ -88,7 +89,8 @@ module.exports = {
       },
     ],
 
-    sidebar: [{
+    sidebar: [
+      {
         title: 'ECMAScript',
         collapsable: false,
         children: [
@@ -208,7 +210,6 @@ module.exports = {
                   '/ECMAScript/Array/entries',
                 ],
               },
-
             ],
           },
           {
@@ -237,21 +238,30 @@ module.exports = {
               },
             ],
           },
-        ]
+          {
+            title: 'Promise',
+            collapsable: true,
+            children: [
+              '/ECMAScript/Promise/Promise',
+              '/ECMAScript/Promise/Promise_A+_translation',
+              '/ECMAScript/Promise/MyPromise',
+            ],
+          },
+        ],
       },
       {
         title: 'BOM',
         collapsable: false,
         children: [
           // '/BOM/',
-        ]
+        ],
       },
       {
         title: 'DOM',
         collapsable: false,
         children: [
           // '/DOM/',
-        ]
+        ],
       },
     ],
     displayAllHeaders: true,

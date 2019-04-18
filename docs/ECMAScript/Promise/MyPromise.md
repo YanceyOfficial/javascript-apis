@@ -1,3 +1,10 @@
+# 手写 Promise
+
+:::tip
+手写 Promise 之前务必阅读 Promise A+ 规范，如果有精力最好自己能翻译一遍。
+:::
+
+```js
 const PENDING = 'pending';
 const FULFILLED = 'fulfilled';
 const REJECTED = 'rejected';
@@ -240,7 +247,7 @@ Promise.all = promises => {
   });
 };
 
-//race方法
+// Promise.race
 Promise.race = promises => {
   return new Promise((resolve, reject) => {
     if (promises.length === 0) {
@@ -261,7 +268,11 @@ Promise.race = promises => {
     }
   });
 };
+```
 
+最后安装 `yarn global add promises-aplus-tests`，在文件中插入下面这段代码，然后使用 `promises-aplus-tests 该文件的文件名` 来验证你手写的 Promise 是否符合 Promises A+ 规范。
+
+```js
 Promise.defer = Promise.deferred = function() {
   let dfd = {};
   dfd.promise = new Promise((resolve, reject) => {
@@ -271,3 +282,4 @@ Promise.defer = Promise.deferred = function() {
   return dfd;
 };
 module.exports = Promise;
+```

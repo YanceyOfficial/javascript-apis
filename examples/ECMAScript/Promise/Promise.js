@@ -46,24 +46,3 @@ promise
 // Buy('xiaoming', 'apple', function() {
 //   console.log('shopping finish');
 // });
-
-const fs = require('fs');
-
-const promise = path =>
-  new Promise((resolve, reject) => {
-    fs.readFile(__dirname + '/' + path, 'utf-8', (err, data) => {
-      if (err) {
-        reject(err);
-        return;
-      }
-      resolve(data);
-    });
-  });
-
-promise('someFile.js')
-  .then(res => {
-    console.log(res);
-  })
-  .catch(e => {
-    console.log(e);
-  });
