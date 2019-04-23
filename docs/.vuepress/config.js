@@ -239,6 +239,11 @@ module.exports = {
             ],
           },
           {
+            title: 'Function',
+            collapsable: true,
+            children: ['/ECMAScript/Function/call'],
+          },
+          {
             title: 'Promise',
             collapsable: true,
             children: [
