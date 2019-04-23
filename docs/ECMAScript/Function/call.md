@@ -20,7 +20,7 @@ call(this: Function, thisArg: any, ...argArray: any[]): any;
 
 ## 示例
 
-不传第一个参数或第一个参数为 null 以及 undefined。
+### 不传第一个参数或第一个参数为 null 以及 undefined。
 
 ```js
 const o = { name: 'yancey' };
@@ -33,7 +33,7 @@ function foo() {
 foo.call(null, 'a', 'b');
 ```
 
-第一个参数为对象。
+### 第一个参数为对象。
 
 ```js
 const o = { name: 'yancey' };
@@ -46,7 +46,9 @@ function foo() {
 foo.call(o, 'a', 'b');
 ```
 
-第一个参数为函数，下面以寄生组合继承为例。关于 JavaScript 的继承可以参考我的一篇文章 [JavaScript 七大继承全解析](https://juejin.im/post/5caeee53f265da03914d4e98)
+### 第一个参数为函数。
+
+下面以寄生组合继承为例。关于 JavaScript 的继承可以参考我的另一篇文章 [JavaScript 七大继承全解析](https://juejin.im/post/5caeee53f265da03914d4e98)
 
 ```js
 function inheritPrototype(child, parent) {
@@ -77,7 +79,7 @@ Car.prototype.playMusic = function() {
 };
 ```
 
-第一个参数为原始数据类型。
+### 第一个参数为原始数据类型。
 
 ```js
 function foo() {
@@ -88,15 +90,31 @@ function foo() {
 foo.call(1, 'a', 'b');
 ```
 
+### 将类数组对象转换成数组
+
+下面各例将类数组对象转换为真正的数组，关于类数组对象，可以参考我的另一篇文章 [Array.from | JavaScript 全解析系列](https://js.yanceyleo.com/ECMAScript/Array/Array.from)，下面三个都会打印出 `["上帝啊", "请", "赐给我一个女孩"]`。
+
+```js
+function foo() {
+  console.log(Array.prototype.slice.call(arguments));
+  console.log([].slice.call(arguments));
+  console.log(Array.from(arguments));
+}
+
+foo('上帝啊', '请', '赐给我一个女孩');
+```
+
+![下载.jpeg](https://yancey-assets.oss-cn-beijing.aliyuncs.com/%E4%B8%8B%E8%BD%BD.jpeg)
+
 ## 手写 call 方法
 
 先假设传递的 `thisArg` 是个普通对象。给该对象添加一个临时的键 `fn`，将被调用的函数作为 `fn` 的值，并把参数序列传递进去。接着删除这个临时的 `fn`，最后返回该函数的执行。
 
 为了防止原对象本身就有 `fn` 方法，这里使用 Symbol 创建一个独一无二的变量。
 
-当不传第一个参数或第一个参数为 null 以及 undefined 时，将 `thisArg` 替换成 `window`
+当不传第一个参数或第一个参数为 null 以及 undefined 时，将 `thisArg` 替换成 `window`。
 
-为了保证原始类型和函数也能添加 `fn`，需要把它们先转换成相应的包装类型。下面的代码为了简单，将 `thisArg` 都做了一次装箱操作，实际像 `window` 和 `Object` 类型完全没有必要在再做一次装箱操作，你最好为这些情况加上必要的条件语句。
+为了保证原始类型和函数也能添加 `fn`，需要把它们先转换成相应的包装类型。下面的代码为了简单，将 `thisArg` 都做了一次装箱操作，实际像 `window` 和 `Object` 完全没有必要在再做一次装箱操作，你最好为这些情况加上必要的条件语句。
 
 ```js
 Function.prototype.call2 = function(thisArg, ...args) {
@@ -114,3 +132,12 @@ Function.prototype.call2 = function(thisArg, ...args) {
   return result;
 };
 ```
+
+## 参考
+
+[写给新人的 call、apply、bind](https://aotu.io/notes/2016/09/02/Different-Binding/)
+
+[this、apply、call、bind](https://juejin.im/post/59bfe84351882531b730bac2)
+
+[为什么 call 比 apply 快？](https://juejin.im/post/59c0e13b5188257e7a428a83)
+

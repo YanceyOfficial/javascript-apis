@@ -8,90 +8,22 @@ apply(this: Function, thisArg: any, argArray?: any): any;
 
 ## 描述
 
-该方法是 call 的，只不过它第二个参数要传递一个数组，而 call 从第二个参数起需要传递一个参数序列。
+该方法是 call 的语法糖，它的第一个参数和 call 方法相同，但第二个参数接收一个数组或者类数组，而 call 从第二个参数起接收一个参数序列。
 
 ## 示例
 
-不传第一个参数或第一个参数为 null 以及 undefined。
+关于 apply，最经典的示例应该就是 Math.max() 传参的问题了。
 
 ```js
-const o = { name: 'yancey' };
-
-function foo() {
-  console.log(this); // window
-  console.log(arguments); // { '0': 'a', '1': 'b' }
-}
-
-foo.call(null, 'a', 'b');
+Math.max(1, 2, 3); // 3
+Math.max.apply(this, [1, 2, 3]); // 3
+Math.max(...[1, 2, 3]); // 3
 ```
 
-第一个参数为对象。
+## 手写 apply 方法
 
 ```js
-const o = { name: 'yancey' };
-
-function foo() {
-  console.log(this); // { name: 'yancey' }
-  console.log(arguments); // { '0': 'a', '1': 'b' }
-}
-
-foo.call(o, 'a', 'b');
-```
-
-第一个参数为函数，下面以寄生组合继承为例。关于 JavaScript 的继承可以参考我的一篇文章 [JavaScript 七大继承全解析](https://juejin.im/post/5caeee53f265da03914d4e98)
-
-```js
-function inheritPrototype(child, parent) {
-  const prototype = Object.create(parent.prototype); // 创建父类原型的副本
-  prototype.constructor = child; // 将副本的构造函数指向子类
-  child.prototype = prototype; // 将该副本赋值给子类的原型
-}
-
-function Vehicle(powerSource) {
-  this.powerSource = powerSource;
-  this.components = ['座椅', '轮子'];
-}
-
-Vehicle.prototype.run = function() {
-  console.log('running~');
-};
-
-function Car(wheelNumber) {
-  this.wheelNumber = wheelNumber;
-  // 在子类中调用父类
-  Vehicle.call(this, '汽油');
-}
-
-inheritPrototype(Car, Vehicle);
-
-Car.prototype.playMusic = function() {
-  console.log('sing~');
-};
-```
-
-第一个参数为原始数据类型。
-
-```js
-function foo() {
-  console.log(this); // Number {1}
-  console.log(arguments); // { '0': 'a', '1': 'b' }
-}
-
-foo.call(1, 'a', 'b');
-```
-
-## 手写 call 方法
-
-先假设传递的 `thisArg` 是个普通对象。给该对象添加一个临时的键 `fn`，将被调用的函数作为 `fn` 的值，并把参数序列传递进去。接着删除这个临时的 `fn`，最后返回该函数的执行。
-
-为了防止原对象本身就有 `fn` 方法，这里使用 Symbol 创建一个独一无二的变量。
-
-当不传第一个参数或第一个参数为 null 以及 undefined 时，将 `thisArg` 替换成 `window`
-
-为了保证原始类型和函数也能添加 `fn`，需要把它们先转换成相应的包装类型。下面的代码为了简单，将 `thisArg` 都做了一次装箱操作，实际像 `window` 和 `Object` 类型完全没有必要在再做一次装箱操作，你最好为这些情况加上必要的条件语句。
-
-```js
-Function.prototype.call2 = function(thisArg, ...args) {
+Function.prototype.apply2 = function(thisArg) {
   const fn = Symbol('fn');
 
   if (!thisArg || thisArg === null || thisArg === undefined) {
@@ -99,10 +31,55 @@ Function.prototype.call2 = function(thisArg, ...args) {
   }
 
   const packing = Object(thisArg);
-
   packing[fn] = this;
-  const result = packing[fn](...args);
-  delete packing[fn];
-  return result;
+
+  if (arguments[1]) {
+    const result = packing[fn](...arguments[1]); // 关键步骤
+    delete packing[fn];
+    return result;
+  } else {
+    const result = packing[fn]();
+    delete packing[fn];
+    return result;
+  }
 };
 ```
+
+## 为什么 call 的性能比 apply 性能高？
+
+### apply 运行原理
+
+1、当函数不可调用时，直接抛出一个 TypeError 的异常。
+
+2、如果 `argArray` 为 null 或者 undefined 或者未声明，则返回调用 Function 的 [[Call]] 内部方法的结果，提供 thisArg 和一个空数组作为参数。
+
+3、如果 `argArray` 不是对象，则抛出 TypeError 异常。
+
+4、获取 `argArray` 的长度。调用 `argArray` 的 [[Get]] 内部方法，找到属性 length。 赋值给 len。
+
+5、定义 n 为 ToUint32。
+
+6、初始化 argList 为一个空列表。
+
+7、初始化 index 为 0。
+
+8、循环迭代取出 argArray。重复循环 while（index < n）
+
+- a、将下标转换成 String 类型。初始化 indexName 为 ToString(index)。
+- b、定义 nextArg 为 使用 indexName 作为参数调用 argArray 的[[Get]]内部方法的结果。
+- c、将 nextArg 添加到 argList 中，作为最后一个元素。
+- d、设置 index ＝ index + 1
+
+9、返回调用 Function 的 `[[Call]]` 内部方法的结果，提供 thisArg 作为该值，argList 作为参数列表。
+
+### call 运行原理
+
+1、当函数不可调用时，直接抛出一个 TypeError 的异常。
+
+2、定义 argList 为一个空列表。
+
+3、如果使用超过一个参数调用此方法，则以从 arg1 开始的从左到右的顺序将每个参数附加为 argList 的最后一个元素
+
+4、返回调用 func 的[[Call]]内部方法的结果，提供 thisArg 作为该值，argList 作为参数列表。
+
+综上所述，call 接收的参数序列正是引擎内部所需要的格式，而 apply 仅仅是 call 的语法糖，在编译过程需要做一定的格式转换。

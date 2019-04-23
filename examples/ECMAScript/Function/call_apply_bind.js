@@ -104,3 +104,4 @@ function foo() {
 }
 
 foo.call(1, 'a', 'b');
+
