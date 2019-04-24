@@ -244,6 +244,7 @@ module.exports = {
             children: [
               '/ECMAScript/Function/call',
               '/ECMAScript/Function/apply',
+              '/ECMAScript/Function/bind',
             ],
           },
           {
