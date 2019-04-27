@@ -28,6 +28,10 @@ Runs the test watcher in an interactive mode. By default, runs tests related to 
 
 Builds the app for production to the `docs/.vuepress/dist` folder. It correctly bundles the app in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. The app is ready to be deployed!
 
+## WeChat Official account
+
+![进击的前端](https://camo.githubusercontent.com/fcaf0826a063e724d7038ae5dd7bb8ad57d71f32/68747470733a2f2f757365722d676f6c642d63646e2e786974752e696f2f323031392f342f32312f313661336538393634643433343836633f773d33343426683d33343426663d6a70656726733d38313735)
+
 ## License
 
 JavaScript API Set is open source software licensed as [MIT](https://opensource.org/licenses/MIT).
