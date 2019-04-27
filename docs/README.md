@@ -5,10 +5,10 @@ actionText: LET'S GO
 actionLink: /ECMAScript/
 features:
 - title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+  details: 抽丝剥茧，讲解 API 核心的用法。
+- title: 准确的示例
+  details: 几乎每篇文章的每个示例都通过 Jest 单元测试。
+- title: 多端支持
+  details: 采用 VuePress 搭建，支持 PC 端和 WAP 端。
 footer: MIT licensed | Brought to you with ❤️ by Yancey
 ---
