@@ -24,4 +24,4 @@ scripts:
   - yarn test
   - yarn build
 after_success:
-  - ssh caddy@74.120.172.16 -o StrictHostKeyChecking=no 'cd /var/www/jsapi/javascript-apis && git pull && yarn install && yarn build'
+  - ssh caddy@74.120.172.16 -o StrictHostKeyChecking=no 'cd /var/www/jsapi/javascript-apis && git pull && yarn install && yarn build && cd docs/.vuepress && scp -r ./dist ./build'
