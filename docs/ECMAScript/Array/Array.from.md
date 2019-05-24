@@ -127,6 +127,8 @@ function add(x) {
 Array.from([1, 2, 3, 4, 5], add, obj); // [2, 3, 4, 5, 6]
 ```
 
+此外，你还可以使用 `Array.from({length: 2})` 的方式来创建数组。
+
 ## 扩展
 
 获取 dom 集合的方式有两种，分别是：

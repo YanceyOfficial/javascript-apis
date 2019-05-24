@@ -10,7 +10,7 @@ call(this: Function, thisArg: any, ...argArray: any[]): any;
 
 该方法通过指定 this 值并给出一个参数序列来调用函数。其中第一个参数有四种可能：
 
-- 不传参数或者传 null、undefined，this 指向 window 对象（浏览器下）
+- 不传参数或者传 null、undefined，this 指向 window 对象（浏览器环境下）
 
 - 传递一个函数名，this 指向该函数的引用
 
@@ -48,7 +48,7 @@ foo.call(o, 'a', 'b');
 
 ### 第一个参数为函数。
 
-下面以寄生组合继承为例。关于 JavaScript 的继承可以参考我的另一篇文章 [JavaScript 七大继承全解析](https://juejin.im/post/5caeee53f265da03914d4e98)
+下面以寄生组合继承为例。关于 JavaScript 的继承可以参考我的另一篇文章 [JavaScript 七大继承全解析](https://github.com/YanceyOfficial/interview/blob/master/JavaScript/JavaScript%20%E4%B8%83%E5%A4%A7%E7%BB%A7%E6%89%BF%E5%85%A8%E8%A7%A3%E6%9E%90.md)
 
 ```js
 function inheritPrototype(child, parent) {
@@ -83,6 +83,7 @@ Car.prototype.playMusic = function() {
 
 ```js
 function foo() {
+  // 原始类型会转换成相应的包装类型
   console.log(this); // Number {1}
   console.log(arguments); // { '0': 'a', '1': 'b' }
 }
@@ -92,25 +93,26 @@ foo.call(1, 'a', 'b');
 
 ### 将类数组对象转换成数组
 
-下面各例将类数组对象转换为真正的数组，关于类数组对象，可以参考我的另一篇文章 [Array.from | JavaScript 全解析系列](https://js.yanceyleo.com/ECMAScript/Array/Array.from)，下面三个都会打印出 `["上帝啊", "请", "赐给我一个女孩"]`。
+下面各例将类数组对象转换为真正的数组，关于类数组对象，可以参考我的另一篇文章 [Array.from | JavaScript 全解析系列](https://js.yanceyleo.com/ECMAScript/Array/Array.from)，下面各例都会打印出 `["上帝啊", "请", "赐给我一个女孩吧"]`。
 
 ```js
 function foo() {
   console.log(Array.prototype.slice.call(arguments));
   console.log([].slice.call(arguments));
   console.log(Array.from(arguments));
+
+  // 只有类数组对象是可迭代对象时，才可以用下面这种方法
+  console.log([...arguments]);
 }
 
-foo('上帝啊', '请', '赐给我一个女孩');
+foo('上帝啊', '请', '赐给我一个女孩吧');
 ```
-
-![下载.jpeg](https://yancey-assets.oss-cn-beijing.aliyuncs.com/%E4%B8%8B%E8%BD%BD.jpeg)
 
 ## 手写 call 方法
 
-先假设传递的 `thisArg` 是个普通对象。给该对象添加一个临时的键 `fn`，将被调用的函数作为 `fn` 的值，并把参数序列传递进去。接着删除这个临时的 `fn`，最后返回该函数的执行。
+思路：先假设传递的 `thisArg` 是个普通对象。然后给该对象添加一个临时的键 `fn`，将此函数挂载到 `fn`，并把参数序列传递进去。接着删除这个临时的 `fn`，最后返回该函数的执行。
 
-为了防止原对象本身就有 `fn` 方法，这里使用 Symbol 创建一个独一无二的变量。
+为了防止原对象本身就有 `fn` 这个键，这里使用 Symbol 创建一个独一无二的变量。
 
 当不传第一个参数或第一个参数为 null 以及 undefined 时，将 `thisArg` 替换成 `window`。
 
@@ -138,6 +140,3 @@ Function.prototype.call2 = function(thisArg, ...args) {
 [写给新人的 call、apply、bind](https://aotu.io/notes/2016/09/02/Different-Binding/)
 
 [this、apply、call、bind](https://juejin.im/post/59bfe84351882531b730bac2)
-
-[为什么 call 比 apply 快？](https://juejin.im/post/59c0e13b5188257e7a428a83)
-
