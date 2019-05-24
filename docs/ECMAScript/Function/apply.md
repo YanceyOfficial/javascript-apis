@@ -20,6 +20,22 @@ Math.max.apply(this, [1, 2, 3]); // 3
 Math.max(...[1, 2, 3]); // 3
 ```
 
+此外，它还可以做数组之间的追加。
+
+```js
+const arr1 = ['a', 'b', 'c'];
+const arr2 = [1, 2, 3];
+
+Array.prototype.push.apply(arr1, arr2);
+console.log(arr1); // ["a", "b", "c", 1, 2, 3]
+
+// 当然更现代化的方式是使用展开运算符
+[...arr1, ...arr2];
+
+// 数组有一个 concat 的方法，也可以做数组的合并
+arr1.concat(arr2);
+```
+
 ## 手写 apply 方法
 
 ```js
@@ -83,3 +99,9 @@ Function.prototype.apply2 = function(thisArg) {
 4、返回调用 func 的[[Call]]内部方法的结果，提供 thisArg 作为该值，argList 作为参数列表。
 
 综上所述，call 接收的参数序列正是引擎内部所需要的格式，而 apply 仅仅是 call 的语法糖，在编译过程需要做一定的格式转换。
+
+## 参考
+
+[深入浅出妙用 Javascript 中 apply、call、bind](https://mp.weixin.qq.com/s/BYbCgTMt7nvChPddWor0Tw?)
+
+[为什么 call 比 apply 快？](https://juejin.im/post/59c0e13b5188257e7a428a83)

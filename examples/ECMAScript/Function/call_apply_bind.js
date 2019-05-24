@@ -105,3 +105,23 @@ function foo() {
 
 foo.call(1, 'a', 'b');
 
+Function.prototype.bind2 = function(thisArg) {
+  if (typeof this != 'function') {
+    throw TypeError('not a function');
+  }
+
+  const fn = this;
+  const args = [...arguments].slice(1);
+
+  const resFn = function() {
+    return fn.apply(
+      this instanceof resFn ? this : thisArg,
+      args.concat(...arguments),
+    );
+  };
+  function F() {}
+  F.prototype = this.prototype;
+  resFn.prototype = new F();
+
+  return resFn;
+};

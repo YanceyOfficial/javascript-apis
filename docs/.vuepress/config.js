@@ -244,6 +244,7 @@ module.exports = {
             children: [
               '/ECMAScript/Function/call',
               '/ECMAScript/Function/apply',
+              '/ECMAScript/Function/bind',
             ],
           },
           {
@@ -254,6 +255,11 @@ module.exports = {
               '/ECMAScript/Promise/Promise_A+_translation',
               '/ECMAScript/Promise/MyPromise',
             ],
+          },
+          {
+            title: 'Proxy',
+            collapsable: true,
+            children: ['/ECMAScript/Proxy/Proxy'],
           },
         ],
       },
