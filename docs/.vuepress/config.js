@@ -256,6 +256,11 @@ module.exports = {
               '/ECMAScript/Promise/MyPromise',
             ],
           },
+          {
+            title: 'Proxy',
+            collapsable: true,
+            children: ['/ECMAScript/Proxy/Proxy'],
+          },
         ],
       },
       {

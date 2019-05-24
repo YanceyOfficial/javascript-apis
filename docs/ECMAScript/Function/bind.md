@@ -75,4 +75,3 @@ Function.prototype.bind2 = function(thisArg, ...args) {
 };
 ```
 
-## 附录：浅谈柯里化
