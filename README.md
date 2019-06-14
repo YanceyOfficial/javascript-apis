@@ -8,7 +8,7 @@
 [![Build Status](https://travis-ci.org/YanceyOfficial/javascript-apis.svg?branch=master)](https://travis-ci.org/YanceyOfficial/javascript-apis)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis?ref=badge_shield)
 
-I explain the APIs which is recommended by MDN of JavaScript.
+I explain the APIs of JavaScript which is recommended by MDN.
 
 ## Available Scripts
 
