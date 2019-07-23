@@ -43,6 +43,7 @@
     "vuepress": "^1.0.0-alpha.44"
   },
   "dependencies": {
+    "axios": "^0.18.1",
     "gitalk": "^1.5.0"
   }
 }
