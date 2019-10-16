@@ -39,7 +39,7 @@
     "jest": "^24.5.0",
     "markdown-it-katex": "^2.0.3",
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^8.0.0",
     "vuepress": "^1.0.0-alpha.44"
   },
   "dependencies": {
