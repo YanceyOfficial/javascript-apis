@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/YanceyOfficial/javascript-apis#readme",
   "devDependencies": {
-    "@babel/core": "^7.3.4",
+    "@babel/core": "^7.6.4",
     "@vuepress/plugin-active-header-links": "^1.0.0-alpha.44",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.44",
     "@vuepress/plugin-google-analytics": "^1.0.0-alpha.0",
