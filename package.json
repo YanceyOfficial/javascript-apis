@@ -40,7 +40,7 @@
     "markdown-it-katex": "^2.0.3",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vuepress": "^1.0.0-alpha.44"
+    "vuepress": "^1.2.0"
   },
   "dependencies": {
     "axios": "^0.18.1",
