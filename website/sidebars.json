@@ -1,0 +1,122 @@
+{
+  "docs": {
+    "Docusaurus": [
+      "doc1"
+    ],
+    "First Category": [
+      "doc2"
+    ],
+    "Second Category": [
+      "doc3"
+    ]
+  },
+  "ecmascript": {
+    "Introduction": [
+      "ECMAScript/ecmascript"
+    ],
+    "Object": [
+      "ECMAScript/Object/hasOwnProperty",
+      "ECMAScript/Object/getPrototypeOf",
+      "ECMAScript/Object/isPrototypeOf",
+      "ECMAScript/Object/propertyIsEnumerable",
+      "ECMAScript/Object/assign",
+      "ECMAScript/Object/create",
+      "ECMAScript/Object/is",
+      "ECMAScript/Object/defineProperty",
+      "ECMAScript/Object/defineProperties",
+      "ECMAScript/Object/keys",
+      "ECMAScript/Object/values",
+      "ECMAScript/Object/entries",
+      "ECMAScript/Object/fromEntries",
+      "ECMAScript/Object/getOwnPropertyDescriptor",
+      "ECMAScript/Object/getOwnPropertyDescriptors",
+      "ECMAScript/Object/getOwnPropertyNames",
+      "ECMAScript/Object/getOwnPropertySymbols",
+      "ECMAScript/Object/preventExtensions",
+      "ECMAScript/Object/seal",
+      "ECMAScript/Object/freeze",
+      "ECMAScript/Object/isExtensible",
+      "ECMAScript/Object/isSealed",
+      "ECMAScript/Object/isFrozen",
+      "ECMAScript/Object/setPrototypeOf"
+    ],
+    "String": [
+      "ECMAScript/String/charAt",
+      "ECMAScript/String/charCodeAt",
+      "ECMAScript/String/codePointAt",
+      "ECMAScript/String/concat",
+      "ECMAScript/String/endsWith",
+      "ECMAScript/String/includes",
+      "ECMAScript/String/indexOf",
+      "ECMAScript/String/lastIndexOf",
+      "ECMAScript/String/localeCompare",
+      "ECMAScript/String/match",
+      "ECMAScript/String/normalize",
+      "ECMAScript/String/padEnd",
+      "ECMAScript/String/padStart",
+      "ECMAScript/String/repeat",
+      "ECMAScript/String/replace",
+      "ECMAScript/String/search",
+      "ECMAScript/String/slice",
+      "ECMAScript/String/split",
+      "ECMAScript/String/startsWith",
+      "ECMAScript/String/fromCharCode",
+      "ECMAScript/String/fromCodePoint",
+      "ECMAScript/String/substr",
+      "ECMAScript/String/substring",
+      "ECMAScript/String/to...Case",
+      "ECMAScript/String/trim"
+    ],
+    "Array": [
+      "ECMAScript/Array/from",
+      "ECMAScript/Array/of",
+      "ECMAScript/Array/isArray",
+      "ECMAScript/Array/concat",
+      "ECMAScript/Array/copyWithin",
+      "ECMAScript/Array/entries",
+      "ECMAScript/Array/flat"
+    ],
+    "Math": [
+      "ECMAScript/Math/sin",
+      "ECMAScript/Math/tan",
+      "ECMAScript/Math/cos",
+      "ECMAScript/Math/abs",
+      "ECMAScript/Math/clz32",
+      "ECMAScript/Math/floor",
+      "ECMAScript/Math/formulas",
+      "ECMAScript/Math/fround",
+      "ECMAScript/Math/imul",
+      "ECMAScript/Math/max",
+      "ECMAScript/Math/random",
+      "ECMAScript/Math/sign",
+      "ECMAScript/Math/trunc"
+    ],
+    "Function": [
+      "ECMAScript/Function/call",
+      "ECMAScript/Function/apply",
+      "ECMAScript/Function/bind"
+    ],
+    "Number": [
+      "ECMAScript/Number/parserInt",
+      "ECMAScript/Number/parserFloat"
+    ],
+    "Promise": [
+      "ECMAScript/Promise/promise",
+      "ECMAScript/Promise/promiseA+",
+      "ECMAScript/Promise/promiseWheel"
+    ],
+    "Proxy": [
+      "ECMAScript/Proxy/proxy"
+    ]
+  },
+  "dom": {
+    "Introduction": [
+      "DOM/dom"
+    ]
+  },
+  "bom": {
+    "Introduction": [
+      "BOM/bom"
+    ]
+  }
+}

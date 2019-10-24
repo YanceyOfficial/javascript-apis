@@ -1,0 +1,4 @@
+---
+id: parseInt
+title: parseInt()
+---

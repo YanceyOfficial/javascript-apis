@@ -1,0 +1,45 @@
+{
+  "name": "javascript-apis",
+  "private": true,
+  "version": "1.0.0",
+  "description": "I explain all APIs of JavaScript",
+  "scripts": {
+    "examples": "docusaurus-examples",
+    "start": "docusaurus-start",
+    "build": "docusaurus-build",
+    "publish-gh-pages": "docusaurus-publish",
+    "write-translations": "docusaurus-write-translations",
+    "version": "docusaurus-version",
+    "rename-version": "docusaurus-rename-version",
+    "test": "jest",
+    "precommit": "yarn eslint && yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanceyOfficial/javascript-apis.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "API"
+  ],
+  "author": "Yancey Leo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YanceyOfficial/javascript-apis/issues"
+  },
+  "homepage": "https://github.com/YanceyOfficial/javascript-apis#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^24.5.0",
+    "babel-preset-env": "^1.7.0",
+    "docusaurus": "^1.14.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "gitalk": "^1.5.0"
+  }
+}

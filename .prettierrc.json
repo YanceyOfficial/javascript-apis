@@ -1,0 +1,8 @@
+{
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "bracketSpacing": true,
+  "trailingComma": "all",
+  "proseWrap": "preserve",
+  "semi": false
+}

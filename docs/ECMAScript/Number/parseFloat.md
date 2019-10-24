@@ -1,0 +1,4 @@
+---
+id: parseFloat
+title: parseFloat()
+---
