@@ -24,3 +24,7 @@
 .gt-container .gt-ico-arrdown svg {
   fill: #000000 !important;
 }
+
+.gt-container .gt-popup .gt-action.is--active::before {
+  background: #2e8555 !important;
+}
