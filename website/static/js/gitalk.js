@@ -1,9 +1,9 @@
 window.addEventListener('load', function() {
   const gitalkDOMId = 'gitalk-container'
 
-  const postDOM = document.querySelector('.post')
+  const prevnextDOM = document.querySelector('.docs-prevnext')
   const gitalkDOMStr = `<section id=${gitalkDOMId}></section>`
-  postDOM.insertAdjacentHTML('afterend', gitalkDOMStr)
+  prevnextDOM.insertAdjacentHTML('beforebegin', gitalkDOMStr)
 
   const gitalk = new Gitalk({
     clientID: 'cafb285f82b3c637550b',

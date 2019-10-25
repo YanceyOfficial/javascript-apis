@@ -37,7 +37,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: 'ECMAScript/ecmascript', label: 'ECMAScript' },
+    { doc: 'ES/ecmascript', label: 'ECMAScript' },
     { doc: 'BOM/bom', label: 'BOM' },
     { doc: 'DOM/dom', label: 'DOM' },
     { page: 'about', label: 'About' },
