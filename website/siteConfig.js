@@ -8,6 +8,8 @@
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
 
+const katexPlugin = require('remarkable-katex')
+
 // List of projects/orgs using your project for the users page.
 const users = [
   {
@@ -77,6 +79,12 @@ const siteConfig = {
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Yancey Inc. and its affiliates.`,
+
+  markdownPlugins: [
+    function useRemarkableKatex(md) {
+      md.use(katexPlugin)
+    },
+  ],
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

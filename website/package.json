@@ -37,6 +37,7 @@
     "eslint": "^6.5.1",
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.9",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "remarkable-katex": "^1.0.1"
   }
 }

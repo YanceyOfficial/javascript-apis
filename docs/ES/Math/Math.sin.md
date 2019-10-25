@@ -21,14 +21,14 @@ sin(x: number): number;
 
 ```js
 // 因为 IEEE-754的原因，sin(30°) 不等于 0.5
-Math.sin((Math.PI / 180) * 30); // 0.49999999999999994
-Math.sin(Math.PI / 2); // 1
+Math.sin((Math.PI / 180) * 30) // 0.49999999999999994
+Math.sin(Math.PI / 2) // 1
 
-Math.sin(); // NaN
-Math.sin('yancey'); // NaN
+Math.sin() // NaN
+Math.sin('yancey') // NaN
 ```
 
-## Math.sinh() <Badge text="ES6"/>
+## Math.sinh()
 
 ### 语法
 
@@ -43,7 +43,7 @@ sinh(x: number): number;
 ### 示例
 
 ```js
-Math.sinh(0); // 0
+Math.sinh(0) // 0
 ```
 
 ## Math.asin()
@@ -61,9 +61,9 @@ asin(x: number): number;
 ### 示例
 
 ```js
-Math.asin(2); // NaN
-Math.asin(0); // 0
-Math.asin(Math.PI / 4); // 0.9033391107665127
+Math.asin(2) // NaN
+Math.asin(0) // 0
+Math.asin(Math.PI / 4) // 0.9033391107665127
 ```
 
 ## Math.asinh() <Badge text="ES6"/>
@@ -81,5 +81,5 @@ asinh(x: number): number;
 ### 示例
 
 ```js
-Math.asinh(1); // 0.881373587019543
+Math.asinh(1) // 0.881373587019543
 ```
