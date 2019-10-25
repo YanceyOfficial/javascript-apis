@@ -93,6 +93,7 @@ const siteConfig = {
   ],
   stylesheets: [
     'https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.5.0/gitalk.min.css',
+    '/css/code-block-buttons.css',
   ],
 
   // On page navigation for the current documentation page.
