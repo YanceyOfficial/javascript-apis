@@ -38,8 +38,5 @@
     "eslint-plugin-react": "^7.16.0",
     "husky": "^3.0.9",
     "jest": "^24.9.0"
-  },
-  "dependencies": {
-    "gitalk": "^1.5.0"
   }
 }
