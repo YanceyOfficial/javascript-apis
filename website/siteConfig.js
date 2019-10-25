@@ -85,10 +85,15 @@ const siteConfig = {
 
   // Add custom scripts here that would be placed in <script> tags.
   scripts: [
+    'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     '/js/code-block-buttons.js',
+    '/js/gitalk.js',
   ],
-  stylesheets: ['/css/code-block-buttons.css'],
+  stylesheets: [
+    'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css',
+    '/css/code-block-buttons.css',
+  ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
@@ -121,7 +126,7 @@ const siteConfig = {
   twitterUsername: 'YanceyOfficial',
 
   facebookAppId: 'yanceyleo',
-  facebookComments: 'true',
+  facebookComments: true,
 
   gitterUrl: 'https://gitter.im/yancey-official/community',
 
