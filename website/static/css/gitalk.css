@@ -3,6 +3,12 @@
   border: 1px solid #2e8555 !important;
   background-color: #2e8555 !important;
 }
+
+.gt-container .gt-btn-preview {
+  background-color: #ffffff !important;
+  color: #2e8555 !important;
+}
+
 .gt-container a {
   color: #2e8555 !important;
 }
