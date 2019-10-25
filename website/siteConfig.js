@@ -135,6 +135,7 @@ const siteConfig = {
   algolia: {
     apiKey: 'a98607f4dad08fe71f299bd7a7069cbe',
     indexName: 'javascript-apis',
+    appId: 'IKO6JIOZ69',
     algoliaOptions: {}, // Optional, if provided by Algolia
   },
 
