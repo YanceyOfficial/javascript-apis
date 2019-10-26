@@ -1,4 +1,73 @@
 /* your custom css */
+pre {
+  position: relative;
+}
+
+pre .btnIcon {
+  position: absolute;
+  top: 4px;
+  z-index: 2;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: 0;
+  color: #fff;
+  background-color: transparent;
+  height: 30px;
+  transition: all 0.25s ease-out;
+}
+
+pre .btnIcon:hover {
+  text-decoration: none;
+}
+
+.btnIcon__body {
+  align-items: center;
+  display: flex;
+}
+
+.btnIcon svg {
+  fill: currentColor;
+  margin-right: 0.4em;
+}
+
+.btnIcon__label {
+  font-size: 11px;
+}
+
+.btnClipboard {
+  right: 10px;
+}
+
+.gt-container .gt-btn {
+  color: #ffffff !important;
+  border: 1px solid #2e8555 !important;
+  background-color: #2e8555 !important;
+}
+
+.gt-container .gt-btn-preview {
+  background-color: #ffffff !important;
+  color: #2e8555 !important;
+}
+
+.gt-container a {
+  color: #2e8555 !important;
+}
+
+.gt-container .gt-link {
+  border-bottom: 1px dotted #2e8555 !important;
+}
+
+.gt-container .gt-svg svg {
+  fill: #2e8555 !important;
+}
+
+.gt-container .gt-ico-arrdown svg {
+  fill: #000000 !important;
+}
+
+.gt-container .gt-popup .gt-action.is--active::before {
+  background: #2e8555 !important;
+}
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }

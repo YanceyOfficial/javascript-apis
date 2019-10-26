@@ -99,11 +99,7 @@ const siteConfig = {
     '/js/code-block-buttons.js',
     '/js/gitalk.js',
   ],
-  stylesheets: [
-    'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css',
-    '/css/code-block-buttons.css',
-    '/css/gitalk.css',
-  ],
+  stylesheets: ['https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css'],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
