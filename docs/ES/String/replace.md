@@ -17,7 +17,8 @@ replace(searchValue: { [Symbol.replace](string: string, replacer: (substring: st
 
 - 第二个参数（替换值）可以是`字符串`或者`函数`，其中第二个参数是`字符串`时可以插入一些特殊的值
 
-> tip
+> TIP
+>
 > `replace()`方法有四种组合，分别是：
 >
 > - replace(substr, newSubStr)
@@ -30,7 +31,8 @@ replace(searchValue: { [Symbol.replace](string: string, replacer: (substring: st
 
 ## 示例
 
-> tip
+> TIP
+>
 > 以下示例均使用 `const str = 'can you Celebrate'`
 
 ### 特殊示例

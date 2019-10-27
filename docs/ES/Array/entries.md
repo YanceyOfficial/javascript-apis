@@ -13,7 +13,7 @@ entries(): IterableIterator<[number, T]>;
 
 方法返回一个新的 Array Iterator 对象，该对象包含数组中每个索引的键/值对。
 
-![iterator](/Object.entries.jpg)
+![iterator](/img/docImages/Object.entries.jpg)
 
 ## 示例
 

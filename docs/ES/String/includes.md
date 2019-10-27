@@ -38,3 +38,5 @@ str.includes(); // false
 
 在 Firefox 18~39 中该方法的名称为`contains`, 因为[bug 1102219](https://bugzilla.mozilla.org/show_bug.cgi?id=1102219)
 的存在，该方法被命名为`includes`.截止当前（2019/03/18）,除 IE 为实现此方法，其他浏览器均已实现。
+
+![can i use](/img/docImages/includes.jpg)

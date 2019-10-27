@@ -96,7 +96,7 @@ foo.call(1, 'a', 'b');
 
 ### 将类数组对象转换成数组
 
-下面各例将类数组对象转换为真正的数组，关于类数组对象，可以参考我的另一篇文章 [Array.from | JavaScript 全解析系列](https://js.yanceyleo.com/ECMAScript/Array/Array.from)，下面各例都会打印出 `["上帝啊", "请", "赐给我一个女孩吧"]`。
+下面各例将类数组对象转换为真正的数组，关于类数组对象，可以参考我的另一篇文章 [Array.from | JavaScript 全解析系列](https://js.yanceyleo.com/ES/Array/from)，下面各例都会打印出 `["上帝啊", "请", "赐给我一个女孩吧"]`。
 
 ```js
 function foo() {

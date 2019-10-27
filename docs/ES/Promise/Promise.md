@@ -295,7 +295,7 @@ task()
   });
 ```
 
-![Jietu20190415-172853.jpg](https://yancey-assets.oss-cn-beijing.aliyuncs.com/Jietu20190415-172853.jpg)
+![运行结果](/img/docImages/promise.jpg)
 
 运行结果如上图所示。我们知道，每次调用 then() 或者 catch() 都会返回一个新的 Promise 实例，通过指定处理函数的返回值，可以沿着一个链继续传递数据。
 

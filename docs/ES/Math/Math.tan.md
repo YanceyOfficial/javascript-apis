@@ -22,7 +22,7 @@ Math.tan(Math.PI / 2); // 16331239353195370
 Math.tan(0); // 0
 ```
 
-## Math.tanh() <Badge text="ES6"/>
+## Math.tanh()
 
 ### 语法
 
@@ -80,7 +80,7 @@ atan2(y: number, x: number): number;
 Math.atan2(Math.PI / 2, Math.PI / 6); // 1.2490457723982544
 ```
 
-## Math.atanh() <Badge text="ES6"/>
+## Math.atanh()
 
 ### 语法
 

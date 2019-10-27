@@ -15,7 +15,7 @@ defineProperties(o: any, properties: PropertyDescriptorMap & ThisType<any>): any
 
 > TIP
 >
-> 大部分理论知识都在[上一节](/ECMAScript/Object/Object.defineProperty), 因此本篇只举一个基本的例子.
+> 大部分理论知识都在[上一节](/ES/Object/defineProperty), 因此本篇只举一个基本的例子.
 
 ## 示例
 

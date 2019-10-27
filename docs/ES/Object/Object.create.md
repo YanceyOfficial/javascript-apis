@@ -145,7 +145,7 @@ if (typeof Object.create !== "function") {
 
 因为 null 是原型链的终点，因此以 null 为 \_\_proto\_\_ 创建的空对象是一个完全纯净的对象，看下图便一目了然。
 
-![Object.create(null)](/Object.create.jpg)
+![Object.create(null)](/img/docImages/Object.create.jpg)
 
 ## 参考
 

@@ -60,7 +60,7 @@ Math.acos(0); // 1.5707963267948966
 Math.acos(Math.PI / 4); // 0.6674572160283838
 ```
 
-## Math.acosh() <Badge text="ES6"/>
+## Math.acosh()
 
 ### 语法
 

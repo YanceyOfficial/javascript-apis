@@ -8,8 +8,6 @@
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
 
-const katexPlugin = require('remarkable-katex')
-
 // List of projects/orgs using your project for the users page.
 const users = [
   {
@@ -82,7 +80,7 @@ const siteConfig = {
 
   markdownPlugins: [
     function useRemarkableKatex(md) {
-      md.use(katexPlugin)
+      md.use(require('remarkable-katex'))
     },
   ],
 
@@ -98,8 +96,12 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     '/js/code-block-buttons.js',
     '/js/gitalk.js',
+    '/js/useKatex.js',
   ],
-  stylesheets: ['https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css'],
+  stylesheets: [
+    'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css',
+    'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css',
+  ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
@@ -149,8 +151,6 @@ const siteConfig = {
   scrollToTop: true,
 
   usePrism: ['jsx'],
-
-  markdownPlugins: [],
 }
 
 module.exports = siteConfig

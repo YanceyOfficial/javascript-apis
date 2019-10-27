@@ -66,7 +66,7 @@ Math.asin(0) // 0
 Math.asin(Math.PI / 4) // 0.9033391107665127
 ```
 
-## Math.asinh() <Badge text="ES6"/>
+## Math.asinh()
 
 ### 语法
 

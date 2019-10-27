@@ -61,7 +61,7 @@ function getBaseLog(x, y) {
 getBaseLog(10, 1000) // 2.9999999999999996
 ```
 
-## Math.log10() <Badge text="ES6"/>
+## Math.log10()
 
 ### 语法
 
@@ -80,7 +80,7 @@ Math.log10(1) // 0
 Math.log10(100) // 2
 ```
 
-## Math.log1p() <Badge text="ES6"/>
+## Math.log1p()
 
 ### 语法
 
@@ -92,7 +92,7 @@ log1p(x: number): number;
 
 返回一个数字加 1 后的自然对数，即计算 $ln(x + 1)$.
 
-![Math.log1p](/log1p.jpg)
+![Math.log1p](/img/docImages/log1p.jpg)
 
 ### 示例
 
@@ -101,7 +101,7 @@ Math.log1p(Math.E - 1) // 1
 Math.log1p(Math.pow(Math.E, 2) - 1) // 2.1269280110429722
 ```
 
-## Math.log2() <Badge text="ES6"/>
+## Math.log2()
 
 ### 语法
 
@@ -141,7 +141,7 @@ Math.sqrt(-1) // NaN
 Math.sqrt(1024) // 32
 ```
 
-## Math.cbrt() <Badge text="ES6"/>
+## Math.cbrt()
 
 ### 语法
 
@@ -182,7 +182,7 @@ Math.pow() // NaN
 Math.pow(2) // NaN
 ```
 
-## Math.hypot() <Badge text="ES6"/>
+## Math.hypot()
 
 ### 语法
 
@@ -205,7 +205,7 @@ Math.hypot(3, -4) // 5
 Math.hypot() // 0
 ```
 
-## Math.expm1() <Badge text="ES6"/>
+## Math.expm1()
 
 ### 语法
 

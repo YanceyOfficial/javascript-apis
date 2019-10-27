@@ -49,7 +49,7 @@ ECMAScript 中有两种属性：`数据属性` 和 `访问器属性`。
 
 简言之，定义了 **value** 或 **writable**，一定不能有 **get** 或 **set**，反之亦然，否则直接报错。
 
-![描述符可同时具有的键值](/defineProperty.jpg)
+![描述符可同时具有的键值](/img/docImages/defineProperty.jpg)
 
 ### Configurable
 
@@ -313,7 +313,7 @@ Object.defineProperty(obj, 'input', {
 })
 ```
 
-![MVVM?](/mvvm.jpg)
+![MVVM?](/img/docImages/mvvm.jpg)
 
 最后看一个关于继承的例子, 我们创建了一个 **Person** 构造函数, 它包括两个参数: **firstName** 和 **lastName**, 此构造函数暴露出四个属性: **firstName**, **lastName**, **fullName**, **species**, 我们想让前三个属性动态变化, 最后一个属性是一个常量而不允许变化.
 
