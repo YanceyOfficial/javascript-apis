@@ -41,7 +41,7 @@ const siteConfig = {
     { doc: 'BOM/bom', label: 'BOM' },
     { doc: 'DOM/dom', label: 'DOM' },
     { page: 'about', label: 'About' },
-    { href: 'https://github.com/YanceyOfficial', label: 'GitHub' },
+    { href: 'https://github.com/YanceyOfficial/javascript-apis', label: 'GitHub' },
     { blog: false },
     { search: true },
     { languages: true },
