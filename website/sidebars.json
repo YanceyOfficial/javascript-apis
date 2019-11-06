@@ -96,10 +96,6 @@
       "ES/Function/apply",
       "ES/Function/bind"
     ],
-    "Number": [
-      "ES/Number/parserInt",
-      "ES/Number/parserFloat"
-    ],
     "Promise": [
       "ES/Promise/promise",
       "ES/Promise/promiseA+",
