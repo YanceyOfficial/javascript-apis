@@ -138,9 +138,8 @@ const siteConfig = {
   gitterUrl: 'https://gitter.im/yancey-official/community',
 
   algolia: {
-    apiKey: '0cbe8db7114977ec76dae560ff01405b',
-    indexName: 'javascript-apis',
-    appId: 'Q3SMLHT07G',
+    apiKey: '3fab48c65c06ef486aa7fe5d484a76b2',
+    indexName: 'yanceyofficial_javascript-apis',
     algoliaOptions: {}, // Optional, if provided by Algolia
   },
 
