@@ -2,7 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/656ce5e5b0894f968bc2f98499f239a3)](https://app.codacy.com/app/YanceyOfficial/JavaScript-API-Set?utm_source=github.com&utm_medium=referral&utm_content=YanceyOfficial/JavaScript-API-Set&utm_campaign=Badge_Grade_Dashboard)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set)
 [![Node](https://img.shields.io/badge/node-%3E%3D8.0.0-green.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/YanceyOfficial/JavaScript-API-Set/pulls)
 [![Build Status](https://travis-ci.org/YanceyOfficial/javascript-apis.svg?branch=master)](https://travis-ci.org/YanceyOfficial/javascript-apis)
