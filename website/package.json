@@ -29,15 +29,15 @@
   },
   "homepage": "https://github.com/YanceyOfficial/javascript-apis#readme",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
+    "@babel/core": "^7.9.0",
     "babel-core": "^7.0.0-0",
-    "babel-jest": "^24.5.0",
+    "babel-jest": "^25.2.6",
     "babel-preset-env": "^1.7.0",
-    "docusaurus": "^1.14.0",
-    "eslint": "^6.5.1",
-    "eslint-plugin-react": "^7.16.0",
-    "husky": "^3.0.9",
-    "jest": "^24.9.0",
+    "docusaurus": "^1.14.4",
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.3",
+    "jest": "^25.2.7",
     "remarkable-katex": "^1.0.1"
   }
 }
