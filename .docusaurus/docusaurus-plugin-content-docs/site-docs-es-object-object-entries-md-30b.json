@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/entries",
+  "title": "Object.entries()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/Object.entries.md",
+  "permalink": "/docs/ES/Object/entries",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/Object.entries.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.values()",
+    "permalink": "/docs/ES/Object/values"
+  },
+  "next": {
+    "title": "Object.fromEntries()",
+    "permalink": "/docs/ES/Object/fromEntries"
+  }
+}

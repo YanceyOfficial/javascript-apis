@@ -1,0 +1,19 @@
+{
+  "id": "Promise/promiseA+",
+  "title": "Promise A+ 规范",
+  "description": "**一个开放、可靠且通用的 JavaScript Promise 标准。由开发者制定，供开发者参考。**",
+  "source": "@site/docs/Promise/PromiseA+.md",
+  "permalink": "/docs/Promise/promiseA+",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Promise/PromiseA+.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Promise",
+    "permalink": "/docs/Promise/promise"
+  },
+  "next": {
+    "title": "手写 Promise",
+    "permalink": "/docs/Promise/promiseWheel"
+  }
+}

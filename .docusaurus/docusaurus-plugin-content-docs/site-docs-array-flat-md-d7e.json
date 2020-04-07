@@ -1,0 +1,19 @@
+{
+  "id": "Array/flat",
+  "title": "flat()",
+  "description": "## 语法",
+  "source": "@site/docs/Array/flat.md",
+  "permalink": "/docs/Array/flat",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Array/flat.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "entries()",
+    "permalink": "/docs/Array/entries"
+  },
+  "next": {
+    "title": "Math.正弦系列()",
+    "permalink": "/docs/Math/sin"
+  }
+}

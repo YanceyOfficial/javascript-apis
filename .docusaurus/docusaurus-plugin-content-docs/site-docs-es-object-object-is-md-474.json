@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/is",
+  "title": "Object.is()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/Object.is.md",
+  "permalink": "/docs/ES/Object/is",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/Object.is.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.create()",
+    "permalink": "/docs/ES/Object/create"
+  },
+  "next": {
+    "title": "Object.defineProperty()",
+    "permalink": "/docs/ES/Object/defineProperty"
+  }
+}

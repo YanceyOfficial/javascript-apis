@@ -1,0 +1,19 @@
+{
+  "id": "Promise/promise",
+  "title": "Promise",
+  "description": "> 相比于回调函数，Promise 解决了 “回调地狱” 和 “信任问题” 等痛点，并且大大提高了代码的可读性。在现代前端开发中，Promise 几乎成了处理异步的首选（虽然还有更方便的 async/await，逃）。这篇文章从 Promise 的思想和运行机制入手，深入理解每个 API，最后手写一个遵循 Promise/A+ 规范的 Promise 来。",
+  "source": "@site/docs/Promise/Promise.md",
+  "permalink": "/docs/Promise/promise",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Promise/Promise.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "bind()",
+    "permalink": "/docs/Function/bind"
+  },
+  "next": {
+    "title": "Promise A+ 规范",
+    "permalink": "/docs/Promise/promiseA+"
+  }
+}

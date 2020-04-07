@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/match",
+  "title": "match()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/match.md",
+  "permalink": "/docs/ES/String/match",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/match.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "localeCompare()",
+    "permalink": "/docs/ES/String/localeCompare"
+  },
+  "next": {
+    "title": "normalize()",
+    "permalink": "/docs/ES/String/normalize"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "Math/max",
+  "title": "Math.max/min()",
+  "description": "## 语法",
+  "source": "@site/docs/Math/Math.max_min.md",
+  "permalink": "/docs/Math/max",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Math/Math.max_min.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Math.imul()",
+    "permalink": "/docs/Math/imul"
+  },
+  "next": {
+    "title": "Math.random()",
+    "permalink": "/docs/Math/random"
+  }
+}

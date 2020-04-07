@@ -1,0 +1,19 @@
+{
+  "id": "String/normalize",
+  "title": "normalize()",
+  "description": "## 语法",
+  "source": "@site/docs/String/normalize.md",
+  "permalink": "/docs/String/normalize",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/normalize.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "match()",
+    "permalink": "/docs/String/match"
+  },
+  "next": {
+    "title": "padEnd()",
+    "permalink": "/docs/String/padEnd"
+  }
+}

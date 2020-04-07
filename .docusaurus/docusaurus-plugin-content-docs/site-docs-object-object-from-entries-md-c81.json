@@ -1,0 +1,19 @@
+{
+  "id": "Object/fromEntries",
+  "title": "Object.fromEntries()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/Object.fromEntries.md",
+  "permalink": "/docs/Object/fromEntries",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.fromEntries.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.entries()",
+    "permalink": "/docs/Object/entries"
+  },
+  "next": {
+    "title": "Object.getOwnPropertyDescriptor()",
+    "permalink": "/docs/Object/getOwnPropertyDescriptor"
+  }
+}

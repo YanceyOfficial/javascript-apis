@@ -1,0 +1,15 @@
+{
+  "id": "Object/hasOwnProperty",
+  "title": "hasOwnProperty()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/hasOwnProperty.md",
+  "permalink": "/docs/Object/hasOwnProperty",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/hasOwnProperty.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "next": {
+    "title": "Object.getPrototypeOf()",
+    "permalink": "/docs/Object/getPrototypeOf"
+  }
+}

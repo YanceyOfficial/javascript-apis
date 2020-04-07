@@ -1,0 +1,19 @@
+{
+  "id": "String/match",
+  "title": "match()",
+  "description": "## 语法",
+  "source": "@site/docs/String/match.md",
+  "permalink": "/docs/String/match",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/match.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "localeCompare()",
+    "permalink": "/docs/String/localeCompare"
+  },
+  "next": {
+    "title": "normalize()",
+    "permalink": "/docs/String/normalize"
+  }
+}

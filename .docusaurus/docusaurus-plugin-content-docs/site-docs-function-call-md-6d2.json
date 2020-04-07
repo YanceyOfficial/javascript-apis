@@ -1,0 +1,19 @@
+{
+  "id": "Function/call",
+  "title": "call()",
+  "description": "## 语法",
+  "source": "@site/docs/Function/call.md",
+  "permalink": "/docs/Function/call",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Function/call.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Math.trunc()",
+    "permalink": "/docs/Math/trunc"
+  },
+  "next": {
+    "title": "apply()",
+    "permalink": "/docs/Function/apply"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/substring",
+  "title": "substring()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/substring.md",
+  "permalink": "/docs/ES/String/substring",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/substring.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "substr()",
+    "permalink": "/docs/ES/String/substr"
+  },
+  "next": {
+    "title": "to...Case()",
+    "permalink": "/docs/ES/String/to...Case"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "String/padEnd",
+  "title": "padEnd()",
+  "description": "## 语法",
+  "source": "@site/docs/String/padEnd.md",
+  "permalink": "/docs/String/padEnd",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/padEnd.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "normalize()",
+    "permalink": "/docs/String/normalize"
+  },
+  "next": {
+    "title": "padStart()",
+    "permalink": "/docs/String/padStart"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ES/Math/cos",
+  "title": "Math.余弦系列()",
+  "description": "## Math.cos()",
+  "source": "@site/docs/ES/Math/Math.cos.md",
+  "permalink": "/docs/ES/Math/cos",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Math/Math.cos.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Math.正切系列()",
+    "permalink": "/docs/ES/Math/tan"
+  },
+  "next": {
+    "title": "Math.abs()",
+    "permalink": "/docs/ES/Math/abs"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "String/padStart",
+  "title": "padStart()",
+  "description": "## 语法",
+  "source": "@site/docs/String/padStart.md",
+  "permalink": "/docs/String/padStart",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/padStart.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "padEnd()",
+    "permalink": "/docs/String/padEnd"
+  },
+  "next": {
+    "title": "repeat()",
+    "permalink": "/docs/String/repeat"
+  }
+}

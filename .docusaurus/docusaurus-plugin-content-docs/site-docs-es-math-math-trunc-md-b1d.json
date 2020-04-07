@@ -1,0 +1,17 @@
+{
+  "id": "ES/Math/trunc",
+  "title": "Math.trunc()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Math/Math.trunc.md",
+  "permalink": "/docs/ES/Math/trunc",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Math/Math.trunc.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Math.sign()",
+    "permalink": "/docs/ES/Math/sign"
+  },
+  "next": {
+    "title": "call()",
+    "permalink": "/docs/ES/Function/call"
+  }
+}

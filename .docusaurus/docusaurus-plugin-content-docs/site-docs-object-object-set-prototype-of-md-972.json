@@ -1,0 +1,19 @@
+{
+  "id": "Object/setPrototypeOf",
+  "title": "Object.setPrototypeOf()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/Object.setPrototypeOf.md",
+  "permalink": "/docs/Object/setPrototypeOf",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.setPrototypeOf.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.isFrozen()",
+    "permalink": "/docs/Object/isFrozen"
+  },
+  "next": {
+    "title": "charAt()",
+    "permalink": "/docs/String/charAt"
+  }
+}

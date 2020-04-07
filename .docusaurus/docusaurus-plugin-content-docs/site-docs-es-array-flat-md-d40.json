@@ -1,0 +1,17 @@
+{
+  "id": "ES/Array/flat",
+  "title": "flat()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Array/flat.md",
+  "permalink": "/docs/ES/Array/flat",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Array/flat.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "entries()",
+    "permalink": "/docs/ES/Array/entries"
+  },
+  "next": {
+    "title": "Math.正弦系列()",
+    "permalink": "/docs/ES/Math/sin"
+  }
+}

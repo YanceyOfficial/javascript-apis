@@ -1,0 +1,19 @@
+{
+  "id": "Object/isPrototypeOf",
+  "title": "isPrototypeOf()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/isPrototypeOf.md",
+  "permalink": "/docs/Object/isPrototypeOf",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/isPrototypeOf.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.getPrototypeOf()",
+    "permalink": "/docs/Object/getPrototypeOf"
+  },
+  "next": {
+    "title": "propertyIsEnumerable()",
+    "permalink": "/docs/Object/propertyIsEnumerable"
+  }
+}

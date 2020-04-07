@@ -1,0 +1,19 @@
+{
+  "id": "Object/freeze",
+  "title": "Object.freeze()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/Object.freeze.md",
+  "permalink": "/docs/Object/freeze",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.freeze.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.seal()",
+    "permalink": "/docs/Object/seal"
+  },
+  "next": {
+    "title": "Object.isExtensible()",
+    "permalink": "/docs/Object/isExtensible"
+  }
+}

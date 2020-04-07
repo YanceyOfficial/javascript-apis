@@ -1,0 +1,19 @@
+{
+  "id": "String/to...Case",
+  "title": "to...Case()",
+  "description": "## 语法",
+  "source": "@site/docs/String/to...Case.md",
+  "permalink": "/docs/String/to...Case",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/to...Case.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "substring()",
+    "permalink": "/docs/String/substring"
+  },
+  "next": {
+    "title": "trim() trimLeft() trimRight()",
+    "permalink": "/docs/String/trim"
+  }
+}

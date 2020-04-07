@@ -1,0 +1,19 @@
+{
+  "id": "Math/cos",
+  "title": "Math.余弦系列()",
+  "description": "## Math.cos()",
+  "source": "@site/docs/Math/Math.cos.md",
+  "permalink": "/docs/Math/cos",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Math/Math.cos.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Math.正切系列()",
+    "permalink": "/docs/Math/tan"
+  },
+  "next": {
+    "title": "Math.abs()",
+    "permalink": "/docs/Math/abs"
+  }
+}

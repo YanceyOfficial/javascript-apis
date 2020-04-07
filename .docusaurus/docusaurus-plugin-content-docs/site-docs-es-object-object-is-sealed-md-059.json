@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/isSealed",
+  "title": "Object.isSealed()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/Object.isSealed.md",
+  "permalink": "/docs/ES/Object/isSealed",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/Object.isSealed.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.isExtensible()",
+    "permalink": "/docs/ES/Object/isExtensible"
+  },
+  "next": {
+    "title": "Object.isFrozen()",
+    "permalink": "/docs/ES/Object/isFrozen"
+  }
+}

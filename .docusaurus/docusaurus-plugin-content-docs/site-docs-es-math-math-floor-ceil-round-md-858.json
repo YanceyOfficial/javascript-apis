@@ -1,0 +1,17 @@
+{
+  "id": "ES/Math/floor",
+  "title": "Math.floor/ceil/round()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Math/Math.floor_ceil_round.md",
+  "permalink": "/docs/ES/Math/floor",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Math/Math.floor_ceil_round.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Math.clz32()",
+    "permalink": "/docs/ES/Math/clz32"
+  },
+  "next": {
+    "title": "Math.数学公式合集()",
+    "permalink": "/docs/ES/Math/formulas"
+  }
+}

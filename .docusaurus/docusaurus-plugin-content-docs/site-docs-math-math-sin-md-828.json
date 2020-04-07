@@ -1,0 +1,19 @@
+{
+  "id": "Math/sin",
+  "title": "Math.正弦系列()",
+  "description": "在谈三角函数系列之前，先复习一下数学知识。一个完整的圆的弧度是 `2π`，因此由 `2π rad = 360°` 可推导出 `1°= π/180 rad`。所以 30° 在 JavaScript 中可表示为 `Math.PI / 6`.",
+  "source": "@site/docs/Math/Math.sin.md",
+  "permalink": "/docs/Math/sin",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Math/Math.sin.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "flat()",
+    "permalink": "/docs/Array/flat"
+  },
+  "next": {
+    "title": "Math.正切系列()",
+    "permalink": "/docs/Math/tan"
+  }
+}

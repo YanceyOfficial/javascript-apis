@@ -1,0 +1,19 @@
+{
+  "id": "String/endsWith",
+  "title": "endsWith()",
+  "description": "## 语法",
+  "source": "@site/docs/String/endsWith.md",
+  "permalink": "/docs/String/endsWith",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/endsWith.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "concat()",
+    "permalink": "/docs/String/concat"
+  },
+  "next": {
+    "title": "includes()",
+    "permalink": "/docs/String/includes"
+  }
+}

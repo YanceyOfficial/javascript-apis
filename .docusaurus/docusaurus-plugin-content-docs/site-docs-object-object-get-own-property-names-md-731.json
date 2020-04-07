@@ -1,0 +1,19 @@
+{
+  "id": "Object/getOwnPropertyNames",
+  "title": "Object.getOwnPropertyNames()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/Object.getOwnPropertyNames.md",
+  "permalink": "/docs/Object/getOwnPropertyNames",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.getOwnPropertyNames.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.getOwnPropertyDescriptors()",
+    "permalink": "/docs/Object/getOwnPropertyDescriptors"
+  },
+  "next": {
+    "title": "Object.getOwnPropertySymbols()",
+    "permalink": "/docs/Object/getOwnPropertySymbols"
+  }
+}

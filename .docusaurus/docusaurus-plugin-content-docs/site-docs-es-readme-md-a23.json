@@ -1,0 +1,8 @@
+{
+  "id": "ES/ecmascript",
+  "title": "ECMAScript",
+  "description": "I love ECMAScript",
+  "source": "@site/docs/ES/README.md",
+  "permalink": "/docs/ES/ecmascript",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/README.md"
+}

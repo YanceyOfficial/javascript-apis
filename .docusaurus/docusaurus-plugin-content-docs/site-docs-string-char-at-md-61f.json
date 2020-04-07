@@ -1,0 +1,19 @@
+{
+  "id": "String/charAt",
+  "title": "charAt()",
+  "description": "## 语法",
+  "source": "@site/docs/String/charAt.md",
+  "permalink": "/docs/String/charAt",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/charAt.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.setPrototypeOf()",
+    "permalink": "/docs/Object/setPrototypeOf"
+  },
+  "next": {
+    "title": "charCodeAt()",
+    "permalink": "/docs/String/charCodeAt"
+  }
+}

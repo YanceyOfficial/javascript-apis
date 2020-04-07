@@ -1,0 +1,19 @@
+{
+  "id": "String/fromCodePoint",
+  "title": "String.fromCodePoint()",
+  "description": "## 语法",
+  "source": "@site/docs/String/String.fromCodePoint.md",
+  "permalink": "/docs/String/fromCodePoint",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/String.fromCodePoint.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "String.fromCharCode()",
+    "permalink": "/docs/String/fromCharCode"
+  },
+  "next": {
+    "title": "substr()",
+    "permalink": "/docs/String/substr"
+  }
+}

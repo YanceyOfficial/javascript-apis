@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/assign",
+  "title": "Object.assign()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/Object.assign.md",
+  "permalink": "/docs/ES/Object/assign",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/Object.assign.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "propertyIsEnumerable()",
+    "permalink": "/docs/ES/Object/propertyIsEnumerable"
+  },
+  "next": {
+    "title": "Object.create()",
+    "permalink": "/docs/ES/Object/create"
+  }
+}

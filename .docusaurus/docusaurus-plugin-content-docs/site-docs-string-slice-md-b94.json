@@ -1,0 +1,19 @@
+{
+  "id": "String/slice",
+  "title": "slice()",
+  "description": "## 语法",
+  "source": "@site/docs/String/slice.md",
+  "permalink": "/docs/String/slice",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/slice.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "search()",
+    "permalink": "/docs/String/search"
+  },
+  "next": {
+    "title": "split()",
+    "permalink": "/docs/String/split"
+  }
+}

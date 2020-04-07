@@ -1,0 +1,17 @@
+{
+  "id": "ES/Function/apply",
+  "title": "apply()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Function/apply.md",
+  "permalink": "/docs/ES/Function/apply",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Function/apply.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "call()",
+    "permalink": "/docs/ES/Function/call"
+  },
+  "next": {
+    "title": "bind()",
+    "permalink": "/docs/ES/Function/bind"
+  }
+}

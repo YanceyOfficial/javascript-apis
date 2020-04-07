@@ -1,0 +1,10 @@
+{
+  "id": "Array/slice",
+  "title": "slice()",
+  "description": "## 语法",
+  "source": "@site/docs/Array/slice.md",
+  "permalink": "/docs/Array/slice",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Array/slice.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

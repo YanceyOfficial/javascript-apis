@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/lastIndexOf",
+  "title": "lastIndexOf()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/lastIndexOf.md",
+  "permalink": "/docs/ES/String/lastIndexOf",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/lastIndexOf.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "indexOf()",
+    "permalink": "/docs/ES/String/indexOf"
+  },
+  "next": {
+    "title": "localeCompare()",
+    "permalink": "/docs/ES/String/localeCompare"
+  }
+}

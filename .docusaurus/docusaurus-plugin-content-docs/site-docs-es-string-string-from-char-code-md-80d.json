@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/fromCharCode",
+  "title": "String.fromCharCode()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/String.fromCharCode.md",
+  "permalink": "/docs/ES/String/fromCharCode",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/String.fromCharCode.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "startsWith()",
+    "permalink": "/docs/ES/String/startsWith"
+  },
+  "next": {
+    "title": "String.fromCodePoint()",
+    "permalink": "/docs/ES/String/fromCodePoint"
+  }
+}

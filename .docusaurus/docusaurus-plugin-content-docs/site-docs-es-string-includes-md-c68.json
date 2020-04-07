@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/includes",
+  "title": "includes()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/includes.md",
+  "permalink": "/docs/ES/String/includes",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/includes.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "endsWith()",
+    "permalink": "/docs/ES/String/endsWith"
+  },
+  "next": {
+    "title": "indexOf()",
+    "permalink": "/docs/ES/String/indexOf"
+  }
+}

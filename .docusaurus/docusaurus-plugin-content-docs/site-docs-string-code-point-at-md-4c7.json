@@ -1,0 +1,19 @@
+{
+  "id": "String/codePointAt",
+  "title": "codePointAt()",
+  "description": "## 语法",
+  "source": "@site/docs/String/codePointAt.md",
+  "permalink": "/docs/String/codePointAt",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/codePointAt.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "charCodeAt()",
+    "permalink": "/docs/String/charCodeAt"
+  },
+  "next": {
+    "title": "concat()",
+    "permalink": "/docs/String/concat"
+  }
+}

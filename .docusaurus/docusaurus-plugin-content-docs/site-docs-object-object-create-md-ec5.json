@@ -1,0 +1,19 @@
+{
+  "id": "Object/create",
+  "title": "Object.create()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/Object.create.md",
+  "permalink": "/docs/Object/create",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.create.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.assign()",
+    "permalink": "/docs/Object/assign"
+  },
+  "next": {
+    "title": "Object.is()",
+    "permalink": "/docs/Object/is"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/charAt",
+  "title": "charAt()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/charAt.md",
+  "permalink": "/docs/ES/String/charAt",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/charAt.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.setPrototypeOf()",
+    "permalink": "/docs/ES/Object/setPrototypeOf"
+  },
+  "next": {
+    "title": "charCodeAt()",
+    "permalink": "/docs/ES/String/charCodeAt"
+  }
+}

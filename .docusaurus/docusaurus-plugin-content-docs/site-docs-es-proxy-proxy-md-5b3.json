@@ -1,0 +1,13 @@
+{
+  "id": "ES/Proxy/proxy",
+  "title": "Proxy 和 Reflect",
+  "description": "> 一提到代理，立刻就想到 Fan Qiang. -- 鲁迅",
+  "source": "@site/docs/ES/Proxy/Proxy.md",
+  "permalink": "/docs/ES/Proxy/proxy",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Proxy/Proxy.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "手写 Promise",
+    "permalink": "/docs/ES/Promise/promiseWheel"
+  }
+}

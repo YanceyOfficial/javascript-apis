@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/defineProperty",
+  "title": "Object.defineProperty()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/Object.defineProperty.md",
+  "permalink": "/docs/ES/Object/defineProperty",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/Object.defineProperty.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.is()",
+    "permalink": "/docs/ES/Object/is"
+  },
+  "next": {
+    "title": "Object.defineProperties()",
+    "permalink": "/docs/ES/Object/defineProperties"
+  }
+}

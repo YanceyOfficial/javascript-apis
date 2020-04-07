@@ -1,0 +1,19 @@
+{
+  "id": "Object/isSealed",
+  "title": "Object.isSealed()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/Object.isSealed.md",
+  "permalink": "/docs/Object/isSealed",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.isSealed.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.isExtensible()",
+    "permalink": "/docs/Object/isExtensible"
+  },
+  "next": {
+    "title": "Object.isFrozen()",
+    "permalink": "/docs/Object/isFrozen"
+  }
+}

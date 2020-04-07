@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/seal",
+  "title": "Object.seal()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/Object.seal.md",
+  "permalink": "/docs/ES/Object/seal",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/Object.seal.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.preventExtensions()",
+    "permalink": "/docs/ES/Object/preventExtensions"
+  },
+  "next": {
+    "title": "Object.freeze()",
+    "permalink": "/docs/ES/Object/freeze"
+  }
+}

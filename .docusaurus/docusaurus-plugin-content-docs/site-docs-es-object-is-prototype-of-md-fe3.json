@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/isPrototypeOf",
+  "title": "isPrototypeOf()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/isPrototypeOf.md",
+  "permalink": "/docs/ES/Object/isPrototypeOf",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/isPrototypeOf.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.getPrototypeOf()",
+    "permalink": "/docs/ES/Object/getPrototypeOf"
+  },
+  "next": {
+    "title": "propertyIsEnumerable()",
+    "permalink": "/docs/ES/Object/propertyIsEnumerable"
+  }
+}

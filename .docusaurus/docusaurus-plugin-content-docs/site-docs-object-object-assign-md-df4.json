@@ -1,0 +1,19 @@
+{
+  "id": "Object/assign",
+  "title": "Object.assign()",
+  "description": "## 语法",
+  "source": "@site/docs/Object/Object.assign.md",
+  "permalink": "/docs/Object/assign",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.assign.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "propertyIsEnumerable()",
+    "permalink": "/docs/Object/propertyIsEnumerable"
+  },
+  "next": {
+    "title": "Object.create()",
+    "permalink": "/docs/Object/create"
+  }
+}

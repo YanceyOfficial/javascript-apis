@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/endsWith",
+  "title": "endsWith()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/endsWith.md",
+  "permalink": "/docs/ES/String/endsWith",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/endsWith.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "concat()",
+    "permalink": "/docs/ES/String/concat"
+  },
+  "next": {
+    "title": "includes()",
+    "permalink": "/docs/ES/String/includes"
+  }
+}

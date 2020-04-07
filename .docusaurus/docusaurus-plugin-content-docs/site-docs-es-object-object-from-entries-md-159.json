@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/fromEntries",
+  "title": "Object.fromEntries()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/Object.fromEntries.md",
+  "permalink": "/docs/ES/Object/fromEntries",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/Object.fromEntries.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.entries()",
+    "permalink": "/docs/ES/Object/entries"
+  },
+  "next": {
+    "title": "Object.getOwnPropertyDescriptor()",
+    "permalink": "/docs/ES/Object/getOwnPropertyDescriptor"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ES/Object/getOwnPropertyDescriptor",
+  "title": "Object.getOwnPropertyDescriptor()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Object/Object.getOwnPropertyDescriptor.md",
+  "permalink": "/docs/ES/Object/getOwnPropertyDescriptor",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Object/Object.getOwnPropertyDescriptor.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Object.fromEntries()",
+    "permalink": "/docs/ES/Object/fromEntries"
+  },
+  "next": {
+    "title": "Object.getOwnPropertyDescriptors()",
+    "permalink": "/docs/ES/Object/getOwnPropertyDescriptors"
+  }
+}

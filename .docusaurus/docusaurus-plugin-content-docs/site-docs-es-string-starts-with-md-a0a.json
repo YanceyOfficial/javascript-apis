@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/startsWith",
+  "title": "startsWith()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/startsWith.md",
+  "permalink": "/docs/ES/String/startsWith",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/startsWith.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "split()",
+    "permalink": "/docs/ES/String/split"
+  },
+  "next": {
+    "title": "String.fromCharCode()",
+    "permalink": "/docs/ES/String/fromCharCode"
+  }
+}

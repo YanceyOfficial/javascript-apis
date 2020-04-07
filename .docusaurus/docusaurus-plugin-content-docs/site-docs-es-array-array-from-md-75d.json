@@ -1,0 +1,17 @@
+{
+  "id": "ES/Array/from",
+  "title": "Array.from()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/Array/Array.from.md",
+  "permalink": "/docs/ES/Array/from",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/Array/Array.from.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "trim() trimLeft() trimLeft()",
+    "permalink": "/docs/ES/String/trim"
+  },
+  "next": {
+    "title": "Array.of()",
+    "permalink": "/docs/ES/Array/of"
+  }
+}

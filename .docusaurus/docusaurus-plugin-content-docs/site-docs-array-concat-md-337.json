@@ -1,0 +1,19 @@
+{
+  "id": "Array/concat",
+  "title": "concat()",
+  "description": "## 语法",
+  "source": "@site/docs/Array/concat.md",
+  "permalink": "/docs/Array/concat",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Array/concat.md",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "Array.isArray()",
+    "permalink": "/docs/Array/isArray"
+  },
+  "next": {
+    "title": "copyWithin()",
+    "permalink": "/docs/Array/copyWithin"
+  }
+}

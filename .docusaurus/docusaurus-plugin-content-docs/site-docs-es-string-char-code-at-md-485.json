@@ -1,0 +1,17 @@
+{
+  "id": "ES/String/charCodeAt",
+  "title": "charCodeAt()",
+  "description": "## 语法",
+  "source": "@site/docs/ES/String/charCodeAt.md",
+  "permalink": "/docs/ES/String/charCodeAt",
+  "editUrl": "https://github.com/facebook/docusaurus/edit/master/website/docs/ES/String/charCodeAt.md",
+  "sidebar": "ecmascript",
+  "previous": {
+    "title": "charAt()",
+    "permalink": "/docs/ES/String/charAt"
+  },
+  "next": {
+    "title": "codePointAt()",
+    "permalink": "/docs/ES/String/codePointAt"
+  }
+}
