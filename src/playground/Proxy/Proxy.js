@@ -35,25 +35,26 @@
 // proxy.age = 'string'
 // proxy.age = 'string'
 
-class Animal {
-  constructor(name, age) {
-    this.name = name
-    this.age = age
-  }
+const proxy = new Proxy(
+  {},
+  {
+    ownKeys(trapTarget) {
+      return Reflect.ownKeys(trapTarget).filter((key) => {
+        return typeof key !== 'string' || key[0] !== '_'
+      })
+    },
+  },
+)
 
-  bark() {
-    return `Hi, I'm ${this.name}.`
-  }
-}
+proxy.name = 'public property'
+proxy._name = 'private property'
+proxy.age = 18
+proxy[Symbol('symbolName')] = 'symbol property'
 
-class Dog extends Animal {
-  constructor(name, age, color) {
-    super(name, age)
+Object.defineProperty(proxy, 'age', {
+  enumerable: false,
+})
 
-    this.color = color
-  }
-
-  eat() {
-    return `I eat 💩.`
-  }
-}
+console.log(Object.getOwnPropertyNames(proxy)) // [ 'name', 'age' ]
+console.log(Object.keys(proxy)) // [ 'name' ]
+console.log(Object.getOwnPropertySymbols(proxy)) // [ Symbol(symbolName) ]
