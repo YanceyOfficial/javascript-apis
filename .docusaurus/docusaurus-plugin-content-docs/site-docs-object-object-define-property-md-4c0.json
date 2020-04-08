@@ -5,8 +5,8 @@
   "source": "@site/docs/Object/Object.defineProperty.md",
   "permalink": "/docs/Object/defineProperty",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Object/Object.defineProperty.md",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
+  "lastUpdatedBy": "YanceyOfficial",
+  "lastUpdatedAt": 1586254669,
   "sidebar": "ecmascript",
   "previous": {
     "title": "Object.is()",

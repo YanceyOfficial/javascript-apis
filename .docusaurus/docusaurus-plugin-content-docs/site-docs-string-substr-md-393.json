@@ -5,8 +5,8 @@
   "source": "@site/docs/String/substr.md",
   "permalink": "/docs/String/substr",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/String/substr.md",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
+  "lastUpdatedBy": "YanceyOfficial",
+  "lastUpdatedAt": 1586254669,
   "sidebar": "ecmascript",
   "previous": {
     "title": "String.fromCodePoint()",
