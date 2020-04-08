@@ -25,7 +25,7 @@ Runs the test watcher in an interactive mode. By default, runs tests related to 
 
 ### `yarn build`
 
-Builds the app for production to the `website/build` folder. It correctly bundles the app in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. The app is ready to be deployed!
+Builds the app for production to the `build` folder. It correctly bundles the app in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. The app is ready to be deployed!
 
 ## WeChat Official account
 
