@@ -16,7 +16,7 @@ export default {
       "logo": {
         "alt": "JavaScript API 全解析",
         "src": "img/logo.png",
-        "href": "https://js.yanceyleo.com/docs/Object/hasOwnProperty",
+        "href": "/docs/Object/hasOwnProperty",
         "target": "_self"
       },
       "links": [
@@ -62,7 +62,8 @@ export default {
   ],
   "stylesheets": [
     "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css",
-    "https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css"
+    "https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css",
+    "/css/custom.css"
   ],
   "presets": [
     [

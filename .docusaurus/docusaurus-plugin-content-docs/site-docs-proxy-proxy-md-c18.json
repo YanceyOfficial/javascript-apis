@@ -1,7 +1,7 @@
 {
   "id": "Proxy/proxy",
   "title": "Proxy 和 Reflect",
-  "description": "> 一提到代理，立刻就想到 Fan Qiang. -- 鲁迅",
+  "description": ":::tip",
   "source": "@site/docs/Proxy/Proxy.md",
   "permalink": "/docs/Proxy/proxy",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Proxy/Proxy.md",

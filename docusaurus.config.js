@@ -19,6 +19,7 @@ module.exports = {
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css',
     'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css',
+    '/css/custom.css'
   ],
   plugins: [
     '@docusaurus/plugin-ideal-image',
@@ -35,7 +36,7 @@ module.exports = {
       logo: {
         alt: 'JavaScript API 全解析',
         src: 'img/logo.png',
-        href: 'https://js.yanceyleo.com/docs/Object/hasOwnProperty', // default to siteConfig.baseUrl
+        href: '/docs/Object/hasOwnProperty', // default to siteConfig.baseUrl
         target: '_self', // by default, this value is calculated based on the `href` attribute (the external link will open in a new tab, all others in the current one)
       },
       links: [

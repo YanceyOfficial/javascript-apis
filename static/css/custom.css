@@ -1,4 +1,5 @@
 /* your custom css */
+
 pre {
   position: relative;
 }
@@ -44,25 +45,25 @@ pre .btnIcon:hover {
 
 .gt-container .gt-btn {
   color: #ffffff !important;
-  border: 1px solid #2e8555 !important;
-  background-color: #2e8555 !important;
+  border: 1px solid var(--ifm-color-primary) !important;
+  background-color: var(--ifm-color-primary) !important;
 }
 
 .gt-container .gt-btn-preview {
   background-color: #ffffff !important;
-  color: #2e8555 !important;
+  color: var(--ifm-color-primary) !important;
 }
 
 .gt-container a {
-  color: #2e8555 !important;
+  color: var(--ifm-color-primary) !important;
 }
 
 .gt-container .gt-link {
-  border-bottom: 1px dotted #2e8555 !important;
+  border-bottom: 1px dotted var(--ifm-color-primary) !important;
 }
 
 .gt-container .gt-svg svg {
-  fill: #2e8555 !important;
+  fill: var(--ifm-color-primary) !important;
 }
 
 .gt-container .gt-ico-arrdown svg {
@@ -70,7 +71,7 @@ pre .btnIcon:hover {
 }
 
 .gt-container .gt-popup .gt-action.is--active::before {
-  background: #2e8555 !important;
+  background: var(--ifm-color-primary) !important;
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
