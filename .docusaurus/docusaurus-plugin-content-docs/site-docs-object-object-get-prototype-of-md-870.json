@@ -4,7 +4,7 @@
   "description": "## 语法",
   "source": "@site/docs/Object/Object.getPrototypeOf.md",
   "permalink": "/docs/Object/getPrototypeOf",
-  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.getPrototypeOf.md",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Object/Object.getPrototypeOf.md",
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",

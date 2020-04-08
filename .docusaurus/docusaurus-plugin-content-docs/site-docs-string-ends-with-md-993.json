@@ -4,7 +4,7 @@
   "description": "## 语法",
   "source": "@site/docs/String/endsWith.md",
   "permalink": "/docs/String/endsWith",
-  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/endsWith.md",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/String/endsWith.md",
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",

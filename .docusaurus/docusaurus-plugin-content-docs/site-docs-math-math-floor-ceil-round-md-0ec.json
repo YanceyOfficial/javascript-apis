@@ -4,7 +4,7 @@
   "description": "## 语法",
   "source": "@site/docs/Math/Math.floor_ceil_round.md",
   "permalink": "/docs/Math/floor",
-  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Math/Math.floor_ceil_round.md",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Math/Math.floor_ceil_round.md",
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",

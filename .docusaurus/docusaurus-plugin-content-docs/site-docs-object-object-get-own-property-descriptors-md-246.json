@@ -4,7 +4,7 @@
   "description": "## 语法",
   "source": "@site/docs/Object/Object.getOwnPropertyDescriptors.md",
   "permalink": "/docs/Object/getOwnPropertyDescriptors",
-  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Object/Object.getOwnPropertyDescriptors.md",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Object/Object.getOwnPropertyDescriptors.md",
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",

@@ -70,7 +70,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "/Users/yancey/code/javascript-apis/sidebars.js",
-          "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs",
+          "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master",
           "remarkPlugins": [
             null
           ],

@@ -4,7 +4,7 @@
   "description": "## 语法",
   "source": "@site/docs/String/codePointAt.md",
   "permalink": "/docs/String/codePointAt",
-  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/String/codePointAt.md",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/String/codePointAt.md",
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",

@@ -69,7 +69,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/YanceyOfficial/javascript-apis/tree/master/docs',
+            'https://github.com/YanceyOfficial/javascript-apis/tree/master',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
           showLastUpdateAuthor: true,

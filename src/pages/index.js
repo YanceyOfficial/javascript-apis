@@ -58,9 +58,9 @@ function Home() {
   const context = useDocusaurusContext()
   const { siteConfig = {} } = context
 
-  // useEffect(() => {
-  //   window.location.href = '/docs/Object/hasOwnProperty'
-  // }, [])
+  useEffect(() => {
+    window.location.href = '/docs/Object/hasOwnProperty'
+  }, [])
   return (
     <Layout
       title={`${siteConfig.title}`}

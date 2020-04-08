@@ -4,7 +4,7 @@
   "description": "> TIP",
   "source": "@site/docs/Promise/MyPromise.md",
   "permalink": "/docs/Promise/promiseWheel",
-  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/docs/Promise/MyPromise.md",
+  "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Promise/MyPromise.md",
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",
