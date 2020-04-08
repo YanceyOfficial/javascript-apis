@@ -15,16 +15,13 @@ export default {
       "title": "JavaScript API 全解析",
       "logo": {
         "alt": "JavaScript API 全解析",
-        "src": "img/logo.png"
+        "src": "img/logo.png",
+        "href": "https://js.yanceyleo.com/docs/Object/hasOwnProperty",
+        "target": "_self"
       },
       "links": [
         {
-          "to": "docs/Object/hasOwnProperty",
-          "label": "ECMAScript",
-          "position": "right"
-        },
-        {
-          "to": "about",
+          "to": "blog",
           "label": "About",
           "position": "right"
         },

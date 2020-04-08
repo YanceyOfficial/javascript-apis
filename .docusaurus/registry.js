@@ -1,8 +1,11 @@
 export default {
-  'component---site-src-pages-about-js-779-319': [() => import(/* webpackChunkName: 'component---site-src-pages-about-js-779-319' */ "@site/src/pages/about.js"), "@site/src/pages/about.js", require.resolveWeak("@site/src/pages/about.js")],
   'component---site-src-pages-index-jsc-4-f-f99': [() => import(/* webpackChunkName: 'component---site-src-pages-index-jsc-4-f-f99' */ "@site/src/pages/index.js"), "@site/src/pages/index.js", require.resolveWeak("@site/src/pages/index.js")],
+  'component---theme-blog-list-pagea-6-a-7ba': [() => import(/* webpackChunkName: 'component---theme-blog-list-pagea-6-a-7ba' */ "@theme/BlogListPage"), "@theme/BlogListPage", require.resolveWeak("@theme/BlogListPage")],
+  'component---theme-blog-post-pageccc-cab': [() => import(/* webpackChunkName: 'component---theme-blog-post-pageccc-cab' */ "@theme/BlogPostPage"), "@theme/BlogPostPage", require.resolveWeak("@theme/BlogPostPage")],
   'component---theme-doc-item-178-a40': [() => import(/* webpackChunkName: 'component---theme-doc-item-178-a40' */ "@theme/DocItem"), "@theme/DocItem", require.resolveWeak("@theme/DocItem")],
   'component---theme-doc-page-1-be-9be': [() => import(/* webpackChunkName: 'component---theme-doc-page-1-be-9be' */ "@theme/DocPage"), "@theme/DocPage", require.resolveWeak("@theme/DocPage")],
+  'content---blog-2020-04-08-about-402-a72': [() => import(/* webpackChunkName: 'content---blog-2020-04-08-about-402-a72' */ "@site/blog/about.md"), "@site/blog/about.md", require.resolveWeak("@site/blog/about.md")],
+  'content---blog-728-e9a': [() => import(/* webpackChunkName: 'content---blog-728-e9a' */ "@site/blog/about.md?truncated=true"), "@site/blog/about.md?truncated=true", require.resolveWeak("@site/blog/about.md?truncated=true")],
   'content---docs-array-concat-337-b66': [() => import(/* webpackChunkName: 'content---docs-array-concat-337-b66' */ "@site/docs/Array/concat.md"), "@site/docs/Array/concat.md", require.resolveWeak("@site/docs/Array/concat.md")],
   'content---docs-array-copy-within-12-b-6f6': [() => import(/* webpackChunkName: 'content---docs-array-copy-within-12-b-6f6' */ "@site/docs/Array/copyWithin.md"), "@site/docs/Array/copyWithin.md", require.resolveWeak("@site/docs/Array/copyWithin.md")],
   'content---docs-array-entries-25-d-e00': [() => import(/* webpackChunkName: 'content---docs-array-entries-25-d-e00' */ "@site/docs/Array/entries.md"), "@site/docs/Array/entries.md", require.resolveWeak("@site/docs/Array/entries.md")],
@@ -82,4 +85,5 @@ export default {
   'content---docs-string-substring-623-858': [() => import(/* webpackChunkName: 'content---docs-string-substring-623-858' */ "@site/docs/String/substring.md"), "@site/docs/String/substring.md", require.resolveWeak("@site/docs/String/substring.md")],
   'content---docs-string-to-case-029-412': [() => import(/* webpackChunkName: 'content---docs-string-to-case-029-412' */ "@site/docs/String/to...Case.md"), "@site/docs/String/to...Case.md", require.resolveWeak("@site/docs/String/to...Case.md")],
   'content---docs-string-trim-008-99e': [() => import(/* webpackChunkName: 'content---docs-string-trim-008-99e' */ "@site/docs/String/trim.md"), "@site/docs/String/trim.md", require.resolveWeak("@site/docs/String/trim.md")],
-  'docsMetadata---docs-route-20-a-f24': [() => import(/* webpackChunkName: 'docsMetadata---docs-route-20-a-f24' */ "~docs/docs-route-ff2.json"), "~docs/docs-route-ff2.json", require.resolveWeak("~docs/docs-route-ff2.json")],};
+  'docsMetadata---docs-route-20-a-f24': [() => import(/* webpackChunkName: 'docsMetadata---docs-route-20-a-f24' */ "~docs/docs-route-ff2.json"), "~docs/docs-route-ff2.json", require.resolveWeak("~docs/docs-route-ff2.json")],
+  'metadata---blogbbb-5f9': [() => import(/* webpackChunkName: 'metadata---blogbbb-5f9' */ "~blog/blog-c06.json"), "~blog/blog-c06.json", require.resolveWeak("~blog/blog-c06.json")],};

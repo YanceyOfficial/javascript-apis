@@ -35,14 +35,11 @@ module.exports = {
       logo: {
         alt: 'JavaScript API 全解析',
         src: 'img/logo.png',
+        href: 'https://js.yanceyleo.com/docs/Object/hasOwnProperty', // default to siteConfig.baseUrl
+        target: '_self', // by default, this value is calculated based on the `href` attribute (the external link will open in a new tab, all others in the current one)
       },
       links: [
-        {
-          to: 'docs/Object/hasOwnProperty',
-          label: 'ECMAScript',
-          position: 'right',
-        },
-        { to: 'about', label: 'About', position: 'right' },
+        { to: 'blog', label: 'About', position: 'right' },
         {
           href: 'https://github.com/YanceyOfficial/javascript-apis',
           label: 'GitHub',

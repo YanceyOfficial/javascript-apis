@@ -1,0 +1,506 @@
+{
+  "docsSidebars": {
+    "ecmascript": [
+      {
+        "type": "category",
+        "label": "Object",
+        "items": [
+          {
+            "type": "link",
+            "label": "hasOwnProperty()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/hasOwnProperty"
+          },
+          {
+            "type": "link",
+            "label": "Object.getPrototypeOf()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/getPrototypeOf"
+          },
+          {
+            "type": "link",
+            "label": "isPrototypeOf()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/isPrototypeOf"
+          },
+          {
+            "type": "link",
+            "label": "propertyIsEnumerable()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/propertyIsEnumerable"
+          },
+          {
+            "type": "link",
+            "label": "Object.assign()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/assign"
+          },
+          {
+            "type": "link",
+            "label": "Object.create()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/create"
+          },
+          {
+            "type": "link",
+            "label": "Object.is()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/is"
+          },
+          {
+            "type": "link",
+            "label": "Object.defineProperty()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/defineProperty"
+          },
+          {
+            "type": "link",
+            "label": "Object.defineProperties()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/defineProperties"
+          },
+          {
+            "type": "link",
+            "label": "Object.keys()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/keys"
+          },
+          {
+            "type": "link",
+            "label": "Object.values()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/values"
+          },
+          {
+            "type": "link",
+            "label": "Object.entries()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/entries"
+          },
+          {
+            "type": "link",
+            "label": "Object.fromEntries()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/fromEntries"
+          },
+          {
+            "type": "link",
+            "label": "Object.getOwnPropertyDescriptor()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/getOwnPropertyDescriptor"
+          },
+          {
+            "type": "link",
+            "label": "Object.getOwnPropertyDescriptors()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/getOwnPropertyDescriptors"
+          },
+          {
+            "type": "link",
+            "label": "Object.getOwnPropertyNames()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/getOwnPropertyNames"
+          },
+          {
+            "type": "link",
+            "label": "Object.getOwnPropertySymbols()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/getOwnPropertySymbols"
+          },
+          {
+            "type": "link",
+            "label": "Object.preventExtensions()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/preventExtensions"
+          },
+          {
+            "type": "link",
+            "label": "Object.seal()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/seal"
+          },
+          {
+            "type": "link",
+            "label": "Object.freeze()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/freeze"
+          },
+          {
+            "type": "link",
+            "label": "Object.isExtensible()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/isExtensible"
+          },
+          {
+            "type": "link",
+            "label": "Object.isSealed()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/isSealed"
+          },
+          {
+            "type": "link",
+            "label": "Object.isFrozen()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/isFrozen"
+          },
+          {
+            "type": "link",
+            "label": "Object.setPrototypeOf()",
+            "href": "/docs/Object/hasOwnProperty/docs/Object/setPrototypeOf"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "String",
+        "items": [
+          {
+            "type": "link",
+            "label": "charAt()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/charAt"
+          },
+          {
+            "type": "link",
+            "label": "charCodeAt()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/charCodeAt"
+          },
+          {
+            "type": "link",
+            "label": "codePointAt()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/codePointAt"
+          },
+          {
+            "type": "link",
+            "label": "concat()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/concat"
+          },
+          {
+            "type": "link",
+            "label": "endsWith()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/endsWith"
+          },
+          {
+            "type": "link",
+            "label": "includes()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/includes"
+          },
+          {
+            "type": "link",
+            "label": "indexOf()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/indexOf"
+          },
+          {
+            "type": "link",
+            "label": "lastIndexOf()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/lastIndexOf"
+          },
+          {
+            "type": "link",
+            "label": "localeCompare()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/localeCompare"
+          },
+          {
+            "type": "link",
+            "label": "match()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/match"
+          },
+          {
+            "type": "link",
+            "label": "normalize()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/normalize"
+          },
+          {
+            "type": "link",
+            "label": "padEnd()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/padEnd"
+          },
+          {
+            "type": "link",
+            "label": "padStart()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/padStart"
+          },
+          {
+            "type": "link",
+            "label": "repeat()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/repeat"
+          },
+          {
+            "type": "link",
+            "label": "replace()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/replace"
+          },
+          {
+            "type": "link",
+            "label": "search()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/search"
+          },
+          {
+            "type": "link",
+            "label": "slice()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/slice"
+          },
+          {
+            "type": "link",
+            "label": "split()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/split"
+          },
+          {
+            "type": "link",
+            "label": "startsWith()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/startsWith"
+          },
+          {
+            "type": "link",
+            "label": "String.fromCharCode()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/fromCharCode"
+          },
+          {
+            "type": "link",
+            "label": "String.fromCodePoint()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/fromCodePoint"
+          },
+          {
+            "type": "link",
+            "label": "substr()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/substr"
+          },
+          {
+            "type": "link",
+            "label": "substring()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/substring"
+          },
+          {
+            "type": "link",
+            "label": "to...Case()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/to...Case"
+          },
+          {
+            "type": "link",
+            "label": "trim() trimLeft() trimRight()",
+            "href": "/docs/Object/hasOwnProperty/docs/String/trim"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Array",
+        "items": [
+          {
+            "type": "link",
+            "label": "Array.from()",
+            "href": "/docs/Object/hasOwnProperty/docs/Array/from"
+          },
+          {
+            "type": "link",
+            "label": "Array.of()",
+            "href": "/docs/Object/hasOwnProperty/docs/Array/of"
+          },
+          {
+            "type": "link",
+            "label": "Array.isArray()",
+            "href": "/docs/Object/hasOwnProperty/docs/Array/isArray"
+          },
+          {
+            "type": "link",
+            "label": "concat()",
+            "href": "/docs/Object/hasOwnProperty/docs/Array/concat"
+          },
+          {
+            "type": "link",
+            "label": "copyWithin()",
+            "href": "/docs/Object/hasOwnProperty/docs/Array/copyWithin"
+          },
+          {
+            "type": "link",
+            "label": "entries()",
+            "href": "/docs/Object/hasOwnProperty/docs/Array/entries"
+          },
+          {
+            "type": "link",
+            "label": "flat()",
+            "href": "/docs/Object/hasOwnProperty/docs/Array/flat"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Math",
+        "items": [
+          {
+            "type": "link",
+            "label": "Math.正弦系列()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/sin"
+          },
+          {
+            "type": "link",
+            "label": "Math.正切系列()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/tan"
+          },
+          {
+            "type": "link",
+            "label": "Math.余弦系列()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/cos"
+          },
+          {
+            "type": "link",
+            "label": "Math.abs()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/abs"
+          },
+          {
+            "type": "link",
+            "label": "Math.clz32()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/clz32"
+          },
+          {
+            "type": "link",
+            "label": "Math.floor/ceil/round()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/floor"
+          },
+          {
+            "type": "link",
+            "label": "Math.数学公式合集()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/formulas"
+          },
+          {
+            "type": "link",
+            "label": "Math.fround()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/fround"
+          },
+          {
+            "type": "link",
+            "label": "Math.imul()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/imul"
+          },
+          {
+            "type": "link",
+            "label": "Math.max/min()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/max"
+          },
+          {
+            "type": "link",
+            "label": "Math.random()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/random"
+          },
+          {
+            "type": "link",
+            "label": "Math.sign()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/sign"
+          },
+          {
+            "type": "link",
+            "label": "Math.trunc()",
+            "href": "/docs/Object/hasOwnProperty/docs/Math/trunc"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Function",
+        "items": [
+          {
+            "type": "link",
+            "label": "call()",
+            "href": "/docs/Object/hasOwnProperty/docs/Function/call"
+          },
+          {
+            "type": "link",
+            "label": "apply()",
+            "href": "/docs/Object/hasOwnProperty/docs/Function/apply"
+          },
+          {
+            "type": "link",
+            "label": "bind()",
+            "href": "/docs/Object/hasOwnProperty/docs/Function/bind"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Promise",
+        "items": [
+          {
+            "type": "link",
+            "label": "Promise",
+            "href": "/docs/Object/hasOwnProperty/docs/Promise/promise"
+          },
+          {
+            "type": "link",
+            "label": "Promise A+ 规范",
+            "href": "/docs/Object/hasOwnProperty/docs/Promise/promiseA+"
+          },
+          {
+            "type": "link",
+            "label": "手写 Promise",
+            "href": "/docs/Object/hasOwnProperty/docs/Promise/promiseWheel"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Proxy",
+        "items": [
+          {
+            "type": "link",
+            "label": "Proxy 和 Reflect",
+            "href": "/docs/Object/hasOwnProperty/docs/Proxy/proxy"
+          }
+        ]
+      }
+    ]
+  },
+  "permalinkToSidebar": {
+    "/docs/Object/hasOwnProperty/docs/Array/concat": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Array/copyWithin": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Array/entries": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Array/flat": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Array/from": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Array/isArray": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Array/of": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Function/apply": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Function/bind": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Function/call": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/abs": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/clz32": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/cos": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/floor": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/formulas": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/fround": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/imul": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/max": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/random": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/sign": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/sin": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/tan": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Math/trunc": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/assign": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/create": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/defineProperties": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/defineProperty": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/entries": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/freeze": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/fromEntries": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/getOwnPropertyDescriptor": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/getOwnPropertyDescriptors": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/getOwnPropertyNames": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/getOwnPropertySymbols": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/getPrototypeOf": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/hasOwnProperty": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/is": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/isExtensible": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/isFrozen": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/isPrototypeOf": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/isSealed": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/keys": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/preventExtensions": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/propertyIsEnumerable": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/seal": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/setPrototypeOf": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Object/values": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Promise/promise": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Promise/promiseA+": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Promise/promiseWheel": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/Proxy/proxy": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/charAt": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/charCodeAt": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/codePointAt": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/concat": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/endsWith": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/fromCharCode": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/fromCodePoint": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/includes": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/indexOf": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/lastIndexOf": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/localeCompare": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/match": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/normalize": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/padEnd": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/padStart": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/repeat": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/replace": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/search": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/slice": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/split": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/startsWith": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/substr": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/substring": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/to...Case": "ecmascript",
+    "/docs/Object/hasOwnProperty/docs/String/trim": "ecmascript"
+  }
+}

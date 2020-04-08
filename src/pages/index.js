@@ -59,7 +59,7 @@ function Home() {
   const { siteConfig = {} } = context
 
   // useEffect(() => {
-  //   window.location.href = 'https://js.yanceyleo.com/docs/Object/hasOwnProperty'
+  //   window.location.href = '/docs/Object/hasOwnProperty'
   // }, [])
   return (
     <Layout

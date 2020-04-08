@@ -11,8 +11,14 @@ export default [
   
 },
 {
-  path: '/about',
-  component: ComponentCreator('/about'),
+  path: '/blog',
+  component: ComponentCreator('/blog'),
+  exact: true,
+  
+},
+{
+  path: '/blog/2020/04/08/about',
+  component: ComponentCreator('/blog/2020/04/08/about'),
   exact: true,
   
 },
