@@ -58,3 +58,6 @@ typings/
 # Production
 dist
 build
+
+# docusaurus
+.docusaurus
