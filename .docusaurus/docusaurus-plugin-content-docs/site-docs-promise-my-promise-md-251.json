@@ -1,7 +1,7 @@
 {
   "id": "Promise/promiseWheel",
   "title": "手写 Promise",
-  "description": "> TIP",
+  "description": ":::tip",
   "source": "@site/docs/Promise/MyPromise.md",
   "permalink": "/docs/Promise/promiseWheel",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Promise/MyPromise.md",
