@@ -1,7 +1,7 @@
 window.addEventListener('load', function () {
   const gitalkDOMId = 'gitalk-container'
 
-  const prevnextDOM = document.querySelector('article')
+  const prevnextDOM = document.querySelector('.pagination-nav')
   const gitalkDOMStr = `<section id=${gitalkDOMId}></section>`
 
   if (prevnextDOM && prevnextDOM.insertAdjacentHTML) {
