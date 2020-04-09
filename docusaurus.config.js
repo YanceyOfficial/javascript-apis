@@ -11,12 +11,15 @@ module.exports = {
   projectName: 'javascript-apis', // Usually your repo name.
   scripts: [
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js',
-    '/js/install-gitalk.js',
+    {
+      src: '/js/gitalk.js',
+      async: true,
+    },
   ],
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css',
     'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css',
-    '/css/gitalk.css'
+    '/css/gitalk.css',
   ],
   plugins: [
     '@docusaurus/plugin-ideal-image',
