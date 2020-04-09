@@ -4,7 +4,9 @@ window.addEventListener('load', function () {
   const prevnextDOM = document.querySelector('.pagination-nav')
   const gitalkDOMStr = `<section id=${gitalkDOMId}></section>`
 
-  if (prevnextDOM) {
+  console.log(prevnextDOM)
+
+  if (prevnextDOM && prevnextDOM.insertAdjacentHTML) {
     prevnextDOM.insertAdjacentHTML('beforebegin', gitalkDOMStr)
   }
 
