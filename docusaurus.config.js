@@ -12,7 +12,7 @@ module.exports = {
   scripts: [
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js',
     {
-      src: '/js/gitalk.js',
+      src: '/js/load-gitalk.js',
       defer: true,
     },
   ],
