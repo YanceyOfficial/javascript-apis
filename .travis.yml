@@ -21,6 +21,7 @@ before_install:
 install:
   - yarn install
 scripts:
+  - yarn test
   - yarn build
 after_success:
   - ssh caddy@74.120.172.16 -o StrictHostKeyChecking=no '. ./javascript-apis-deploy.sh'
