@@ -70,7 +70,7 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/yancey/code/javascript-apis/sidebars.js",
+          "sidebarPath": "/Users/yanceyleo/code/project/javascript-apis/sidebars.js",
           "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master",
           "remarkPlugins": [
             null
@@ -82,7 +82,7 @@ export default {
           "showLastUpdateTime": true
         },
         "theme": {
-          "customCss": "/Users/yancey/code/javascript-apis/src/css/custom.css"
+          "customCss": "/Users/yanceyleo/code/project/javascript-apis/src/css/custom.css"
         },
         "sitemap": {
           "cacheTime": 600000,

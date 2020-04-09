@@ -5,8 +5,8 @@
   "source": "@site/docs/String/localeCompare.md",
   "permalink": "/docs/String/localeCompare",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/String/localeCompare.md",
-  "lastUpdatedBy": "YanceyOfficial",
-  "lastUpdatedAt": 1586254669,
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",
   "previous": {
     "title": "lastIndexOf()",

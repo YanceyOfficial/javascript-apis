@@ -5,8 +5,8 @@
   "source": "@site/docs/Proxy/Proxy.md",
   "permalink": "/docs/Proxy/proxy",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Proxy/Proxy.md",
-  "lastUpdatedBy": "YanceyOfficial",
-  "lastUpdatedAt": 1586342257,
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",
   "previous": {
     "title": "手写 Promise",

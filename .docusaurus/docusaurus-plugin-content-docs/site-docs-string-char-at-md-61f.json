@@ -5,8 +5,8 @@
   "source": "@site/docs/String/charAt.md",
   "permalink": "/docs/String/charAt",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/String/charAt.md",
-  "lastUpdatedBy": "YanceyOfficial",
-  "lastUpdatedAt": 1586254669,
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",
   "previous": {
     "title": "Object.setPrototypeOf()",

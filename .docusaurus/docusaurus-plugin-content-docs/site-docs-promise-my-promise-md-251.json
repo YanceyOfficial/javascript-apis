@@ -5,8 +5,8 @@
   "source": "@site/docs/Promise/MyPromise.md",
   "permalink": "/docs/Promise/promiseWheel",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Promise/MyPromise.md",
-  "lastUpdatedBy": "YanceyOfficial",
-  "lastUpdatedAt": 1586254669,
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",
   "previous": {
     "title": "Promise A+ 规范",

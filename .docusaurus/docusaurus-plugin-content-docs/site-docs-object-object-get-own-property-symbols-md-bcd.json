@@ -5,8 +5,8 @@
   "source": "@site/docs/Object/Object.getOwnPropertySymbols.md",
   "permalink": "/docs/Object/getOwnPropertySymbols",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Object/Object.getOwnPropertySymbols.md",
-  "lastUpdatedBy": "YanceyOfficial",
-  "lastUpdatedAt": 1586254669,
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
   "sidebar": "ecmascript",
   "previous": {
     "title": "Object.getOwnPropertyNames()",
