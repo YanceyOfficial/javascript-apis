@@ -13,7 +13,7 @@ module.exports = {
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js',
     {
       src: '/js/gitalk.js',
-      async: true,
+      defer: true,
     },
   ],
   stylesheets: [
