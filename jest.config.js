@@ -23,7 +23,7 @@ module.exports = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   'collectCoverageFrom': [
-    'playground/**/*.{js,jsx,ts,tsx}',
+    'playground/**/*.js',
     '!**/node_modules/**',
   ],
 
