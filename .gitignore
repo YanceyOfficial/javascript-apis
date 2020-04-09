@@ -56,5 +56,5 @@ typings/
 .yarn-integrity
 
 # Production
-/dist
-/build
+dist
+build

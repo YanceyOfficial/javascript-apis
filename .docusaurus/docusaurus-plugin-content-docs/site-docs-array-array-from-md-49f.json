@@ -5,8 +5,8 @@
   "source": "@site/docs/Array/Array.from.md",
   "permalink": "/docs/Array/from",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Array/Array.from.md",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
+  "lastUpdatedBy": "YanceyOfficial",
+  "lastUpdatedAt": 1586254669,
   "sidebar": "ecmascript",
   "previous": {
     "title": "trim() trimLeft() trimRight()",

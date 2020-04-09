@@ -5,8 +5,8 @@
   "source": "@site/docs/Object/hasOwnProperty.md",
   "permalink": "/docs/Object/hasOwnProperty",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Object/hasOwnProperty.md",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
+  "lastUpdatedBy": "YanceyOfficial",
+  "lastUpdatedAt": 1586254669,
   "sidebar": "ecmascript",
   "next": {
     "title": "Object.getPrototypeOf()",

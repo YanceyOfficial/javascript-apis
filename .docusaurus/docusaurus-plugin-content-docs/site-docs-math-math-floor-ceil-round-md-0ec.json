@@ -5,8 +5,8 @@
   "source": "@site/docs/Math/Math.floor_ceil_round.md",
   "permalink": "/docs/Math/floor",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/Math/Math.floor_ceil_round.md",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
+  "lastUpdatedBy": "YanceyOfficial",
+  "lastUpdatedAt": 1586254669,
   "sidebar": "ecmascript",
   "previous": {
     "title": "Math.clz32()",

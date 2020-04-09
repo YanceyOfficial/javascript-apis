@@ -5,8 +5,8 @@
   "source": "@site/docs/String/codePointAt.md",
   "permalink": "/docs/String/codePointAt",
   "editUrl": "https://github.com/YanceyOfficial/javascript-apis/tree/master/docs/String/codePointAt.md",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
+  "lastUpdatedBy": "YanceyOfficial",
+  "lastUpdatedAt": 1586254669,
   "sidebar": "ecmascript",
   "previous": {
     "title": "charCodeAt()",

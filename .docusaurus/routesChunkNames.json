@@ -1,338 +1,338 @@
 {
   "/": {
-    "component": "component---site-src-pages-index-jsc-4-f-f99"
+    "component": "c4f5d8e4"
   },
   "/blog": {
-    "component": "component---theme-blog-list-pagea-6-a-7ba",
+    "component": "a6aa9e1f",
     "items": [
       {
-        "content": "content---blog-728-e9a"
+        "content": "7283c832"
       }
     ],
-    "metadata": "metadata---blogbbb-5f9"
+    "metadata": "bbb4ffb5"
   },
   "/blog/2020/04/08/about": {
-    "component": "component---theme-blog-post-pageccc-cab",
-    "content": "content---blog-2020-04-08-about-402-a72"
+    "component": "ccc49370",
+    "content": "40208c0b"
   },
   "/docs/:route": {
-    "component": "component---theme-doc-page-1-be-9be",
-    "docsMetadata": "docsMetadata---docs-route-20-a-f24"
+    "component": "1be78505",
+    "docsMetadata": "20ac7829"
   },
   "/docs/Array/concat": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-array-concat-337-b66"
+    "component": "17896441",
+    "content": "337a8e93"
   },
   "/docs/Array/copyWithin": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-array-copy-within-12-b-6f6"
+    "component": "17896441",
+    "content": "12b3b26c"
   },
   "/docs/Array/entries": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-array-entries-25-d-e00"
+    "component": "17896441",
+    "content": "25dedf4d"
   },
   "/docs/Array/flat": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-array-flatd-7-e-f0c"
+    "component": "17896441",
+    "content": "d7ebee38"
   },
   "/docs/Array/from": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-array-from-49-f-3c7"
+    "component": "17896441",
+    "content": "49fec6b5"
   },
   "/docs/Array/isArray": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-array-is-array-8-df-3dc"
+    "component": "17896441",
+    "content": "8dfe0b79"
   },
   "/docs/Array/of": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-array-of-11-d-f50"
+    "component": "17896441",
+    "content": "11d4bd76"
   },
   "/docs/Array/slice": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-array-slice-701-bac"
+    "component": "17896441",
+    "content": "7017c638"
   },
   "/docs/Function/apply": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-function-applyb-70-8c0"
+    "component": "17896441",
+    "content": "b7076351"
   },
   "/docs/Function/bind": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-function-bind-5-f-1-867"
+    "component": "17896441",
+    "content": "5f11115b"
   },
   "/docs/Function/call": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-function-call-6-d-2-910"
+    "component": "17896441",
+    "content": "6d2f88e9"
   },
   "/docs/Math/abs": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-abs-871-1dc"
+    "component": "17896441",
+    "content": "87159bd8"
   },
   "/docs/Math/clz32": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-clz-32-fa-7-ba1"
+    "component": "17896441",
+    "content": "fa7ab7c0"
   },
   "/docs/Math/cos": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-cose-12-65c"
+    "component": "17896441",
+    "content": "e12b380c"
   },
   "/docs/Math/floor": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-floor-0-ec-7b5"
+    "component": "17896441",
+    "content": "0ec56ff1"
   },
   "/docs/Math/formulas": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-formulasf-80-1b7"
+    "component": "17896441",
+    "content": "f80176c1"
   },
   "/docs/Math/fround": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-fround-90-f-262"
+    "component": "17896441",
+    "content": "90f57429"
   },
   "/docs/Math/imul": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-imuldb-8-ace"
+    "component": "17896441",
+    "content": "db8113a7"
   },
   "/docs/Math/max": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-max-227-997"
+    "component": "17896441",
+    "content": "227a798c"
   },
   "/docs/Math/random": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-random-2-ac-65d"
+    "component": "17896441",
+    "content": "2aca9f0b"
   },
   "/docs/Math/sign": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-sign-887-1b8"
+    "component": "17896441",
+    "content": "88706ded"
   },
   "/docs/Math/sin": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-sin-828-ba4"
+    "component": "17896441",
+    "content": "8280d17e"
   },
   "/docs/Math/tan": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-tan-04-b-2a9"
+    "component": "17896441",
+    "content": "04b66476"
   },
   "/docs/Math/trunc": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-math-truncdd-4-9ed"
+    "component": "17896441",
+    "content": "dd44773f"
   },
   "/docs/Number/parseFloat": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-number-parse-float-1-e-4-129"
+    "component": "17896441",
+    "content": "1e452b9c"
   },
   "/docs/Number/parseInt": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-number-parse-intd-35-2b0"
+    "component": "17896441",
+    "content": "d353450c"
   },
   "/docs/Object/assign": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-assigndf-4-7b7"
+    "component": "17896441",
+    "content": "df4e8daf"
   },
   "/docs/Object/create": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-createec-5-88e"
+    "component": "17896441",
+    "content": "ec5114f1"
   },
   "/docs/Object/defineProperties": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-define-properties-869-1c1"
+    "component": "17896441",
+    "content": "86964b95"
   },
   "/docs/Object/defineProperty": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-define-property-4-c-0-913"
+    "component": "17896441",
+    "content": "4c0a8623"
   },
   "/docs/Object/entries": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-entriesc-4-b-6ce"
+    "component": "17896441",
+    "content": "c4b7425a"
   },
   "/docs/Object/freeze": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-freezefe-8-fbd"
+    "component": "17896441",
+    "content": "fe8354ad"
   },
   "/docs/Object/fromEntries": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-from-entriesc-81-e43"
+    "component": "17896441",
+    "content": "c81315e9"
   },
   "/docs/Object/getOwnPropertyDescriptor": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-get-own-property-descriptor-142-96a"
+    "component": "17896441",
+    "content": "142c1a22"
   },
   "/docs/Object/getOwnPropertyDescriptors": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-get-own-property-descriptors-246-7a8"
+    "component": "17896441",
+    "content": "24628b7f"
   },
   "/docs/Object/getOwnPropertyNames": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-get-own-property-names-731-516"
+    "component": "17896441",
+    "content": "731e3273"
   },
   "/docs/Object/getOwnPropertySymbols": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-get-own-property-symbolsbcd-26c"
+    "component": "17896441",
+    "content": "bcdb86b8"
   },
   "/docs/Object/getPrototypeOf": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-get-prototype-of-870-5ce"
+    "component": "17896441",
+    "content": "870ad277"
   },
   "/docs/Object/hasOwnProperty": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-has-own-property-6-d-7-cc4"
+    "component": "17896441",
+    "content": "6d7d3b80"
   },
   "/docs/Object/is": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-is-71-a-fc9"
+    "component": "17896441",
+    "content": "71af0a17"
   },
   "/docs/Object/isExtensible": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-is-extensibled-58-a8d"
+    "component": "17896441",
+    "content": "d58dbff0"
   },
   "/docs/Object/isFrozen": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-is-frozen-34-e-0d9"
+    "component": "17896441",
+    "content": "34eb16e3"
   },
   "/docs/Object/isPrototypeOf": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-is-prototype-ofcbf-861"
+    "component": "17896441",
+    "content": "cbf404ed"
   },
   "/docs/Object/isSealed": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-is-sealed-0-f-8-83f"
+    "component": "17896441",
+    "content": "0f8eada7"
   },
   "/docs/Object/keys": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-keys-377-fd6"
+    "component": "17896441",
+    "content": "3776fdf3"
   },
   "/docs/Object/preventExtensions": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-prevent-extensions-66-b-1c4"
+    "component": "17896441",
+    "content": "66bc0fa7"
   },
   "/docs/Object/propertyIsEnumerable": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-property-is-enumerable-719-1a1"
+    "component": "17896441",
+    "content": "719aefad"
   },
   "/docs/Object/seal": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-sealc-00-e1a"
+    "component": "17896441",
+    "content": "c007aead"
   },
   "/docs/Object/setPrototypeOf": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-set-prototype-of-972-1b3"
+    "component": "17896441",
+    "content": "97263280"
   },
   "/docs/Object/values": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-object-values-7-cb-c13"
+    "component": "17896441",
+    "content": "7cbaa3b9"
   },
   "/docs/Promise/promise": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-promise-promise-8-d-9-7c1"
+    "component": "17896441",
+    "content": "8d9bb21f"
   },
   "/docs/Promise/promiseA+": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-promise-promise-a-b-3-c-0dd"
+    "component": "17896441",
+    "content": "b3cf89f5"
   },
   "/docs/Promise/promiseWheel": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-promise-promise-wheel-251-9a0"
+    "component": "17896441",
+    "content": "2514fffe"
   },
   "/docs/Proxy/proxy": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-proxy-proxyc-18-814"
+    "component": "17896441",
+    "content": "c18bd8ef"
   },
   "/docs/String/charAt": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-char-at-61-f-940"
+    "component": "17896441",
+    "content": "61f3e558"
   },
   "/docs/String/charCodeAt": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-char-code-at-38-e-ef9"
+    "component": "17896441",
+    "content": "38e8c24f"
   },
   "/docs/String/codePointAt": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-code-point-at-4-c-7-130"
+    "component": "17896441",
+    "content": "4c7c13f7"
   },
   "/docs/String/concat": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-concat-871-a73"
+    "component": "17896441",
+    "content": "8710aa90"
   },
   "/docs/String/endsWith": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-ends-with-993-ab7"
+    "component": "17896441",
+    "content": "993ae089"
   },
   "/docs/String/fromCharCode": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-from-char-code-171-58f"
+    "component": "17896441",
+    "content": "171f7ebf"
   },
   "/docs/String/fromCodePoint": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-from-code-point-136-83d"
+    "component": "17896441",
+    "content": "136ab0d3"
   },
   "/docs/String/includes": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-includese-88-b55"
+    "component": "17896441",
+    "content": "e88f671f"
   },
   "/docs/String/indexOf": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-index-of-54-d-323"
+    "component": "17896441",
+    "content": "54d6b4bb"
   },
   "/docs/String/lastIndexOf": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-last-index-ofaad-776"
+    "component": "17896441",
+    "content": "aad277a3"
   },
   "/docs/String/localeCompare": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-locale-compare-130-54f"
+    "component": "17896441",
+    "content": "1300915f"
   },
   "/docs/String/match": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-matche-97-1de"
+    "component": "17896441",
+    "content": "e97f50a8"
   },
   "/docs/String/normalize": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-normalizea-1-d-92f"
+    "component": "17896441",
+    "content": "a1d3ca71"
   },
   "/docs/String/padEnd": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-pad-endef-7-0f8"
+    "component": "17896441",
+    "content": "ef71a4fb"
   },
   "/docs/String/padStart": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-pad-start-46-a-c19"
+    "component": "17896441",
+    "content": "46ad4aea"
   },
   "/docs/String/repeat": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-repeat-672-4ef"
+    "component": "17896441",
+    "content": "67229f6f"
   },
   "/docs/String/replace": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-replaced-0-a-6f5"
+    "component": "17896441",
+    "content": "d0a1ddc8"
   },
   "/docs/String/search": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-searcheb-0-914"
+    "component": "17896441",
+    "content": "eb05979e"
   },
   "/docs/String/slice": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-sliceb-94-7e3"
+    "component": "17896441",
+    "content": "b94c043f"
   },
   "/docs/String/split": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-split-0-db-92d"
+    "component": "17896441",
+    "content": "0db5fc15"
   },
   "/docs/String/startsWith": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-starts-with-4-d-7-6cc"
+    "component": "17896441",
+    "content": "4d7b1a6a"
   },
   "/docs/String/substr": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-substr-393-a36"
+    "component": "17896441",
+    "content": "393e176f"
   },
   "/docs/String/substring": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-substring-623-858"
+    "component": "17896441",
+    "content": "623e87f4"
   },
   "/docs/String/to...Case": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-to-case-029-412"
+    "component": "17896441",
+    "content": "029443f0"
   },
   "/docs/String/trim": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-string-trim-008-99e"
+    "component": "17896441",
+    "content": "008dd47f"
   }
 }
