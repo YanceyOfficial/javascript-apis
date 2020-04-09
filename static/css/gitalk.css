@@ -32,3 +32,11 @@
 .gt-container .gt-popup .gt-action.is--active::before {
   background: var(--ifm-color-primary) !important;
 }
+
+.gt-container .gt-header-textarea {
+  background: var(--ifm-navbar-search-input-background-color) !important;
+}
+
+.gt-container .gt-header-textarea:hover {
+  background: var(--ifm-navbar-search-input-background-color) !important;
+}
