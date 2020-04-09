@@ -36,6 +36,7 @@
 
 .gt-container .gt-header-textarea {
   background: var(--ifm-navbar-search-input-background-color) !important;
+  color: #ffffff !important;
 }
 
 .gt-container .gt-header-textarea:hover {

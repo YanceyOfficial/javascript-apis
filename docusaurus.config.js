@@ -12,14 +12,14 @@ module.exports = {
   scripts: [
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js',
     {
-      src: '/js/load-gitalk.js',
+      src: '/js/gitalk.js',
       defer: true,
     },
   ],
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css',
     'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css',
-    '/css/custom-gitalk.css',
+    '/css/gitalk.css',
   ],
   plugins: [
     '@docusaurus/plugin-ideal-image',
