@@ -9,8 +9,9 @@
 }
 
 .gt-container .gt-btn-preview {
-  background-color: #ffffff !important;
-  color: var(--ifm-color-primary) !important;
+  background-color: var(--ifm-color-primary) !important;
+  color: #ffffff !important;
+  border: none !important;
 }
 
 .gt-container a {
