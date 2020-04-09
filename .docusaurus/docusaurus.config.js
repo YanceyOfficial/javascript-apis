@@ -61,8 +61,7 @@ export default {
   ],
   "stylesheets": [
     "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css",
-    "https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css",
-    "/css/custom.css"
+    "https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css"
   ],
   "presets": [
     [
