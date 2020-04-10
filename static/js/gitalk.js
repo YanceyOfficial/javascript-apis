@@ -1,5 +1,9 @@
-window.addEventListener('load', function () {
-  const gitalkDOMId = 'gitalk-container'
+function ramdomStr() {
+  return Math.random().toString(32)
+}
+
+function registerGitalk() {
+  const gitalkDOMId = `gitalk-container_${ramdomStr()}`
 
   const prevnextDOM = document.querySelector('.pagination-nav')
   const gitalkDOMStr = `<section id=${gitalkDOMId}></section>`
@@ -17,4 +21,25 @@ window.addEventListener('load', function () {
   })
 
   gitalk.render(gitalkDOMId)
+}
+
+// 自定义事件
+// 学习一下
+function registerHistoryEvent() {
+  var _wr = function (type) {
+    var orig = history[type]
+    return function () {
+      var rv = orig.apply(this, arguments)
+      var e = new Event(type)
+      e.arguments = arguments
+      window.dispatchEvent(e)
+      return rv
+    }
+  }
+  history.pushState = _wr('pushState')
+  history.replaceState = _wr('replaceState')
+}
+
+window.addEventListener('load', function () {
+  registerGitalk()
 })
