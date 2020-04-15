@@ -35,26 +35,26 @@
 // proxy.age = 'string'
 // proxy.age = 'string'
 
-const proxy = new Proxy(
-  {},
-  {
-    ownKeys(trapTarget) {
-      return Reflect.ownKeys(trapTarget).filter((key) => {
-        return typeof key !== 'string' || key[0] !== '_'
-      })
-    },
-  },
-)
+// const proxy = new Proxy(
+//   {},
+//   {
+//     ownKeys(trapTarget) {
+//       return Reflect.ownKeys(trapTarget).filter((key) => {
+//         return typeof key !== 'string' || key[0] !== '_'
+//       })
+//     },
+//   },
+// )
 
-proxy.name = 'public property'
-proxy._name = 'private property'
-proxy.age = 18
-proxy[Symbol('symbolName')] = 'symbol property'
+// proxy.name = 'public property'
+// proxy._name = 'private property'
+// proxy.age = 18
+// proxy[Symbol('symbolName')] = 'symbol property'
 
-Object.defineProperty(proxy, 'age', {
-  enumerable: false,
-})
+// Object.defineProperty(proxy, 'age', {
+//   enumerable: false,
+// })
 
-console.log(Object.getOwnPropertyNames(proxy)) // [ 'name', 'age' ]
-console.log(Object.keys(proxy)) // [ 'name' ]
-console.log(Object.getOwnPropertySymbols(proxy)) // [ Symbol(symbolName) ]
+// console.log(Object.getOwnPropertyNames(proxy)) // [ 'name', 'age' ]
+// console.log(Object.keys(proxy)) // [ 'name' ]
+// console.log(Object.getOwnPropertySymbols(proxy)) // [ Symbol(symbolName) ]

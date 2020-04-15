@@ -7,13 +7,13 @@ title: Proxy 和 Reflect
 一提到代理，立刻就想到 Fan Qiang. -- 鲁迅
 :::
 
-## Why Proxy?
+## Why Proxy
 
-我们都知道早期的 Vue 无法监听数组的如 `push`, `splice` 的变化, 这是因为 Vue 内核使用的是 [Object.defineProperty()](../Object/defineProperty), 它虽然能劫持数组并为其设置 getter 和 setter, 但调用这些方法改变数组时并不会触发 setter, 虽然尤小右同学做了些 [hack](https://github.com/vuejs/vue/blob/dev/src/core/observer/array.js), 但总有如鲠在喉的感觉. 而万众瞩目的 Vue 3.x 将使用 Proxy 重写内核, 因此还是稍微期待一下的, 虽然我用 React (🤦‍♀️.
+我们都知道早期的 Vue 无法监听数组如 `push`, `splice` 的变化, 这是因为 Vue 内核使用的是 [Object.defineProperty()](../Object/defineProperty), 它虽然能劫持数组并为其设置 getter 和 setter, 但调用这些方法改变数组时并不会触发 setter, 虽然尤小右同学做了些 [hack](https://github.com/vuejs/vue/blob/dev/src/core/observer/array.js), 但总有如鲠在喉的感觉. 而万众瞩目的 Vue 3.x 将使用 Proxy 重写内核, 因此还是稍微期待一下的, 虽然我用 React (🤦‍♀️.
 
 ## 代理和反射是什么
 
-`Proxy` 就是在目标对象之前架设一个拦截对象, 使得 `Proxy` 对象可定义基本操作的自定义行为（如属性查找、赋值、枚举、函数调用等, `Proxy` 接受两个参数, 第一个是**目标对象**, 第二个是**陷阱函数**.
+`Proxy` 就是在访问或操作目标对象之前架设一个拦截对象, 使得 `Proxy` 对象可自定义基本操作的某些行为（如属性查找、赋值、枚举、函数调用等, `Proxy` 接受两个参数, 第一个是**目标对象**, 第二个是**陷阱函数**.
 
 `Reflect` 提供拦截 JavaScript 操作的原生方法, 每个代理陷阱函数都有一个对应的反射方法, 每个方法都与对应的陷阱函数同名, 并且接收的参数也与之一致.
 
@@ -84,7 +84,7 @@ proxy.age = 18
 proxy.age = 'string' // TypeError: Property must be a number.
 ```
 
-上面的例子中, 需要在**写入**对象时做一些拦截, 因此需要代理对象的 set, set 接收四个参数, 分别是:
+上面的例子中, 需要在**写入**对象时做一些拦截, 因此需要代理对象的 `set`, set 陷阱接收四个参数, 分别是:
 
 - trapTarget: 将接收属性的对象, 即目标对象
 
@@ -94,10 +94,10 @@ proxy.age = 'string' // TypeError: Property must be a number.
 
 - receiver: 操作发生的对象, 一般为代理对象
 
-需求规定不对 target 已存在的属性做校验, 因此可使用 [hasOwnProperty()](../Object/hasOwnProperty) 忽略; 接下来, 使用 isNaN 来判断 value 是否为数字, 如果不是就抛出异常, 否则使用 **Reflect**. **它的目的将代理的结果反映到真实的 target 中**. 需求使用的 set 陷阱, 因此也要使用对应的 **Reflect.set()**, 它们接收的参数是一模一样的.
+需求规定不对 target 已存在的属性做校验, 因此可使用 [hasOwnProperty()](../Object/hasOwnProperty) 忽略; 接下来, 使用 isNaN 来判断 value 是否为数字, 如果不是就抛出异常, 否则使用 **Reflect**, 反射的目的是将正确的属性 set 到 target 对象中, 因为我们使用了 **set 陷阱**, 因此也要使用对应的 **Reflect.set()**, 陷阱和反射接收的参数及顺序是一模一样的.
 
 :::tip
-这个例子似乎有了进阶版的表单校验库的雏形. 此外, 还可以使用 get 陷阱函数进行对象外形验证, 使用 has 陷阱函数隐藏属性, 使用 deleteProperty 陷阱函数避免属性被删除.
+这个例子似乎有了表单校验的雏形. 此外, 还可以使用 get 陷阱函数进行对象外形验证, 使用 has 陷阱函数隐藏属性, 使用 deleteProperty 陷阱函数避免属性被删除.
 :::
 
 ## 原型代理
@@ -197,9 +197,7 @@ Object.defineProperty(proxy, nameSymbol, {
 
 ## ownKeys 陷阱函数
 
-ownKeys 陷阱拦截了内部方法 `[[OwnPropertyKeys]]`, 它允许你返回一个数组用于重写该行为, 被重写的行为可以是 [Object.key()](../Object/keys)、[Object.getOwnPropertyNames()](../Object/getOwnPropertyNames)、[Object.getOwnPropertySymbols()](../Object/getOwnPropertySymbols)、[Object.assign()](../Object/assign).
-
-在现在的 JS 编码习惯中, 一般将以**下划线打头**的属性视为私有属性, 下面的例子中将过滤掉所有的 “私有属性”:
+ownKeys 陷阱拦截了内部方法 `[[OwnPropertyKeys]]`, 它允许你返回一个数组用于重写该行为, 被重写的行为可以是 [Object.key()](../Object/keys)、[Object.getOwnPropertyNames()](../Object/getOwnPropertyNames)、[Object.getOwnPropertySymbols()](../Object/getOwnPropertySymbols)、[Object.assign()](../Object/assign). 在 JS 编码习惯中, 一般约定将以**下划线打头**的属性视为私有属性, 下面的例子通过代理过滤掉所有的 “私有属性”:
 
 ```ts
 const proxy = new Proxy(
@@ -219,22 +217,24 @@ proxy.age = 18
 proxy[Symbol('symbolName')] = 'symbol property'
 
 Object.defineProperty(proxy, 'age', {
-  enumerable: false,
+  enumerable: false, // age 不可枚举
 })
 
+// 原生 Object.getOwnPropertyNames() 返回一个包括不可枚举属性, 不包括 Symbol 值作为名称的属性, 不会获取到原型链上的属性的数组.
+// 通过代理后, 在原生的基础上过滤掉了私有属性 _name
 console.log(Object.getOwnPropertyNames(proxy)) // [ 'name', 'age' ]
+
+// 原生 Object.keys() 返回一个不包括不可枚举属性, 不包括 Symbol 值作为名称的属性, 不会获取到原型链上的属性的数组.
+// 通过代理后, 在原生的基础上过滤掉了私有属性 _name
 console.log(Object.keys(proxy)) // [ 'name' ]
+
+// 原生 Object.getOwnPropertySymbols() 返回一个包括不可枚举 Symbol 的属性, 不包括普通字符串作为名称的属性, 不会获取到原型链上的 Symbol 属性的数组.
+// 当然该方法不能直观的看出是否过滤了 _name, 但本质上该私有属性 _name 已经被过滤了!
 console.log(Object.getOwnPropertySymbols(proxy)) // [ Symbol(symbolName) ]
 ```
 
-前两个输出都会过滤掉所谓的“私有属性” —— name, 只不过原生 `Object.keys()` 不会拿到**不可枚举属性**而已. 第三个输出则会拿到 symbol 组成的数组.
-
 :::tip
-原生 Object.getOwnPropertyNames() 返回一个**包括不可枚举属性**, **不包括 Symbol 值作为名称的属性**, **不会获取到原型链上的属性**的数组.
-
-原生 Object.keys() 返回一个**不包括不可枚举属性**, **不包括 Symbol 值作为名称的属性**, **不会获取到原型链上的属性**的数组.
-
-原生 Object.getOwnPropertySymbols() 返回一个**包括不可枚举 Symbol 的属性**, **不包括普通字符串作为名称的属性**, **不会获取到原型链上的 Symbol 属性**的数组.
+目前公认的定义私有属性的方式是以下划线打头, 此外也有使用 # 作为私有属性标识符的提案, 当然使用 WeakMap 定义私有变量也是一个可行的方案, 不过都不如 TypeScript 香啊.
 :::
 
 ## 使用 apply 与 construct 陷阱函数的函数代理
