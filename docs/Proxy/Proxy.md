@@ -7,18 +7,114 @@ title: Proxy 和 Reflect
 一提到代理，立刻就想到 Fan Qiang. -- 鲁迅
 :::
 
-## Why Proxy
+## Object.defineProperty() 的局限性
 
-我们都知道早期的 Vue 无法监听数组如 `push`, `splice` 的变化, 这是因为 Vue 内核使用的是 [Object.defineProperty()](../Object/defineProperty), 它虽然能劫持数组并为其设置 getter 和 setter, 但调用这些方法改变数组时并不会触发 setter, 虽然尤小右同学做了些 [hack](https://github.com/vuejs/vue/blob/dev/src/core/observer/array.js), 但总有如鲠在喉的感觉. 而万众瞩目的 Vue 3.x 将使用 Proxy 重写内核, 因此还是稍微期待一下的, 虽然我用 React (🤦‍♀️.
+谈到 Proxy 就不得不提起它的大前辈 Object.defineProperty(), 我们都知道早期的 Vue 无法监听数组如 `push`, `splice` 等操作, 这是因为 Vue 内核使用了 [Object.defineProperty()](../Object/defineProperty), 它虽然能劫持数组并为其设置 getter 和 setter, 但调用 `push`, `splice` 等操作时却无法触发 setter, 虽然尤小右同学[重写了这些方法](https://github.com/vuejs/vue/blob/dev/src/core/observer/array.js), 但总有如鲠在喉的感觉.
 
-## 代理和反射是什么
+而万众瞩目的 Vue 3.x 将使用 Proxy 重写内核, 最近拿奖拿到手软 [immer.js](https://immerjs.github.io/immer/docs/introduction) 同样是用 Proxy 编写. 当然无论是 Object.defineProperty() 还是 Proxy, 它们都是为了使“元编程”变为可能. 在深入 Proxy 之前, 首先聊一聊 Object.defineProperty() 的局限性.
+
+![描述符可同时具有的键值](/img/docImages/proxyVSdefineProperty.jpeg)
+
+### 拦截方式较少
+
+相比较 Proxy 的 13 种陷阱, Object.defineProperty() 只能对如下属性操作符进行修改.
+
+```ts
+interface PropertyDescriptor {
+  configurable?: boolean
+  enumerable?: boolean
+  value?: any
+  writable?: boolean
+  get?(): any
+  set?(v: any): void
+}
+```
+
+### 无法一次性监听对象的所有属性
+
+Object.defineProperty() 只能通过遍历(或递归)的方式处理对象中的每个属性, 而 Proxy 直接代理整个对象.
+
+```ts
+const obj = {
+  name: 'Yancey',
+  age: 18,
+}
+
+Object.keys(obj).forEach((key) => {
+  Object.defineProperty(obj, key, {
+    enumerable: false,
+  })
+})
+```
+
+### 无法监听新增属性
+
+上面的代码仅仅是对 `name` 和 `age` 做了不可枚举的处理, 如果新增一个属性, 它仍然是可以枚举的, 如果你写过 Vue, 相信你对 `Vue.set()` 一定不陌生.
+
+```ts
+obj.hobby = 'eat'
+console.log(obj.propertyIsEnumerable('hobby')) // true
+```
+
+### 无法监听 push, splice 等数组方法
+
+上面已经谈到了原因, 这里不再赘述, Vue 通过重写这些原型方法来达到可监听的目的:
+
+```ts
+import { def } from '../util/index'
+
+const arrayProto = Array.prototype
+export const arrayMethods = Object.create(arrayProto)
+
+const methodsToPatch = [
+  'push',
+  'pop',
+  'shift',
+  'unshift',
+  'splice',
+  'sort',
+  'reverse',
+]
+
+/**
+ * Intercept mutating methods and emit events
+ */
+methodsToPatch.forEach(function (method) {
+  // cache original method
+  const original = arrayProto[method]
+  def(arrayMethods, method, function mutator(...args) {
+    const result = original.apply(this, args)
+    const ob = this.__ob__
+    let inserted
+    switch (method) {
+      case 'push':
+      case 'unshift':
+        inserted = args
+        break
+      case 'splice':
+        inserted = args.slice(2)
+        break
+    }
+    if (inserted) ob.observeArray(inserted)
+    // notify change
+    ob.dep.notify()
+    return result
+  })
+})
+```
+
+### 兼容性
+
+除了万恶的 IE 和早期浏览器, Proxy 都可以在项目中完美使用, 而 Object.defineProperty() 出自 ES5, 几乎现存浏览器都可以使用. 很多库也给出了兼容方案, 即高级浏览器使用 Proxy, 低级浏览器回退为 Object.defineProperty().
+
+## 什么是代理和反射
 
 `Proxy` 就是在访问或操作目标对象之前架设一个拦截对象, 使得 `Proxy` 对象可自定义基本操作的某些行为（如属性查找、赋值、枚举、函数调用等, `Proxy` 接受两个参数, 第一个是**目标对象**, 第二个是**陷阱函数**.
 
 `Reflect` 提供拦截 JavaScript 操作的原生方法, 每个代理陷阱函数都有一个对应的反射方法, 每个方法都与对应的陷阱函数同名, 并且接收的参数也与之一致.
 
 :::caution
-与大多数全局对象不同, Reflect 不是一个构造函数, 因此不能将其与一个 new 运算符一起使用.
+与大多数全局对象不同, Reflect 不是一个构造函数, 因此不能将其与一个 new 运算符一起使用(类似的还有 Math).
 :::
 
 | 代理陷阱                | 被重写的行为                                                                                 | 默认行为                          |
@@ -61,7 +157,7 @@ console.log(target.name) // target
 
 ## 使用 set 陷阱函数验证属性值
 
-通过上面的例子, 我们入门了 Proxy 的基本概念, 但是 Proxy 更强大的地方在于它的第二个参数, 也就是**陷阱函数**. 接下来通过一个 set 陷阱验证属性值的例子来学习: 假设有一个对象, 该对象已经存在的属性的属性值可以是任意类型, 但新增的属性的属性值必须是 Number 类型, 否则将抛出错误. 直接上代码:
+Proxy 更强大的地方在于它的第二个参数, 也就是**陷阱函数**. 接下来通过一个 set 陷阱验证属性值的例子来学习: 假设有一个对象, 该对象已经存在的属性的属性值可以是任意类型, 但新增的属性的属性值必须是 Number 类型, 否则将抛出错误. 直接上代码:
 
 ```ts
 const target = {
@@ -304,3 +400,7 @@ console.log(proxy.name) // 'target'
 revoke() // 代理被撤销
 console.log(proxy.name) // 抛出错误
 ```
+
+## 参考
+
+[ES6 Proxy 可以做哪些有意思的事情？](https://mp.weixin.qq.com/s/Z3_AfTy84h-ojhljnQJqIg)
