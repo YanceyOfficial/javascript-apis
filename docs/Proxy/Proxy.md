@@ -135,7 +135,7 @@ methodsToPatch.forEach(function (method) {
 
 ## 小试牛刀
 
-下面的例子中, 给 target 对象创建一个代理对象 proxy, 当 proxy.name 被赋值时, target.name 也同时被创建; 同样地, 当修改 target 是, proxy 也会反映出相应的变化.
+下面的例子中, 给 target 对象创建一个代理对象 proxy, 当 proxy.name 被赋值时, target.name 也同时被创建; 同样地, 当修改 target 时, proxy 也会反映出相应的变化.
 
 :::tip
 需要注意的是, 代理对象 proxy 自身并不存储 name, 它只是简单的将值转发给 target 对象.
