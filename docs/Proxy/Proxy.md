@@ -254,3 +254,36 @@ console.log(Object.getOwnPropertySymbols(proxy)) // [ Symbol(symbolName) ]
 - trapTarget: 被执行的函数(即代理的目标对象)
 
 - argumentsList: 被传递给函数的参数数组
+
+Reflect.construct() 方法同样会接收到这两个参数, 还会收到可选的第三参数 newTarget, 如果提供了此参数, 则它就指定了函数内部的 `new.target` 值.
+
+### 验证函数参数的有效性
+
+考虑以下函数, 我们需要限制传递的参数都是数字类型, 因此在代理中做一层拦截, 一旦发现非数字类型的参数就报错; 此外, 该函数也不能被用做构造函数, 因此一旦触发 construct 陷阱亦直接报错.zz
+
+```ts
+const sum = (...arr) => arr.reduce((acc, val) => acc + val, 0)
+
+const proxy = new Proxy(sum, {
+  apply(trapTarget, thisArg, argumentsList) {
+    const isNotAllNumber = argumentsList.some((val) => typeof val !== 'number')
+
+    if (isNotAllNumber) {
+      throw new TypeError('必须是数字类型的数组!')
+    }
+
+    return Reflect.apply(trapTarget, thisArg, argumentsList)
+  },
+
+  construct(trapTarget, argumentsList, newTarget) {
+    throw new TypeError('该函数不能用做构造函数!')
+  },
+})
+
+console.log(sum(1, 2, 3, 4)) // 10
+console.log(proxy(1, 2, 'a', 4)) // 报错
+console.log(new proxy(1, 2, 'a', 4)) // 报错
+```
+
+## 可被撤销的代理
+

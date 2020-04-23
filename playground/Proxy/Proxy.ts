@@ -58,3 +58,27 @@
 // console.log(Object.getOwnPropertyNames(proxy)) // [ 'name', 'age' ]
 // console.log(Object.keys(proxy)) // [ 'name' ]
 // console.log(Object.getOwnPropertySymbols(proxy)) // [ Symbol(symbolName) ]
+
+const sum = (...arr) => arr.reduce((acc, val) => acc + val, 0)
+
+const proxy = new Proxy(sum, {
+  apply(trapTarget, thisArg, argumentsList) {
+    const isNotAllNumber = argumentsList.some((val) => typeof val !== 'number')
+
+    if (isNotAllNumber) {
+      throw new TypeError('必须是数字类型的数组!')
+    }
+
+    return Reflect.apply(trapTarget, thisArg, argumentsList)
+  },
+
+  construct(trapTarget, argumentsList, newTarget) {
+    throw new TypeError('该函数不能用做构造函数!')
+  },
+})
+
+// console.log(sum(1, 2, 3, 4)) // 10
+// console.log(proxy(1, 2, 'a', 4)) // 报错
+
+// @ts-ignore
+console.log(new proxy(1, 2, 'a', 4)) // 报错
