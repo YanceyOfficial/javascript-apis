@@ -160,24 +160,45 @@ console.log(target.name) // target
 Proxy 更强大的地方在于它的第二个参数, 也就是**陷阱函数**. 接下来通过一个 set 陷阱验证属性值的例子来学习: 假设有一个对象, 该对象已经存在的属性的属性值可以是任意类型, 但新增的属性的属性值必须是 Number 类型, 否则将抛出错误. 直接上代码:
 
 ```ts
-const target = {
-  name: 'hello',
+const validationSchema = {
+  name: {
+    validate(value) {
+      return value.length > 6
+    },
+    message: '用户名长度不能小于6',
+  },
+  password: {
+    validate(value) {
+      return value.length > 10
+    },
+    message: '密码长度不能小于10',
+  },
+  moblie: {
+    validate(value) {
+      return /^1\d{10}$/.test(value)
+    },
+    message: '手机号格式错误',
+  },
 }
 
-const proxy = new Proxy(target, {
-  set(trapTarget, key, value, receiver) {
-    if (!trapTarget.hasOwnProperty(key)) {
-      if (isNaN(value)) {
-        throw new TypeError('Property must be a number.')
+function validator(obj, validationSchema) {
+  return new Proxy(obj, {
+    set(trapTarget, key, value) {
+      const validator = validationSchema[key]
+      if (!validator) {
+        trapTarget[key] = value
+      } else if (validator.validate(value)) {
+        trapTarget[key] = value
+      } else {
+        console.log(validator.message || '')
       }
-    }
+    },
+  })
+}
 
-    return Reflect.set(trapTarget, key, value, receiver)
-  },
-})
-
-proxy.age = 18
-proxy.age = 'string' // TypeError: Property must be a number.
+const form = validator(form, validationSchema)
+form.name = '666' // 报错
+form.password = '113123123123123'
 ```
 
 上面的例子中, 需要在**写入**对象时做一些拦截, 因此需要代理对象的 `set`, set 陷阱接收四个参数, 分别是:
@@ -189,8 +210,6 @@ proxy.age = 'string' // TypeError: Property must be a number.
 - value: 需要写入的属性的属性值
 
 - receiver: 操作发生的对象, 一般为代理对象
-
-需求规定不对 target 已存在的属性做校验, 因此可使用 [hasOwnProperty()](../Object/hasOwnProperty) 忽略; 接下来, 使用 isNaN 来判断 value 是否为数字, 如果不是就抛出异常, 否则使用 **Reflect**, 反射的目的是将正确的属性 set 到 target 对象中, 因为我们使用了 **set 陷阱**, 因此也要使用对应的 **Reflect.set()**, 陷阱和反射接收的参数及顺序是一模一样的.
 
 :::tip
 这个例子似乎有了表单校验的雏形. 此外, 还可以使用 get 陷阱函数进行对象外形验证, 使用 has 陷阱函数隐藏属性, 使用 deleteProperty 陷阱函数避免属性被删除.
@@ -242,7 +261,7 @@ Object.setPrototypeOf(proxy, {}) // 抛出异常
 
 ES5 通过 [Object.preventExtensions()](../Object/preventExtensions) 与 [Object.isExtensible()](../Object/isExtensible) 来判断对象是否可扩展. 这里简单复习下: 前者用于禁止给对象及其原型**添加新属性**, 但不会影响已有属性的**修改**和**删除**; 后者则是判断一个对象是否可扩展.
 
-下面的例子本身没有什么意义, 代理仍然返回了 isExtensible 与 preventExtensions 陷阱函数的默认行为. 同原型代理一样, 代理方法仍然要比高层的方法更加的底层, 它对传参的检查更加的底层.
+下面的例子本身没有什么意义, 代理仍然返回了 isExtensible 与 preventExtensions 陷阱函数的默认行为. 同原型代理一样, 代理方法仍然要比高层的方法更加的底层, 它对传参的检查更加的严格.
 
 ```ts
 let target = {}
