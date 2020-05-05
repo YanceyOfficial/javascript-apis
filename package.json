@@ -38,7 +38,7 @@
     "@babel/core": "^7.6.4",
     "babel-jest": "^25.3.0",
     "babel-preset-env": "^1.7.0",
-    "jest": "^25.3.0"
+    "jest": "^26.0.1"
   },
   "browserslist": {
     "production": [
