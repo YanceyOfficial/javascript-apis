@@ -31,15 +31,15 @@ assign<T, U, V>(target: T, source1: U, source2: V): T & U & V;
 
 ```js
 // 以下三个全部报错
-Object.assign();
-Object.assign(undefined);
-Object.assign(null);
+Object.assign()
+Object.assign(undefined)
+Object.assign(null)
 
 // 当只有一个参数且参数为引用类型时直接返回该参数
-Object.assign([1, 2, 3]); // [1, 2, 3]
+Object.assign([1, 2, 3]) // [1, 2, 3]
 
 // 除 undefined 和 null 以外的基本数据类型会被包装成对象形式
-Object.assign(100).__proto__ === new Number(100).__proto__; // true
+Object.assign(100).__proto__ === new Number(100).__proto__ // true
 ```
 
 ### 基本数据类型会被包装成对象
@@ -48,29 +48,39 @@ Object.assign(100).__proto__ === new Number(100).__proto__; // true
 
 ```js
 // null undefined number boolean sysmbol 将会被忽略
-Object.assign({}, 0, "abc", Symbol("name"), null, undefined, true); // { '0': 'a', '1': 'b', '2': 'c' }
+Object.assign({}, 0, 'abc', Symbol('name'), null, undefined, true) // { '0': 'a', '1': 'b', '2': 'c' }
 ```
+
+### 数组会被转换成类数组对象
+
+下面这个例子中, 第一个数组 `[1, 2, 3]` 被转换成 `{'0': 1, '1': 2, '2': 3}`, 第二个数组 `[4, 5]` 被转换成 `{'0': 4, '1': 5}`, 后面的类数组对象将前面的类数组对象的同名属性覆盖, 故结果为 `[4, 5, 3]`
+
+![数组会被转换成类数组对象](/img/docImages/assignLikedArray.jpg)
+
+再看一个例子, 第一个是数组, 第二个是对象, 两者 assgin 变成了如下的样子:
+
+![数组会被转换成类数组对象](/img/docImages/assignLikedArray2.jpg)
 
 ### 简单的对象复制
 
 ```js
 const target = {
-  name: "Sayaka"
-};
+  name: 'Sayaka',
+}
 
 // 源对象1会覆盖掉与目标对象相同的属性，所以 name: 'Yancey' 会覆盖掉 name: 'Sayaka'
 const source_1 = {
-  name: "Yancey",
-  say() {}
-};
+  name: 'Yancey',
+  say() {},
+}
 
 // 源对象2因为后于源对象1，所以 name: 'Lucy' 会覆盖掉 name: 'Yancey'
 const source_2 = {
-  name: "Lucy",
-  nullType: null
-};
+  name: 'Lucy',
+  nullType: null,
+}
 
-Object.assign(target, source_1, source_2); // { name: 'Lucy', say: [Function: say], nullType: null }
+Object.assign(target, source_1, source_2) // { name: 'Lucy', say: [Function: say], nullType: null }
 ```
 
 ### 浅拷贝
@@ -82,23 +92,23 @@ Object.assign(target, source_1, source_2); // { name: 'Lucy', say: [Function: sa
 ```js
 const source = {
   food: {
-    japaneseFood: ["sushi", "udon"]
+    japaneseFood: ['sushi', 'udon'],
   },
-  name: "Yancey"
-};
+  name: 'Yancey',
+}
 
-const copy = Object.assign({}, source);
+const copy = Object.assign({}, source)
 
 // 分别修改 name 属性和 food 属性
-source.name = "Sayaka";
-source.food.japaneseFood = [...source.food.japaneseFood, "natto"];
+source.name = 'Sayaka'
+source.food.japaneseFood = [...source.food.japaneseFood, 'natto']
 
-copy.name; // 'Yancey'
+copy.name // 'Yancey'
 
-copy.food.japaneseFood; // ['sushi', 'udon', 'natto']
+copy.food.japaneseFood // ['sushi', 'udon', 'natto']
 
 // 两者指向了同一个堆
-copy.food === source.food; // true
+copy.food === source.food // true
 ```
 
 ### 异常会打断后续拷贝
@@ -106,36 +116,36 @@ copy.food === source.food; // true
 拷贝的源对象是按顺序读取，一旦中途出错，将停止拷贝。
 
 ```js
-const target = Object.defineProperty({}, "foo", {
+const target = Object.defineProperty({}, 'foo', {
   value: 1,
-  writable: false
-});
+  writable: false,
+})
 
 // 直接报错
 // TypeError: Cannot assign to read only property 'foo' of object '#<Object>'
 Object.assign(
   target,
   {
-    bar: 2
+    bar: 2,
   },
   {
     foo2: 3,
     // 错误出在了这一行
     foo: 3,
-    foo3: 3
+    foo3: 3,
   },
   {
-    baz: 4
-  }
-);
+    baz: 4,
+  },
+)
 
-target.bar; // 2
-target.foo2; // 3
+target.bar // 2
+target.foo2 // 3
 
 // 拷贝终止
-target.foo; // 1
-target.foo3; // undefined
-target.baz; // undefined
+target.foo // 1
+target.foo3 // undefined
+target.baz // undefined
 ```
 
 ## 扩展
@@ -147,15 +157,15 @@ target.baz; // undefined
 ```js
 class Rectangle {
   constructor(width, height) {
-    this.width = width;
-    this.height = height;
+    this.width = width
+    this.height = height
   }
 }
 
 // use Object.assign()
 class Rectangle {
   constructor(width, height) {
-    Object.assign(this, { width, height });
+    Object.assign(this, { width, height })
   }
 }
 ```
@@ -166,25 +176,25 @@ class Rectangle {
 
 ```js
 function Dog(name) {
-  this.name = name;
+  this.name = name
 }
 
 Dog.prototype.say = () => {
-  return "say something...";
-};
+  return 'say something...'
+}
 Dog.prototype.bark = () => {
-  return "yamette...";
-};
+  return 'yamette...'
+}
 
 // use Object.assign()
 Object.assign(Dog.prototype, {
   say() {
-    return "say something...";
+    return 'say something...'
   },
   bark() {
-    return "yamette...";
-  }
-});
+    return 'yamette...'
+  },
+})
 ```
 
 ### Object.assign() "四宗罪"
