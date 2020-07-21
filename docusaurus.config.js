@@ -50,7 +50,7 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Yancey, Inc. and its affiliates.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Yancey Inc. and its affiliates.`,
     },
     googleAnalytics: {
       trackingID: 'UA-136329095-1',
