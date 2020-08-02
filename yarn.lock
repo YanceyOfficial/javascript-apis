@@ -7382,10 +7382,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-katex@^0.11.0:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.11.1.tgz#df30ca40c565c9df01a466a00d53e079e84ffaa2"
-  integrity sha512-5oANDICCTX0NqYIyAiFCCwjQ7ERu3DQG2JFHLbYOf+fXaMoH8eg/zOq5WSYJsKMi/QebW+Eh3gSM+oss1H/bww==
+katex@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.12.0.tgz#2fb1c665dbd2b043edcf8a1f5c555f46beaa0cb9"
+  integrity sha512-y+8btoc/CK70XqcHqjxiGWBOeIL8upbS0peTPXTvgrh21n1RiWWcIpSWM+4uXq+IAgNh9YYQWdc7LVDPDAEEAg==
   dependencies:
     commander "^2.19.0"
 
@@ -10131,15 +10131,15 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-rehype-katex@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/rehype-katex/-/rehype-katex-3.0.0.tgz#3847ff8110d9ae795c12cdc70fbceb6d122bbfc6"
-  integrity sha512-gWC86mSCzTQ4ogpBOTIeCPRaJUyGVFAL+CcR/rhaPET99RADjXKBEWVyheeWFqbJjYzDGWZoanznc63E0tpOIg==
+rehype-katex@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/rehype-katex/-/rehype-katex-3.1.0.tgz#3a0bf6361b78074110da4c15c62f5d2255d2cc2b"
+  integrity sha512-ozlAEsy0o0vqQvRACVk8WRHkiZMHG3NBF+KjEfyzpVSKG08V+yskCZ+BtCblGyMqKwe+VYReK8xJ6gN7pvV6WA==
   dependencies:
     hast-util-to-text "^2.0.0"
-    katex "^0.11.0"
+    katex "^0.12.0"
     rehype-parse "^6.0.0"
-    unified "^8.0.0"
+    unified "^9.0.0"
     unist-util-visit "^2.0.0"
 
 rehype-parse@^6.0.0, rehype-parse@^6.0.2:
@@ -11685,13 +11685,25 @@ unified@9.0.0:
     trough "^1.0.0"
     vfile "^4.0.0"
 
-unified@^8.0.0, unified@^8.4.2:
+unified@^8.4.2:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/unified/-/unified-8.4.2.tgz#13ad58b4a437faa2751a4a4c6a16f680c500fff1"
   integrity sha512-JCrmN13jI4+h9UAyKEoGcDZV+i1E7BLFuG7OsaDvTXI5P0qhHX+vZO/kOhz9jn8HGENDKbwSeB0nVOg4gVStGA==
   dependencies:
     bail "^1.0.0"
     extend "^3.0.0"
+    is-plain-obj "^2.0.0"
+    trough "^1.0.0"
+    vfile "^4.0.0"
+
+unified@^9.0.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-9.1.0.tgz#7ba82e5db4740c47a04e688a9ca8335980547410"
+  integrity sha512-VXOv7Ic6twsKGJDeZQ2wwPqXs2hM0KNu5Hkg9WgAZbSD1pxhZ7p8swqg583nw1Je2fhwHy6U8aEjiI79x1gvag==
+  dependencies:
+    bail "^1.0.0"
+    extend "^3.0.0"
+    is-buffer "^2.0.0"
     is-plain-obj "^2.0.0"
     trough "^1.0.0"
     vfile "^4.0.0"
