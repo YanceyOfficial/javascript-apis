@@ -3,7 +3,7 @@ function ramdomStr() {
 }
 
 function registerGitalk() {
-  const gitalkDOMId = `gitalk-container_${ramdomStr()}`
+  const gitalkDOMId = `gitalk-wrapper_${ramdomStr()}`
 
   const prevnextDOM = document.querySelector('.pagination-nav')
   const gitalkDOMStr = `<section id=${gitalkDOMId}></section>`
@@ -40,6 +40,12 @@ function registerHistoryEvent() {
   history.replaceState = _wr('replaceState')
 }
 
+registerHistoryEvent()
+
 window.addEventListener('load', function () {
+  registerGitalk()
+})
+
+window.addEventListener('pushState', function () {
   registerGitalk()
 })

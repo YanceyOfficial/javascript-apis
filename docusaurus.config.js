@@ -22,13 +22,15 @@ module.exports = {
     '/css/gitalk.css',
   ],
   plugins: [
-    '@docusaurus/plugin-ideal-image',
-    {
-      quality: 70,
-      max: 1030, // max resized image's size.
-      min: 640, // min resized image's size. if original is lower, use that size.
-      steps: 2, // the max number of images generated between min and max (inclusive)
-    },
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1030, // max resized image's size.
+        min: 640, // min resized image's size. if original is lower, use that size.
+        steps: 2, // the max number of images generated between min and max (inclusive)
+      },
+    ],
   ],
   themeConfig: {
     navbar: {
@@ -39,7 +41,7 @@ module.exports = {
         href: '/docs/Object/hasOwnProperty', // default to siteConfig.baseUrl
         target: '_self', // by default, this value is calculated based on the `href` attribute (the external link will open in a new tab, all others in the current one)
       },
-      links: [
+      items: [
         { to: 'blog', label: 'About', position: 'right' },
         {
           href: 'https://github.com/YanceyOfficial/javascript-apis',
@@ -95,7 +97,7 @@ module.exports = {
            * URL route for the blog section of your site
            * do not include trailing slash
            */
-          routeBasePath: '',
+          routeBasePath: '/',
           include: ['**/*.{js,jsx}'],
         },
       },

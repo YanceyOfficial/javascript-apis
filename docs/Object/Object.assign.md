@@ -207,4 +207,4 @@ Object.assign(Dog.prototype, {
 
 - 无法拷贝源对象的原型
 
-后面的章节在讲到 Object.getOwnPropertyDescriptors 时会来解决这个问题，具体可以戳 [解决 Object.assign() 浅拷贝问题](/ES/Object/getOwnPropertyDescriptors#%E8%A7%A3%E5%86%B3-objectassign-%E6%B5%85%E6%8B%B7%E8%B4%9D%E9%97%AE%E9%A2%98)。
+后面的章节在讲到 Object.getOwnPropertyDescriptors 时会来解决这个问题，具体可以戳 [解决 Object.assign() 浅拷贝问题](./getOwnPropertyDescriptors#扩展)。
