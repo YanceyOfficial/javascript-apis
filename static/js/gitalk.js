@@ -47,5 +47,6 @@ window.addEventListener('load', function () {
 })
 
 window.addEventListener('pushState', function () {
+  location.reload()
   registerGitalk()
 })
