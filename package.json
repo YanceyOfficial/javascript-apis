@@ -36,7 +36,7 @@
     "yancey-js-util": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
+    "@babel/core": "^7.11.4",
     "babel-jest": "^26.2.2",
     "babel-preset-env": "^1.7.0",
     "jest": "^26.2.2"
