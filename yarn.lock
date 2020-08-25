@@ -10522,10 +10522,10 @@ remark-footnotes@1.0.0:
   resolved "https://registry.yarnpkg.com/remark-footnotes/-/remark-footnotes-1.0.0.tgz#9c7a97f9a89397858a50033373020b1ea2aad011"
   integrity sha512-X9Ncj4cj3/CIvLI2Z9IobHtVi8FVdUrdJkCNaL9kdX8ohfsi18DXHsCVd/A7ssARBdccdDb5ODnt62WuEWaM/g==
 
-remark-math@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/remark-math/-/remark-math-2.0.1.tgz#6edc884ba3b40710c2ae31ce93cd88c9959ac8b9"
-  integrity sha512-FokDg5BmlPbKaAdD4IfSVuRgYH6FBPeIn0zxZA6oZ6epc4qOSjoSJPyhsH0H/WKABuaCVMJuF5O2STti6UmBQw==
+remark-math@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/remark-math/-/remark-math-3.0.1.tgz#85a02a15b15cad34b89a27244d4887b3a95185bb"
+  integrity sha512-epT77R/HK0x7NqrWHdSV75uNLwn8g9qTyMqCRCDujL0vj/6T6+yhdrR7mjELWtkse+Fw02kijAaBuVcHBor1+Q==
 
 remark-mdx@1.6.13:
   version "1.6.13"
