@@ -2103,6 +2103,11 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.5.tgz#dcce4430e64b443ba8945f0290fb564ad5bac6dd"
   integrity sha512-7+2BITlgjgDhH0vvwZU/HZJVyk+2XUlvxXe8dFMedNX/aMkaOq++rMAFXc0tM7ij15QaWlbdQASBR9dihi+bDQ==
 
+"@types/katex@^0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@types/katex/-/katex-0.11.0.tgz#b16c54ee670925ffef0616beae9e90c557e17334"
+  integrity sha512-27BfE8zASRLYfSBNMk5/+KIjr2CBBrH0i5lhsO04fca4TGirIIMay73v3zNkzqmsaeIa/Mi5kejWDcxPLAmkvA==
+
 "@types/lodash@^4.14.53":
   version "4.14.157"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.157.tgz#fdac1c52448861dfde1a2e1515dbc46e54926dc8"
@@ -10523,18 +10528,19 @@ regjsparser@^0.6.4:
   dependencies:
     jsesc "~0.5.0"
 
-rehype-katex@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/rehype-katex/-/rehype-katex-3.1.0.tgz#3a0bf6361b78074110da4c15c62f5d2255d2cc2b"
-  integrity sha512-ozlAEsy0o0vqQvRACVk8WRHkiZMHG3NBF+KjEfyzpVSKG08V+yskCZ+BtCblGyMqKwe+VYReK8xJ6gN7pvV6WA==
+rehype-katex@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/rehype-katex/-/rehype-katex-4.0.0.tgz#ce11a5db0bff014350e7a9cfd30147d314b14330"
+  integrity sha512-0mgBqYugQyIW0eUl6RDOZ28Cat2YzrnWGaYgKCMQnJw6ClmKgLqXBnkDAPGh2mwxvkkKwQOUMUpSLpA5rt7rzA==
   dependencies:
+    "@types/katex" "^0.11.0"
     hast-util-to-text "^2.0.0"
     katex "^0.12.0"
-    rehype-parse "^6.0.0"
+    rehype-parse "^7.0.0"
     unified "^9.0.0"
     unist-util-visit "^2.0.0"
 
-rehype-parse@^6.0.0, rehype-parse@^6.0.2:
+rehype-parse@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/rehype-parse/-/rehype-parse-6.0.2.tgz#aeb3fdd68085f9f796f1d3137ae2b85a98406964"
   integrity sha512-0S3CpvpTAgGmnz8kiCyFLGuW5yA4OQhyNTm/nwPopZ7+PI11WnGl1TTWTGv/2hPEe/g2jRLlhVVSsoDH8waRug==
@@ -10542,6 +10548,14 @@ rehype-parse@^6.0.0, rehype-parse@^6.0.2:
     hast-util-from-parse5 "^5.0.0"
     parse5 "^5.0.0"
     xtend "^4.0.0"
+
+rehype-parse@^7.0.0:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/rehype-parse/-/rehype-parse-7.0.1.tgz#58900f6702b56767814afc2a9efa2d42b1c90c57"
+  integrity sha512-fOiR9a9xH+Le19i4fGzIEowAbwG7idy2Jzs4mOrFWBSJ0sNUgy0ev871dwWnbOo371SjgjG4pwzrbgSVrKxecw==
+  dependencies:
+    hast-util-from-parse5 "^6.0.0"
+    parse5 "^6.0.0"
 
 relateurl@^0.2.7:
   version "0.2.7"
