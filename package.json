@@ -31,13 +31,13 @@
     "classnames": "^2.2.6",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "rehype-katex": "^3.1.0",
+    "rehype-katex": "^4.0.0",
     "remark-math": "^3.0.1",
     "yancey-js-util": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
-    "babel-jest": "^26.2.2",
+    "babel-jest": "^26.3.0",
     "babel-preset-env": "^1.7.0",
     "jest": "^26.2.2"
   },
