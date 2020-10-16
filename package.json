@@ -29,7 +29,7 @@
     "@docusaurus/plugin-ideal-image": "^2.0.0-alpha.39",
     "@docusaurus/preset-classic": "^2.0.0-alpha.61",
     "classnames": "^2.2.6",
-    "react": "^16.8.4",
+    "react": "^16.14.0",
     "react-dom": "^16.8.4",
     "rehype-katex": "^4.0.0",
     "remark-math": "^2.0.1",
