@@ -3,6 +3,7 @@
 }
 
 .gt-container .gt-btn {
+  border: none !important;
   color: #ffffff !important;
   border: 1px solid var(--ifm-color-primary) !important;
   background-color: var(--ifm-color-primary) !important;
@@ -11,7 +12,6 @@
 .gt-container .gt-btn-preview {
   background-color: var(--ifm-color-primary) !important;
   color: #ffffff !important;
-  border: none !important;
 }
 
 .gt-container a {
@@ -26,8 +26,8 @@
   fill: var(--ifm-color-primary) !important;
 }
 
-.gt-container .gt-ico-arrdown svg {
-  fill: #000000 !important;
+.gt-container .gt-user .gt-ico svg {
+  fill: var(--ifm-font-color-base) !important;
 }
 
 .gt-container .gt-popup .gt-action.is--active::before {
@@ -37,6 +37,10 @@
 .gt-container .gt-header-textarea {
   background: var(--ifm-navbar-search-input-background-color) !important;
   color: var(--ifm-navbar-search-input-color) !important;
+}
+
+.gt-container .gt-header-textarea::-webkit-input-placeholder {
+  color: var(--docsearch-muted-color);
 }
 
 .gt-container .gt-header-textarea:hover {
