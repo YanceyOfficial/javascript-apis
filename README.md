@@ -1,6 +1,6 @@
 # JavaScript API Set
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![Build Status](https://github.com/YanceyOfficial/javascript-apis/actions/workflows/github-actions.yml/badge.svg)
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/YanceyOfficial/javascript-apis)
 [![Node](https://img.shields.io/badge/node-%3E%3D12.16.2-green.svg)](https://github.com/YanceyOfficial/javascript-apis)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/YanceyOfficial/Javascript-apis/pulls)
