@@ -271,6 +271,57 @@ Promise.race = (promises) => {
     }
   })
 }
+
+// Promise.any
+Promise.any = function (iterators) {
+  const promises = Array.from(iterators)
+  const num = promises.length
+  const rejectedList = new Array(num)
+  let rejectedCount = 0
+
+  return new Promise((resolve, reject) => {
+    promises.forEach((promise, index) => {
+      Promise.resolve(promise)
+        .then((value) => resolve(value))
+        .catch((error) => {
+          rejectedList[index] = error
+          if (++rejectedCount === num) {
+            reject(rejectedList)
+          }
+        })
+    })
+  })
+}
+
+// Promise.allSettled
+Promise.allSettled = function(promises) {
+    return new Promise(function(resolve) {
+        const results = []
+        const count = 0
+        promises.forEach((s, index) => {
+           Promise.resolve(s).then(res => {
+               results[index] = {
+                    status: FULFILLED,
+                    value: s
+                }
+                count++
+                if(count === promises.length) {
+                    resolve(results)
+                }
+           }).catch(val=>{
+            results[index] = {
+                status:REJECTED
+                value: s
+            }
+            count++
+            if(count === promises.length) {
+                resolve(results)
+            }
+          })
+        })
+        resolve(results)
+    })
+}
 ```
 
 最后安装 `yarn global add promises-aplus-tests`，在文件中插入下面这段代码，然后使用 `promises-aplus-tests 该文件的文件名` 来验证你手写的 Promise 是否符合 Promises A+ 规范。
