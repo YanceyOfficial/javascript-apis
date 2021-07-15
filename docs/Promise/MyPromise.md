@@ -229,98 +229,100 @@ Promise.reject = (reason) => new Promise((resolve, reject) => reject(reason))
 Promise.all = (promises) => {
   return new Promise((resolve, reject) => {
     let resolvedCounter = 0
-    let promiseNum = promises.length
-    let resolvedValues = new Array(promiseNum)
-    for (let i = 0; i < promiseNum; i += 1) {
-      ;((i) => {
-        Promise.resolve(promises[i]).then(
-          (value) => {
-            resolvedCounter++
-            resolvedValues[i] = value
-            if (resolvedCounter === promiseNum) {
-              return resolve(resolvedValues)
-            }
-          },
-          (reason) => {
-            return reject(reason)
-          },
-        )
-      })(i)
-    }
+    let n = promises.length
+    let resolvedValues = []
+
+    promises.forEach((promise, i) => {
+      Promise.resolve(promise).then(
+        (value) => {
+          resolvedCounter++
+          resolvedValues[i] = value
+          if (resolvedCounter === n) {
+            return resolve(resolvedValues)
+          }
+        },
+        (reason) => {
+          return reject(reason)
+        },
+      )
+    })
   })
 }
 
 // Promise.race
 Promise.race = (promises) => {
   return new Promise((resolve, reject) => {
-    if (promises.length === 0) {
-      return
-    } else {
-      for (let i = 0, l = promises.length; i < l; i += 1) {
-        Promise.resolve(promises[i]).then(
-          (data) => {
-            resolve(data)
-            return
-          },
-          (err) => {
-            reject(err)
-            return
-          },
-        )
-      }
-    }
+    promises.forEach((promise) => {
+      Promise.resolve(promises[i]).then(
+        (data) => {
+          resolve(data)
+          return
+        },
+        (err) => {
+          reject(err)
+          return
+        },
+      )
+    })
   })
 }
 
 // Promise.any
-Promise.any = function (iterators) {
-  const promises = Array.from(iterators)
-  const num = promises.length
-  const rejectedList = new Array(num)
-  let rejectedCount = 0
-
+Promise.any = (promises) => {
   return new Promise((resolve, reject) => {
-    promises.forEach((promise, index) => {
-      Promise.resolve(promise)
-        .then((value) => resolve(value))
-        .catch((error) => {
-          rejectedList[index] = error
-          if (++rejectedCount === num) {
-            reject(rejectedList)
-          }
-        })
+    let hasOneResolved = false
+    let remaining = promises.length
+    const errors = []
+
+    promises.forEach((promise, i) => {
+      promise.then(
+        (data) => {
+          if (hasOneResolved) return
+          hasOneResolved = true
+          resolve(data)
+        },
+        (err) => {
+          if (hasOneResolved) return
+          remaining--
+          errors[i] = err
+          remaining || reject(errors)
+        },
+      )
     })
   })
 }
 
 // Promise.allSettled
-Promise.allSettled = function(promises) {
-    return new Promise(function(resolve) {
-        const results = []
-        const count = 0
-        promises.forEach((s, index) => {
-           Promise.resolve(s).then(res => {
-               results[index] = {
-                    status: FULFILLED,
-                    value: s
-                }
-                count++
-                if(count === promises.length) {
-                    resolve(results)
-                }
-           }).catch(val=>{
-            results[index] = {
-                status:REJECTED
-                value: s
-            }
-            count++
-            if(count === promises.length) {
-                resolve(results)
-            }
-          })
+Promise.allSettled = function (promises) {
+  return new Promise(function (resolve) {
+    const res = []
+    const count = 0
+    const n = promises.length
+    promises.forEach((promise, i) => {
+      Promise.resolve(promise)
+        .then((value) => {
+          res[i] = {
+            status: FULFILLED,
+            value,
+          }
+          count++
+          if (count === n) {
+            resolve(res)
+          }
         })
-        resolve(results)
+        .catch((reason) => {
+          res[i] = {
+            status: REJECTED,
+            reason: reason,
+          }
+          count++
+          if (count === n) {
+            resolve(res)
+          }
+        })
     })
+    resolve(res)
+  })
 }
 ```
 
