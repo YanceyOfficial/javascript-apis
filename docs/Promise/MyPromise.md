@@ -268,64 +268,6 @@ Promise.race = (promises) => {
 }
 
 // Promise.any
-Promise.any = (promises) => {
-  return new Promise((resolve, reject) => {
-    let hasOneResolved = false
-    let remaining = promises.length
-    const errors = []
-
-    promises.forEach((promise, i) => {
-      promise.then(
-        (data) => {
-          if (hasOneResolved) return
-          hasOneResolved = true
-          resolve(data)
-        },
-        (err) => {
-          if (hasOneResolved) return
-          remaining--
-          errors[i] = err
-          remaining || reject(errors)
-        },
-      )
-    })
-  })
-}
-
-// Promise.allSettled
-Promise.allSettled = function (promises) {
-  return new Promise(function (resolve) {
-    const res = []
-    const count = 0
-    const n = promises.length
-    promises.forEach((promise, i) => {
-      Promise.resolve(promise)
-        .then((value) => {
-          res[i] = {
-            status: FULFILLED,
-            value,
-          }
-          count++
-          if (count === n) {
-            resolve(res)
-          }
-        })
-        .catch((reason) => {
-          res[i] = {
-            status: REJECTED,
-            reason: reason,
-          }
-          count++
-          if (count === n) {
-            resolve(res)
-          }
-        })
-    })
-    resolve(res)
-  })
-}
-
-// Promise.any
 Promise.any = function (iterators) {
   const promises = Array.from(iterators)
   const num = promises.length
