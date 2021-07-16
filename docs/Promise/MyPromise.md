@@ -230,7 +230,7 @@ Promise.all = (promises) => {
   return new Promise((resolve, reject) => {
     let resolvedCounter = 0
     let n = promises.length
-    let resolvedValues = []
+    const resolvedValues = []
 
     promises.forEach((promise, i) => {
       Promise.resolve(promise).then(
@@ -271,9 +271,9 @@ Promise.race = (promises) => {
 
 Promise.allSettled = function (promises) {
   return new Promise(function (resolve) {
-    const res = []
-    const count = 0
     const n = promises.length
+    const res = []
+    let count = 0
     promises.forEach((promise, i) => {
       Promise.resolve(promise)
         .then((value) => {
