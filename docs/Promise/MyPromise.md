@@ -267,7 +267,42 @@ Promise.race = (promises) => {
   })
 }
 
+// Promise.allSettled
+
+Promise.allSettled = function (promises) {
+  return new Promise(function (resolve) {
+    const res = []
+    const count = 0
+    const n = promises.length
+    promises.forEach((promise, i) => {
+      Promise.resolve(promise)
+        .then((value) => {
+          res[i] = {
+            status: FULFILLED,
+            value,
+          }
+          count++
+          if (count === n) {
+            resolve(res)
+          }
+        })
+        .catch((reason) => {
+          res[i] = {
+            status: REJECTED,
+            reason: reason,
+          }
+          count++
+          if (count === n) {
+            resolve(res)
+          }
+        })
+    })
+    resolve(res)
+  })
+}
+
 // Promise.any
+
 Promise.any = function (iterators) {
   const promises = Array.from(iterators)
   const num = promises.length
@@ -286,36 +321,6 @@ Promise.any = function (iterators) {
         })
     })
   })
-}
-
-// Promise.allSettled
-Promise.allSettled = function(promises) {
-    return new Promise(function(resolve) {
-        const results = []
-        const count = 0
-        promises.forEach((s, index) => {
-           Promise.resolve(s).then(res => {
-               results[index] = {
-                    status: FULFILLED,
-                    value: s
-                }
-                count++
-                if(count === promises.length) {
-                    resolve(results)
-                }
-           }).catch(val=>{
-            results[index] = {
-                status:REJECTED
-                value: s
-            }
-            count++
-            if(count === promises.length) {
-                resolve(results)
-            }
-          })
-        })
-        resolve(results)
-    })
 }
 ```
 
