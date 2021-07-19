@@ -303,20 +303,18 @@ Promise.allSettled = function (promises) {
 
 // Promise.any
 
-Promise.any = function (iterators) {
-  const promises = Array.from(iterators)
-  const num = promises.length
-  const rejectedList = new Array(num)
-  let rejectedCount = 0
-
+Promise.any = function (promises) {
   return new Promise((resolve, reject) => {
-    promises.forEach((promise, index) => {
+    const n = promises.length
+    const rejected = []
+    let count = 0
+    promises.forEach((promise) => {
       Promise.resolve(promise)
-        .then((value) => resolve(value))
-        .catch((error) => {
-          rejectedList[index] = error
-          if (++rejectedCount === num) {
-            reject(rejectedList)
+        .then((val) => resolve(val))
+        .catch((e) => {
+          rejected.push(e)
+          if (++count === n) {
+            return reject(rejects)
           }
         })
     })
