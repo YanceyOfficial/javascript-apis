@@ -1,10 +1,8 @@
 # JavaScript API Set
 
 ![Build Status](https://github.com/YanceyOfficial/javascript-apis/actions/workflows/github-actions.yml/badge.svg)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/YanceyOfficial/javascript-apis)
 [![Node](https://img.shields.io/badge/node-%3E%3D12.16.2-green.svg)](https://github.com/YanceyOfficial/javascript-apis)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/YanceyOfficial/Javascript-apis/pulls)
-[![Build Status](https://travis-ci.org/YanceyOfficial/javascript-apis.svg?branch=master)](https://travis-ci.org/YanceyOfficial/javascript-apis)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FYanceyOfficial%2Fjavascript-apis?ref=badge_shield)
 
 I explain the APIs of JavaScript which is recommended by MDN.
