@@ -6,9 +6,12 @@ module.exports = {
   tagline: 'I explain all apis of JavaScript.',
   url: 'https://js.yanceyleo.com',
   baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'YanceyOfficial', // Usually your GitHub org/user name.
-  projectName: 'javascript-apis', // Usually your repo name.
+  organizationName: 'YanceyOfficial',
+  projectName: 'javascript-apis',
+  themes: ['@docusaurus/theme-live-codeblock'],
   scripts: [
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js',
     {
@@ -33,36 +36,55 @@ module.exports = {
     ],
   ],
   themeConfig: {
+    liveCodeBlock: {
+      playgroundPosition: 'bottom',
+    },
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+    },
+    announcementBar: {
+      id: 'referral-traffic',
+      content:
+        '⭐️ Want more technical articles? Please visit my <a target="_blank" rel="noopener noreferrer" href="https://yanceyleo.com">official website</a>! ⭐️',
+    },
     navbar: {
       title: 'JavaScript API 全解析',
       logo: {
         alt: 'JavaScript API 全解析',
         src: 'img/logo.png',
-        href: '/docs/Object/hasOwnProperty', // default to siteConfig.baseUrl
-        target: '_self', // by default, this value is calculated based on the `href` attribute (the external link will open in a new tab, all others in the current one)
       },
       items: [
         { to: 'blog', label: 'About', position: 'right' },
         {
-          href: 'https://github.com/YanceyOfficial/javascript-apis',
-          label: 'GitHub',
+          href: 'https://yanceyleo.com',
+          label: 'Blog',
           position: 'right',
+        },
+        {
+          href: 'https://algorithm.yanceyleo.com',
+          label: 'LeetCode Trip',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/YanceyOfficial/javascript-apis',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
     footer: {
-      style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} Yancey Inc. and its affiliates.`,
+      copyright: `<a href="https://yanceyleo.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Copyright © ${new Date().getFullYear()} Yancey Inc. and its affiliates.</a>`,
     },
     googleAnalytics: {
       trackingID: 'UA-136329095-1',
-      // Optional fields.
-      anonymizeIP: true, // Should IPs be anonymized?
+      anonymizeIP: true,
     },
     algolia: {
       apiKey: '3fab48c65c06ef486aa7fe5d484a76b2',
       indexName: 'yanceyofficial_javascript-apis',
-      algoliaOptions: {}, // Optional, if provided by Algolia
+      algoliaOptions: {},
     },
   },
   presets: [
@@ -82,21 +104,11 @@ module.exports = {
           customCss: require.resolve('./src/css/custom.css'),
         },
         sitemap: {
-          cacheTime: 600 * 1000, // 600 sec - cache purge period
           changefreq: 'weekly',
           priority: 0.5,
         },
         pages: {
-          /**
-           * Path to data on filesystem
-           * relative to site dir
-           * components in this directory will be automatically converted to pages
-           */
           path: 'src/pages',
-          /**
-           * URL route for the blog section of your site
-           * do not include trailing slash
-           */
           routeBasePath: '/',
           include: ['**/*.{js,jsx}'],
         },
