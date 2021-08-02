@@ -1,4 +1,4 @@
-import * as random from '../playground/Math/Math.random';
+import * as random from '../src/ecmascript/Math/Math.random';
 
 describe('Math.abs()', () => {
   test('', () => {

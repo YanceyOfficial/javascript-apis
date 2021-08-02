@@ -5,7 +5,7 @@ import {
   add,
   set,
   map
-} from '../playground/Array/Array.from';
+} from '../src/ecmascript/Array/Array.from';
 
 describe('Array.of()', () => {
   test('', () => {
