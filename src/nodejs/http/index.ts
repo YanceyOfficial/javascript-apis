@@ -28,14 +28,18 @@ class App {
         const _method = req.method
 
         const request = this.routers[_url]
+        let cb = null
         if (request && request.method === _method) {
-          const response = request.cb()
-
-          res.end(response)
-          return
+          cb = request.cb
         }
 
-        res.end('404')
+        if (!cb) {
+          res.end('404')
+        }
+
+        const response = await cb()
+        res.end(response)
+        return
       })
       .listen(this.port, this.callback)
   }
