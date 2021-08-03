@@ -2,8 +2,19 @@ import http from 'http'
 import { sleep } from 'yancey-js-util'
 import { mockData } from './mock'
 
+interface Dict {
+  [x: string]: Request
+}
+
+interface Request {
+  method: string
+  url: string
+  cb: () => void
+}
+
 class App {
-  private routers = {}
+  private routers: Dict = {}
+
   constructor(private port: number, public callback: () => void) {
     this.port = port
     this.callback = callback
@@ -17,8 +28,8 @@ class App {
         const _method = req.method
 
         const request = this.routers[_url]
-        if (request && request.mothod === _method) {
-          const response = await request.cb(req, res)
+        if (request && request.method === _method) {
+          const response = request.cb()
 
           res.end(response)
           return
@@ -29,7 +40,7 @@ class App {
       .listen(this.port, this.callback)
   }
 
-  public get(url: string, cb: (req: any, res: any) => any) {
+  public get(url: string, cb: () => any) {
     return {
       method: 'GET',
       url,
@@ -37,7 +48,7 @@ class App {
     }
   }
 
-  public post(url: string, cb: (req: any, res: any) => any) {
+  public post(url: string, cb: () => any): Request {
     return {
       method: 'POST',
       url,
@@ -45,7 +56,7 @@ class App {
     }
   }
 
-  public setRouter(...args: any[]) {
+  public setRouter(...args: Request[]) {
     for (const arg of args) {
       const { url } = arg
 
@@ -61,12 +72,12 @@ const app = new App(3004, () => {
   console.log('run')
 })
 
-const getHello = app.get('/hello', async (req, res) => {
+const getHello = app.get('/hello', async () => {
   await sleep(1000)
   return JSON.stringify(mockData)
 })
 
-const postWorld = app.post('/world', async (req, res) => {
+const postWorld = app.post('/world', async () => {
   await sleep(1000)
   return JSON.stringify({ a: 1, b: 2 })
 })
