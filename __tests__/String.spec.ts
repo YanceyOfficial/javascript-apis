@@ -32,19 +32,11 @@ describe('charCodeAt()', () => {
   })
 
   test('passing empty param', () => {
-    expect(twoBytesStr.charCodeAt()).toBe(121)
+    expect(twoBytesStr.charCodeAt(0)).toBe(121)
   })
 
   test('passing one param for four bytes string', () => {
     expect(fourBytesStr.charCodeAt(0)).toBe(55348)
-  })
-
-  test('passing one other data type param', () => {
-    expect(twoBytesStr.charCodeAt(false)).toBe(121)
-  })
-
-  test('passing one other data type param', () => {
-    expect(twoBytesStr.charCodeAt({})).toBe(121)
   })
 })
 
@@ -79,14 +71,6 @@ describe('concat()', () => {
     expect(str.concat(' is', ' best')).toBe('yancey is best')
   })
 
-  test('passing an array', () => {
-    expect(str.concat(['is', 'good'])).toBe('yanceyis,good')
-  })
-
-  test('passing a boolean', () => {
-    expect(str.concat(true)).toBe('yanceytrue')
-  })
-
   test('passing empty', () => {
     expect(str.concat()).toBe('yancey')
   })
@@ -108,7 +92,7 @@ describe('endsWith()', () => {
   })
 
   test('passing one param that less than 0', () => {
-    expect(str.endsWith()).toBeFalsy()
+    expect(str.endsWith('x')).toBeFalsy()
   })
 })
 
@@ -136,12 +120,12 @@ describe('includes', () => {
   })
 
   test('passing one param that less than 0', () => {
-    expect(str.includes()).toBeFalsy()
+    expect(str.includes('x')).toBeFalsy()
   })
 })
 
 describe('indexOf()', () => {
-  const str = 'rurula';
+  const str = 'rurula'
 
   test('passing one param', () => {
     expect(str.indexOf('ru')).toBe(0)
@@ -173,7 +157,7 @@ describe('indexOf()', () => {
 })
 
 describe('lastIndexOf()', () => {
-  const str = 'yancey';
+  const str = 'yancey'
 
   test('passing one param', () => {
     expect(str.lastIndexOf('y')).toBe(5)
@@ -212,7 +196,7 @@ describe('startsWith()', () => {
   })
 
   test('passing one param that less than 0', () => {
-    expect(str.startsWith()).toBeFalsy()
+    expect(str.startsWith('x')).toBeFalsy()
   })
 })
 
@@ -224,7 +208,7 @@ describe('localeCompare', () => {
 })
 
 describe('padStart', () => {
-  const str = 'messi';
+  const str = 'messi'
   test('', () => {
     expect(str.padStart(9, 'goat')).toBe('goatmessi')
   })
@@ -243,7 +227,7 @@ describe('padStart', () => {
 })
 
 describe('padEnd', () => {
-  const str = 'messi';
+  const str = 'messi'
   test('', () => {
     expect(str.padEnd(9, 'goat')).toBe('messigoat')
   })
@@ -262,7 +246,7 @@ describe('padEnd', () => {
 })
 
 describe('trim()', () => {
-  const str = ' yancey  ';
+  const str = ' yancey  '
   test('', () => {
     expect(str.trim()).toBe('yancey')
   })
@@ -277,7 +261,7 @@ describe('trim()', () => {
 })
 
 describe('repeat()', () => {
-  const str = 'messi';
+  const str = 'messi'
   test('', () => {
     expect(str.repeat(1)).toBe('messi')
   })
@@ -289,22 +273,10 @@ describe('repeat()', () => {
   test('', () => {
     expect(str.repeat(0)).toBe('')
   })
-
-  test('', () => {
-    expect(str.repeat()).toBe('')
-  })
-
-  test('', () => {
-    expect(str.repeat('dd')).toBe('')
-  })
-
-  test('', () => {
-    expect(str.repeat('2')).toBe('messimessi')
-  })
 })
 
 describe('to...Case()', () => {
-  const str = 'Yancey Leo';
+  const str = 'Yancey Leo'
   test('', () => {
     expect(str.toLowerCase()).toBe('yancey leo')
   })
@@ -322,7 +294,7 @@ describe('to...Case()', () => {
 })
 
 describe('substr()', () => {
-  const str = 'yanceyleo';
+  const str = 'yanceyleo'
   test('', () => {
     expect(str.substr(0)).toBe('yanceyleo')
   })
@@ -361,9 +333,9 @@ describe('substr()', () => {
 })
 
 describe('substr()', () => {
-  const str = 'yanceyleo';
+  const str = 'yanceyleo'
   test('', () => {
-    expect(str.substring()).toBe('yanceyleo')
+    expect(str.substring(0)).toBe('yanceyleo')
   })
 
   test('', () => {
@@ -392,7 +364,7 @@ describe('substr()', () => {
 })
 
 describe('slice()', () => {
-  const str = 'yanceyleo';
+  const str = 'yanceyleo'
   test('', () => {
     expect(str.slice()).toBe('yanceyleo')
   })
@@ -423,13 +395,26 @@ describe('slice()', () => {
 })
 
 describe('split()', () => {
-  const str = 'Més que un Club';
-  test('', () => {
-    expect(str.split()).toEqual(['Més que un Club'])
-  })
+  const str = 'Més que un Club'
 
   test('', () => {
-    expect(str.split('')).toEqual(['M', 'é', 's', ' ', 'q', 'u', 'e', ' ', 'u', 'n', ' ', 'C', 'l', 'u', 'b'])
+    expect(str.split('')).toEqual([
+      'M',
+      'é',
+      's',
+      ' ',
+      'q',
+      'u',
+      'e',
+      ' ',
+      'u',
+      'n',
+      ' ',
+      'C',
+      'l',
+      'u',
+      'b',
+    ])
   })
 
   test('', () => {
@@ -461,13 +446,10 @@ describe('split()', () => {
 })
 
 describe('search()', () => {
-  const str = 'yanceyLEO1';
-  test('', () => {
-    expect(str.search()).toBe(0)
-  })
+  const str = 'yanceyLEO1'
 
   test('', () => {
-    expect(str.search(/[a-e]/ig)).toBe(1)
+    expect(str.search(/[a-e]/gi)).toBe(1)
   })
 
   test('', () => {
@@ -489,7 +471,7 @@ describe('String.fromCharCode()', () => {
   })
 
   test('', () => {
-    expect(String.fromCharCode('97')).toBe('a')
+    expect(String.fromCharCode(97)).toBe('a')
   })
 })
 
@@ -499,7 +481,7 @@ describe('String.fromCodePoint()', () => {
   })
 
   test('', () => {
-    expect(String.fromCodePoint('97')).toBe('a')
+    expect(String.fromCodePoint(97)).toBe('a')
   })
 
   test('', () => {

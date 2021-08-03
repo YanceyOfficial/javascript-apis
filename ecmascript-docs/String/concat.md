@@ -24,7 +24,6 @@ const str = 'yancey';
 
 str.concat('leo'); // 'yanceyleo'
 str.concat(' is', ' best'); // 'yancey is best'
-str.concat(['is', 'good']); // 'yanceyis,good'
 str.concat(true); // 'yanceytrue'
 str.concat(); // 'yancey'
 ```

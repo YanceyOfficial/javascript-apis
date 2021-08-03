@@ -4,25 +4,16 @@ describe('Math.abs()', () => {
   test('', () => {
     expect(Math.abs(0.1 + 0.2 - 0.3) < Number.EPSILON).toBeTruthy()
     expect(Math.abs(-2)).toBe(2)
-    expect(Math.abs('-1')).toBe(1)
-    expect(Math.abs(null)).toBe(0)
-    expect(Math.abs(true)).toBe(1)
-    expect(Math.abs(undefined)).toBe(NaN)
-    expect(Math.abs('yancey')).toBe(NaN)
-    expect(Math.abs()).toBe(NaN)
   })
 })
 
 describe('Math.max/min()', () => {
   const arr1 = [1, 2, 3];
-  const arr2 = [1, 2, 'yancey'];
   test('', () => {
     expect(Math.max(...arr1)).toBe(3)
-    expect(Math.max(...arr2)).toBe(NaN)
     expect(Math.max()).toBe(-Infinity)
 
     expect(Math.min(...arr1)).toBe(1)
-    expect(Math.min(...arr2)).toBe(NaN)
     expect(Math.min()).toBe(Infinity)
 
     expect(Math.max(1, 2, 3)).toBe(3)
@@ -43,8 +34,6 @@ describe('Math.random()', () => {
 
 describe('Math.formulas()', () => {
   test('Math.exp()', () => {
-    expect(Math.exp('yancey')).toBe(NaN)
-    expect(Math.exp()).toBe(NaN)
     expect(Math.exp(-1)).toBe(0.36787944117144233)
   })
 
@@ -86,8 +75,6 @@ describe('Math.formulas()', () => {
 
   test('Math.pow()', () => {
     expect(Math.pow(2, 4)).toBe(16)
-    expect(Math.pow()).toBe(NaN)
-    expect(Math.pow(2)).toBe(NaN)
   })
 
   test('Math.hypot()', () => {
@@ -104,8 +91,6 @@ describe('Math.formulas()', () => {
 describe('Math.sin系列()', () => {
   test('', () => {
     expect(Math.abs(Math.sin(Math.PI / 180 * 30) - 0.5) < Number.EPSILON).toBeTruthy()
-    expect(Math.sin()).toBe(NaN)
-    expect(Math.sin('yancey')).toBe(NaN)
     expect(Math.sin(Math.PI / 2)).toBe(1)
     expect(Math.sinh(0)).toBe(0)
     expect(Math.asin(2)).toBe(NaN)
@@ -147,20 +132,14 @@ describe('Math.tan系列()', () => {
 
 describe('Math.floor/ceil/round()', () => {
   test('floor', () => {
-    expect(Math.floor()).toBe(NaN)
-    expect(Math.floor('yancey')).toBe(NaN)
     expect(Math.floor(1.5)).toBe(1)
     expect(Math.floor(1.6)).toBe(1)
     expect(Math.floor(1.1)).toBe(1)
     expect(Math.floor(-1.1)).toBe(-2)
     expect(Math.floor(-1.5)).toBe(-2)
     expect(Math.floor(-1.9)).toBe(-2)
-    expect().toBe()
-    expect().toBe()
   })
   test('floor', () => {
-    expect(Math.floor()).toBe(NaN)
-    expect(Math.floor('yancey')).toBe(NaN)
     expect(Math.floor(1.5)).toBe(1)
     expect(Math.floor(1.6)).toBe(1)
     expect(Math.floor(1.1)).toBe(1)
@@ -209,7 +188,6 @@ describe('Math.clz32()', () => {
   test('', () => {
     expect(Math.clz32(1)).toBe(31)
     expect(Math.clz32(1000)).toBe(22)
-    expect(Math.clz32(true)).toBe(31)
     expect(Math.clz32(3.5)).toBe(30)
   })
 })
@@ -224,13 +202,10 @@ describe('Math.imul()', () => {
 
 describe('Math.sign()', () => {
   test('', () => {
-    expect(Math.sign()).toBe(NaN)
     expect(Math.sign(3)).toBe(1)
     expect(Math.sign(-3)).toBe(-1)
-    expect(Math.sign('-3')).toBe(-1)
     expect(Math.sign(0)).toBe(0)
     expect(Math.sign(-0)).toBe(-0)
     expect(Math.sign(NaN)).toBe(NaN)
-    expect(Math.sign('foo')).toBe(NaN)
   })
 })
