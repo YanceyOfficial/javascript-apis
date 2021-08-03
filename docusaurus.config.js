@@ -21,7 +21,12 @@ module.exports = {
   ],
   stylesheets: [
     'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css',
-    'https://cdn.jsdelivr.net/npm/katex@0.11.0/dist/katex.min.css',
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css',
+      integrity:
+        'sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc',
+      crossorigin: 'anonymous',
+    },
     '/css/gitalk.css',
   ],
   plugins: [
@@ -35,6 +40,8 @@ module.exports = {
         sidebarPath: require.resolve('./sidebarsEcmaScript.js'),
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
       },
     ],
     [
@@ -130,8 +137,6 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
             'https://github.com/YanceyOfficial/javascript-apis/tree/master',
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
