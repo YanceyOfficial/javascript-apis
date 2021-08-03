@@ -9,7 +9,7 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'YanceyOfficial',
+  organizationName: 'Yancey Inc.',
   projectName: 'javascript-apis',
   themes: ['@docusaurus/theme-live-codeblock'],
   scripts: [
@@ -25,6 +25,30 @@ module.exports = {
     '/css/gitalk.css',
   ],
   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'ecmascript',
+        path: 'ecmascript-docs',
+        editUrl: 'https://github.com/YanceyOfficial/leetcode-trip/edit/master',
+        routeBasePath: 'ecmascript',
+        sidebarPath: require.resolve('./sidebarsEcmaScript.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'nodejs',
+        path: 'nodejs-docs',
+        editUrl: 'https://github.com/YanceyOfficial/leetcode-trip/edit/master',
+        routeBasePath: 'nodejs',
+        sidebarPath: require.resolve('./sidebarsNodeJS.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
     [
       '@docusaurus/plugin-ideal-image',
       {
@@ -55,7 +79,18 @@ module.exports = {
         src: 'img/logo.png',
       },
       items: [
-        { to: 'blog', label: 'About', position: 'right' },
+        {
+          to: '/ecmascript/Object/hasOwnProperty',
+          label: 'ECMAScript',
+          position: 'left',
+          activeBaseRegex: '/ecmascript/',
+        },
+        {
+          to: '/nodejs/dns/dns',
+          label: 'Node.js',
+          position: 'left',
+          activeBaseRegex: '/nodejs/',
+        },
         {
           href: 'https://yanceyleo.com',
           label: 'Blog',

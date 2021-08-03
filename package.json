@@ -1,7 +1,6 @@
 {
   "name": "javascript-apis",
   "private": true,
-  "version": "1.0.0",
   "description": "I explain all APIs of JavaScript",
   "scripts": {
     "docusaurus": "docusaurus",
@@ -11,6 +10,8 @@
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
+    "lint": "eslint src --ext .ts,.js",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\" \"__tests__/**/*.ts\"",
     "test": "jest"
   },
   "repository": {
@@ -41,13 +42,22 @@
     "yancey-js-util": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.8",
     "@docusaurus/module-type-aliases": "^2.0.0-beta.3",
     "@tsconfig/docusaurus": "^1.0.2",
-    "babel-jest": "^27.0.6",
-    "babel-preset-env": "^1.7.0",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.0",
+    "@types/react-helmet": "^6.1.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.28.4",
+    "@typescript-eslint/parser": "^4.28.4",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.1",
     "jest": "^27.0.6",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "ts-jest": "^27.0.3",
+    "prettier": "^2.2.1"
   },
   "browserslist": {
     "production": [
