@@ -1,21 +1,20 @@
 import http from 'http'
-import { sleep } from 'yancey-js-util'
-import { mockData } from './mock'
+import { Method } from './types'
 
 interface Dict {
   [x: string]: Request
 }
 
 interface Request {
-  method: string
+  method: Method
   url: string
   cb: () => void
 }
 
-class App {
+class NodeServer {
   private routers: Dict = {}
 
-  constructor(private port: number, public callback: () => void) {
+  constructor(private port: number, private callback: () => void) {
     this.port = port
     this.callback = callback
     this.initial()
@@ -24,16 +23,16 @@ class App {
   public initial() {
     http
       .createServer(async (req, res) => {
-        const _url = req.url
-        const _method = req.method
+        const _url = req.url || ''
+        const _method = req.method || Method.GET
 
         const request = this.routers[_url]
-        let cb = null
+        let cb
         if (request && request.method === _method) {
           cb = request.cb
         }
 
-        if (!cb) {
+        if (typeof cb !== 'function') {
           res.end('404')
         }
 
@@ -46,7 +45,7 @@ class App {
 
   public get(url: string, cb: () => any) {
     return {
-      method: 'GET',
+      method: Method.GET,
       url,
       cb,
     }
@@ -54,36 +53,23 @@ class App {
 
   public post(url: string, cb: () => any): Request {
     return {
-      method: 'POST',
+      method: Method.POST,
       url,
       cb,
     }
   }
 
-  public setRouter(...args: Request[]) {
+  public setRouters(...args: Request[]) {
     for (const arg of args) {
       const { url } = arg
 
       if (this.routers[url]) {
         console.warn('repeat url!')
+        continue
       }
       this.routers[url] = arg
     }
   }
 }
 
-const app = new App(3004, () => {
-  console.log('run')
-})
-
-const getHello = app.get('/hello', async () => {
-  await sleep(1000)
-  return JSON.stringify(mockData)
-})
-
-const postWorld = app.post('/world', async () => {
-  await sleep(1000)
-  return JSON.stringify({ a: 1, b: 2 })
-})
-
-app.setRouter(getHello, postWorld)
+export default NodeServer
