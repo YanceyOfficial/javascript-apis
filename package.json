@@ -39,7 +39,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rehype-katex": "5",
-    "remark-math": "3",
+    "remark-math": "4",
     "yancey-js-util": "^3.0.0"
   },
   "devDependencies": {
