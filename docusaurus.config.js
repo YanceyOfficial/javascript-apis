@@ -35,7 +35,7 @@ module.exports = {
       {
         id: 'ecmascript',
         path: 'ecmascript-docs',
-        editUrl: 'https://github.com/YanceyOfficial/leetcode-trip/edit/master',
+        editUrl: 'https://github.com/YanceyOfficial/javascript-apis/edit/master',
         routeBasePath: 'ecmascript',
         sidebarPath: require.resolve('./sidebarsEcmaScript.js'),
         showLastUpdateAuthor: true,
@@ -49,7 +49,7 @@ module.exports = {
       {
         id: 'nodejs',
         path: 'nodejs-docs',
-        editUrl: 'https://github.com/YanceyOfficial/leetcode-trip/edit/master',
+        editUrl: 'https://github.com/YanceyOfficial/javascript-apis/edit/master',
         routeBasePath: 'nodejs',
         sidebarPath: require.resolve('./sidebarsNodeJS.js'),
         showLastUpdateAuthor: true,
