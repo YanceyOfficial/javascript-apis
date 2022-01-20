@@ -124,7 +124,7 @@ module.exports = {
       anonymizeIP: true,
     },
     algolia: {
-      apiKey: '27e3e02708799149b884b94397b97a3c',
+      apiKey: '8f04c5ee88e63bf93bc7e828c6ce68bf',
       indexName: 'yanceyofficial_javascript-apis',
       algoliaOptions: {},
     },
