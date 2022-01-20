@@ -124,9 +124,9 @@ module.exports = {
       anonymizeIP: true,
     },
     algolia: {
+      appId: 'VGOQNA6CS1',
       apiKey: '8f04c5ee88e63bf93bc7e828c6ce68bf',
       indexName: 'yanceyofficial_javascript-apis',
-      algoliaOptions: {},
     },
   },
   presets: [
