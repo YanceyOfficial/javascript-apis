@@ -55,7 +55,7 @@ ECMAScript 中有两种属性：`数据属性` 和 `访问器属性`。
 
 如果某个属性的 configurable 为`false`，那么：
 
-1. 将不能删除此属性，即 `delete obj.xxx` 无效，在严格模式下直接报错。
+将不能删除此属性，即 `delete obj.xxx` 无效，在严格模式下直接报错。
 
 ```js
 // 非严格模式下删除一个"不可配置"的属性会返回false
@@ -86,7 +86,7 @@ obj.name // yancey
 })()
 ```
 
-2. 当 enumerable 或 writable 是`false`时, 再次将它们变成`true`则报错; 但当它们是`true`时, 却可以把它们变成`false` (
+当 enumerable 或 writable 是`false`时, 再次将它们变成`true`则报错; 但当它们是`true`时, 却可以把它们变成`false` (
    注意必须是在`不可配置`的前提下, 如果属性`可配置`, enumerable 和 writable 可任意切换 true 和 false)
 
 ```js
@@ -116,7 +116,7 @@ Object.defineProperty(obj, 'name', {
 Object.defineProperty(obj, 'name', { writable: false })
 ```
 
-3. 无论如何再次修改`get`和`set`都会报错, 因为两者的属性值是一个函数, 在 JS 中不可能存在一个相同的函数.
+无论如何再次修改`get`和`set`都会报错, 因为两者的属性值是一个函数, 在 JS 中不可能存在一个相同的函数.
 
 > TIP
 >
@@ -137,7 +137,7 @@ Object.defineProperty(obj, 'name', { get: function() {} })
 Object.defineProperty(obj, 'name', { set: function() {} })
 ```
 
-4. 只要`writable` 是 true, 可以`任意重新定义` value, 但当`writable`是 false 时, 需要看具体数据类型. 第一个例子中, 虽然 configurable 是 **false**, 但只要 writable 是 **true**, 便可以重新定义 value; 第二个例子中, value 是 `基本数据类型`, 所以再次定义 value 时只要覆盖原值即可; 第三个例子 value 是复杂数据类型, 同样因为 **堆栈** 问题而不能重新赋值.
+只要`writable` 是 true, 可以`任意重新定义` value, 但当`writable`是 false 时, 需要看具体数据类型. 第一个例子中, 虽然 configurable 是 **false**, 但只要 writable 是 **true**, 便可以重新定义 value; 第二个例子中, value 是 `基本数据类型`, 所以再次定义 value 时只要覆盖原值即可; 第三个例子 value 是复杂数据类型, 同样因为 **堆栈** 问题而不能重新赋值.
 
 ```js {6}
 const obj = {};

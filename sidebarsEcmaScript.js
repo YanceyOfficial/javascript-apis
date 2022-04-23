@@ -78,6 +78,7 @@ module.exports = {
       'Math/trunc',
     ],
     Function: ['Function/call', 'Function/apply', 'Function/bind'],
+    Generator: ['Generator/generator'],
     Promise: ['Promise/promise', 'Promise/promiseA+', 'Promise/promiseWheel'],
     Proxy: ['Proxy/proxy'],
   },

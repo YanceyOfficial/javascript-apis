@@ -100,7 +100,7 @@ module.exports = {
         },
         {
           href: 'https://yanceyleo.com',
-          label: 'Blog',
+          label: 'Official Blog',
           position: 'right',
         },
         {
