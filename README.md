@@ -27,7 +27,7 @@ Builds the app for production to the `build` folder. It correctly bundles the ap
 
 ## WeChat Official Account
 
-![进击的前端](https://edge.yancey.app/beg/r8q5r7ny-1642495844400.png)
+![进击的前端](./static/img/wechat-official-account.png)
 
 ## License
 
