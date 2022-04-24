@@ -6,7 +6,7 @@ title: Object.fromEntries()
 ## 语法
 
 ```ts
-Object.fromEntries(iterable); (暂未找到相应 types)
+Object.fromEntries(iterable);
 ```
 
 ## 描述
