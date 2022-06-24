@@ -1,4 +1,7 @@
 import fs from 'fs-extra'
+import process from 'process'
+import path from 'path'
+import { promises as fsp } from 'fs'
 import { sleep } from 'yancey-js-util'
 
 async function readFile(filePath: string) {
@@ -29,3 +32,13 @@ async function copyAndRemove(oldfilePath: string, newFilePath: string) {
 readFile('./public/json/json-1.json')
 
 copyAndRemove('./public/json/json-1.json', './public/json/json-2.json')
+
+// 获取文件的 meta 信息
+async function stat() {
+  console.log(await fsp.stat('./public/json/json-1.json'))
+}
+
+stat()
+
+console.log(path.resolve('package.json'))
+console.log(fs.realpathSync(path.resolve('package.json')))
