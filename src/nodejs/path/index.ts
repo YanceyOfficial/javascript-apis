@@ -12,3 +12,5 @@ function normalizePath(id: string): string {
 }
 
 console.log(normalizePath('/Users/yanceyleo/code/learn-frame/learn-nodejs/src/module/hello.js'));
+
+console.log(path.extname('/Users/yanceyleo/code/learn-frame/learn-nodejs/src/module/styles.module.scss'));
