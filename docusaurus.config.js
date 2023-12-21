@@ -92,12 +92,12 @@ module.exports = {
           position: 'left',
           activeBaseRegex: '/ecmascript/',
         },
-        {
-          to: '/nodejs/dns/dns',
-          label: 'Node.js',
-          position: 'left',
-          activeBaseRegex: '/nodejs/',
-        },
+        // {
+        //   to: '/nodejs/dns/dns',
+        //   label: 'Node.js',
+        //   position: 'left',
+        //   activeBaseRegex: '/nodejs/',
+        // },
         {
           href: 'https://yanceyleo.com',
           label: 'Official Blog',
@@ -118,10 +118,6 @@ module.exports = {
     },
     footer: {
       copyright: `<a href="https://yanceyleo.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Copyright © ${new Date().getFullYear()} Yancey Inc. and its affiliates.</a>`,
-    },
-    googleAnalytics: {
-      trackingID: 'UA-136329095-1',
-      anonymizeIP: true,
     },
     algolia: {
       appId: 'VGOQNA6CS1',
@@ -151,6 +147,10 @@ module.exports = {
           path: 'src/pages',
           routeBasePath: '/',
           include: ['**/*.{js,jsx}'],
+        },
+        googleAnalytics: {
+          trackingID: 'UA-136329095-1',
+          anonymizeIP: true,
         },
       },
     ],
