@@ -7,12 +7,13 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "pnpm run build && wrangler deploy",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "lint": "eslint src --ext .ts,.js",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\" \"__tests__/**/*.ts\"",
-    "test": "jest"
+    "test": "jest",
+    "preview": "pnpm run build && wrangler dev"
   },
   "repository": {
     "type": "git",
@@ -61,7 +62,8 @@
     "prettier": "^3.8.1",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.71.0"
   },
   "browserslist": {
     "production": [

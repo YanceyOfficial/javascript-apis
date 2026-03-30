@@ -1,9 +1,14 @@
-  {
-    "name": "javascript-apis",
-    // Update to today's date
-    // Set this to today's date
-    "compatibility_date": "2026-03-27",
-    "assets": {
-      "directory": "./build"
-    }
-  }
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "javascript-apis",
+  "compatibility_date": "2025-09-27",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "build"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
