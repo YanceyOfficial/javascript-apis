@@ -1,0 +1,7 @@
+packages: []
+
+onlyBuiltDependencies:
+  - core-js
+  - core-js-pure
+  - sharp
+  - unrs-resolver
